@@ -12,6 +12,7 @@ import {
 import { getAllowedFileRoots, isExistingFilePathAllowed } from "@/lib/file-access";
 import { hasJsonContentType, isApiRequestAllowed } from "@/lib/request-security";
 import { getProjectTrustStatus } from "@/lib/project-trust";
+import { ensureNextTrainerPackage } from "@/lib/plugin-package-bootstrap";
 import type {
   PluginDiagnostic,
   PluginPackageInfo,
@@ -288,6 +289,13 @@ export async function GET(req: Request) {
     if (!isExistingFilePathAllowed(cwd, allowedRoots)) {
       return NextResponse.json({ error: "Access denied" }, { status: 403 });
     }
+    // Ensure the bundled Next Trainer package is registered BEFORE listing.
+    // Without this, a freshly started runtime shows the previous version's
+    // stale (or absent) entry until the user happens to open a chat session —
+    // the Plugins panel then truthfully renders a dead row as "missing" and
+    // the bridge extension/resources are not loaded yet. The call is
+    // idempotent (once per process), repairs stale entries, and never throws.
+    await ensureNextTrainerPackage();
     return NextResponse.json(await readPlugins(cwd));
   } catch (error) {
     return NextResponse.json({ error: String(error) }, { status: 500 });
