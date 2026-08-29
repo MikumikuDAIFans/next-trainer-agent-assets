@@ -82,9 +82,14 @@ MANIFEST 逐文件 sha256）+ 签名 `assets-index.json`（与 catalog 同键库
 - 关闭开关：`NEXT_TRAINER_ASSETS_AUTO_UPDATE=0` 关闭一切非显式触发的网络检查
   （显式的市场按钮/工具调用不受影响）；镜像 `NEXT_TRAINER_ASSETS_MIRROR`、
   索引 `NEXT_TRAINER_ASSETS_INDEX_URL`（内网/离线环境指向内网镜像）。
-- 签名现状：dev HMAC 键（反篡改，非信任边界）；生产密钥经
-  `--signing-key-id/--signing-key-hex`（或 `MIKAZUKI_RELEASE_SIGNING_*` env）
-  注入轮换，密钥不进仓库，对应 trust.json 随 release 分发。
+- 签名现状（2026-08-29 起）：**生产密钥 `next-trainer-release-2026a` 已启用**——
+  `assets-2026.08.29-4` 为首个生产键签名发布物，同 tag 分发双键
+  `trust-transition.json`（dev + prod），装机侧换挂该 trust 即完成迁移；旧
+  dev-only trust 会拒绝生产键签名（信任边界实测有效）。密钥解析顺序
+  `MIKAZUKI_RELEASE_SIGNING_KEY_ID/_HEX` env > `MIKAZUKI_RELEASE_SIGNING_FILE`
+  指向的仓外密钥文件 > dev 默认，半截 env 一律 fail-closed。轮换纪律：已发布
+  资产永不重签；新键走新 release；旧 keyId 在后续 trust.json 里 revoke。
+  （HMAC 性质决定 trust.json 即密钥——反篡改而非信任边界，见 closeout 文档。）
 
 **主项目市场页**：打开市场即"刷新目录"（live → 兜底阶梯）；安装/更新/回滚按钮
 走宿主 marketplace API；`assets.status` 报告内容通道状态（configured/版本/
