@@ -7,3 +7,11 @@
 # wsl-stage-linux-package.sh broke &quot;set -euo pipefail&quot; inside WSL and
 # killed a linux packaging run).
 *.sh text eol=lf
+# Managed business content ships inside content zips whose files are
+# sha256-pinned by MANIFEST.json and verified by the host on update; any
+# checkout-time EOL rewrite would break every install. Pin content EOL.
+*.md text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.py text eol=lf
