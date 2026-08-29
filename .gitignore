@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+.runtime/
+node_modules/
+.next/
+dist/
+dist-marketplace/
+.bun-cache/
+plugin/next-trainer-pi-agent/bin/
+plugin/next-trainer-pi-agent/runtime/
+dist-release/
+.pytest_cache/
+.turbo/
