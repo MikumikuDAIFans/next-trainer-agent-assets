@@ -170,7 +170,17 @@ def main() -> int:
         return 0
 
     written = 0
-    for rel in missing + changed:
+    # Byte-EXACT for writes: a line-ending change IS a content change for the
+    # shipped tree (a CRLF-corrupted WSL script once passed the normalized
+    # comparison and survived two syncs until it exploded the linux build).
+    # The normalized comparison above only relaxes the --check gate against
+    # git autocrlf noise in the working copy.
+    changed_bytes = [
+        rel
+        for rel, src in sorted(expected.items())
+        if (snapshot / rel).is_file() and src.read_bytes() != (snapshot / rel).read_bytes()
+    ]
+    for rel in missing + changed_bytes:
         src, dst = expected[rel], snapshot / rel
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(src, dst)
