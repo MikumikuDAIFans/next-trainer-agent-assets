@@ -62,6 +62,10 @@ python scripts/release.py assets --build --remote-base \
 - 升级 = 市场再安装：side-by-side 不可变版本 + 原子切活跃 + 激活失败自动回滚；
   手动 `rollback` 可回上一版本；数据根用户文件跨版本保留。
 - **不可变纪律**：已发布 release 资产永不覆盖、永不重打；改错就发新 tag/新版本。
+- **发布收尾**：带生产密钥 env 的 `--build` 会把本地开发桥
+  `plugin-packages/.../dist-marketplace/{catalog,trust}.json` 重写为 prod 键
+  形态，而仓库测试契约要求本地 dist = dev 键默认——发布后必须无 env 补跑一次
+  `build-marketplace-catalog.py`（zip 不动，只重写 catalog/trust）恢复本地形态。
 
 **业务数据通道（高频，内容）**：`trainer-assets-<assetsVersion>.zip`（内嵌
 MANIFEST 逐文件 sha256）+ 签名 `assets-index.json`（与 catalog 同键库同签名
