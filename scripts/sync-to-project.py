@@ -113,6 +113,23 @@ def resolve_project_root(cli: str | None) -> Path:
     return Path(root).resolve()
 
 
+def _content_equal(src: Path, dst: Path) -> bool:
+    """Content equality ignoring line-ending style.
+
+    The project tracks the snapshot with git's default text handling, so a
+    checkout can materialise files with CRLF while agent-assets stores LF.
+    That is autocrlf noise, not drift; compare on CRLF-normalised bytes so the
+    gate flags real content changes only. Writes still copy source bytes
+    verbatim; this only relaxes the comparison, matching git's text semantics.
+    """
+    def norm(data: bytes) -> bytes:
+        return data.replace(b"\r\n", b"\n")
+    try:
+        return norm(src.read_bytes()) == norm(dst.read_bytes())
+    except OSError:
+        return False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--project-root")
@@ -133,7 +150,7 @@ def main() -> int:
     changed = []
     for rel, src in sorted(expected.items()):
         dst = snapshot / rel
-        if rel in actual and dst.read_bytes() != src.read_bytes():
+        if rel in actual and not _content_equal(src, dst):
             changed.append(rel)
 
     drift = missing or changed or stray
