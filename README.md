@@ -57,5 +57,6 @@ compat.json             资产 ↔ 插件版本 ↔ 宿主兼容声明
   修订，必须换新文件名（版本后缀），或引导用户手动替换。
 - `project/plugin-packages/next-trainer-pi-agent/` 内禁止手工编辑；改动一律回到
   本仓库再 sync。漂移检测：`scripts/sync-to-project.py --check`。
-- 备份施工区内只允许本地 commit，严禁 push / PR / release（见根目录 AGENTS.md）。
+- 本仓库拥有独立远程 `github.com/MikumikuDAIFans/next-trainer-agent-assets`（public，2026-08-29 用户裁定解禁推送；发布脱敏已执行）。release 暂缓，待业务完善后经 `scripts/release.py` 产出资产再发。
+- 主项目备份施工区（`project/`）仍只允许本地 commit，严禁 push / PR / release（见根目录 AGENTS.md）。
 - 技能正文引用的工具名/宿主能力变化时，同步更新 `compat.json`。

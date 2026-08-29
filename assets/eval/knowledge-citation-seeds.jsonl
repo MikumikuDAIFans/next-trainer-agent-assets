@@ -7,7 +7,7 @@
 {"id":"cite-caption-ignore","question":"打标时想保留已有人工标注不被覆盖，冲突动作填什么？","expect_files":["knowledge/captions/wd14-tagging-guide.md"],"must":["只认 ignore（精确小写）","说明 Skip 陷阱"]}
 {"id":"cite-fast-automagic","question":"anima-fast 页面能用 Automagic 优化器吗？","expect_files":["knowledge/engines/anima-fast-vs-standard.md"],"must":["明确不支持及替代 AdamW8bit","标注证据来自项目预设契约"]}
 {"id":"cite-anima-case","question":"有没有一个 Anima 角色训练的完整参考配置？","expect_files":["knowledge/model-families/anima-character-case-v1.md"],"must":["给出完整案例并强调机器路径必须替换","不直接代提交"]}
-{"id":"cite-anima-v1v2","question":"AellaStella v1 和 v2 两次训练参数有什么差别？","expect_files":["knowledge/model-families/anima-character-case-v1.md","knowledge/model-families/anima-lora-parameter-baseline.md"],"must":["按差异表引用两文件","标注为观察非因果"]}
+{"id":"cite-anima-v1v2","question":"同一个角色案例的 v1 和 v2 两次训练参数有什么差别？","expect_files":["knowledge/model-families/anima-character-case-v1.md","knowledge/model-families/anima-lora-parameter-baseline.md"],"must":["按差异表引用两文件","标注为观察非因果"]}
 {"id":"cite-checkpoint-select","question":"几十个 epoch 的 checkpoint 该选哪个？","expect_files":["knowledge/training/curve-reading-guide.md","knowledge/model-families/anima-lora-parameter-baseline.md"],"must":["固定样图对比而非最低 loss/最终 epoch"]}
 {"id":"cite-evidence-rules","question":"Civitai 下载量高是不是就说明这套参数好？","expect_files":["knowledge/parameters/parameter-evidence-rules.md"],"must":["流行度仅作发现性证据","缺失 trainingDetails 保持未知"]}
 {"id":"cite-template-fast","question":"给我一个 anima-fast 的保守起步模板。","expect_files":["templates/anima-lora-fast-conservative.toml","knowledge/engines/anima-fast-vs-standard.md"],"must":["模板仅作起点","提交前走 training_config_validate"]}
