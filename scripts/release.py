@@ -213,8 +213,16 @@ def mode_assets(root: Path, remote_base: str, build: bool) -> int:
         return 1
 
     out = REPO / "dist-release" / f"v{version}"
-    rc = run([project_python(root), snap_dist.parent / "scripts/build-marketplace-catalog.py",
-              "--remote-base", remote_base.rstrip("/"), "--out-dir", out], cwd=root)
+    cmd = [project_python(root), snap_dist.parent / "scripts/build-marketplace-catalog.py",
+           "--remote-base", remote_base.rstrip("/"), "--out-dir", out]
+    # Rotation support: forward the dual-key transition trust extra file
+    # (same {keys:{id:{publisherId,keyHex}}} shape) so the emitted trust.json
+    # lets hosts pinned on the previous key keep verifying the new release.
+    import os
+    extra_keys_file = os.environ.get("MIKAZUKI_TRUST_EXTRA_KEYS_FILE", "").strip()
+    if extra_keys_file:
+        cmd += ["--trust-extra-keys-file", extra_keys_file]
+    rc = run(cmd, cwd=root)
     if rc != 0:
         return rc
     for name in ("catalog.json", "trust.json"):
