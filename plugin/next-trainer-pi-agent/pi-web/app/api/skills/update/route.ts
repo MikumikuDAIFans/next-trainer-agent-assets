@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { runNpx } from "@/lib/npx";
 import { getAgentDir } from "@earendil-works/pi-coding-agent";
-import { ensureBundledNpmEnv } from "@/lib/npm-runtime";
+import { ensureBundledNpmEnv, syncCliInstalledSkills } from "@/lib/npm-runtime";
 import type { SkillInstallScope } from "@/lib/api-types";
 import { buildSkillUpdateArgs } from "@/lib/skill-updates";
 import { loadSkillsWithInstallInfo } from "@/lib/skills-service";
@@ -47,6 +47,9 @@ export async function POST(req: Request) {
       env: { ...process.env, FORCE_COLOR: "0" },
     });
 
+    // Mirror the CLI update from $HOME/.pi/agent/skills into the relocated
+    // agent dir before re-listing resources (see npm-runtime.ts).
+    if (scope !== "project") syncCliInstalledSkills(getAgentDir());
     const refreshed = await loadSkillsWithInstallInfo(cwd);
     const updatedSkill = refreshed.skills.find(
       (item) => item.install?.package === pkg && item.install.scope === scope,

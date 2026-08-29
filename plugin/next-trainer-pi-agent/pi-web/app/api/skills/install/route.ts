@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getAgentDir } from "@earendil-works/pi-coding-agent";
 import { runNpx } from "@/lib/npx";
-import { ensureBundledNpmEnv } from "@/lib/npm-runtime";
+import { ensureBundledNpmEnv, syncCliInstalledSkills } from "@/lib/npm-runtime";
 import { getAllowedFileRoots, isExistingFilePathAllowed } from "@/lib/file-access";
 import { hasJsonContentType, isApiRequestAllowed } from "@/lib/request-security";
 import { getProjectTrustStatus } from "@/lib/project-trust";
@@ -57,7 +57,10 @@ export async function POST(req: Request) {
     if (!success) {
       return NextResponse.json({ error: output.slice(-300) || "Install failed" }, { status: 500 });
     }
-    return NextResponse.json({ success: true, output });
+    // CLI wrote to $HOME/.pi/agent/skills (native layout); mirror it into
+    // the relocated agent dir so the SDK loader actually sees the skill.
+    const synced = isGlobal ? syncCliInstalledSkills(getAgentDir()) : [];
+    return NextResponse.json({ success: true, output, synced });
   } catch (e: unknown) {
     const err = e as { stdout?: string; stderr?: string; message?: string };
     const output = ((err.stdout ?? "") + (err.stderr ?? "")).replace(ANSI_RE, "");

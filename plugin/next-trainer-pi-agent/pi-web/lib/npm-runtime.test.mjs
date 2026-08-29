@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 
 import {
+  syncCliInstalledSkills,
   resolveNpmRuntimePaths,
   ensureNpmRc,
   ensureBundledNpmDefaults,
@@ -255,5 +256,28 @@ test("ensureBundledNpmEnv puts bundled node AND git dirs on PATH (in order)", ()
     });
   } finally {
     rt.cleanup();
+  }
+});
+
+test("syncCliInstalledSkills copies CLI-installed global skills into agentDir/skills", () => {
+  const root = mkdtempSync(path.join(tmpdir(), "nt-skill-sync-"));
+  try {
+    const agentDir = path.join(root, "agent");
+    const cliDir = path.join(root, "home", ".pi", "agent", "skills");
+    mkdirSync(path.join(cliDir, "pdf"), { recursive: true });
+    writeFileSync(path.join(cliDir, "pdf", "SKILL.md"), "# pdf skill");
+    mkdirSync(path.join(cliDir, "notaskill"), { recursive: true });
+    const first = syncCliInstalledSkills(agentDir, path.join(root, "home"));
+    assert.deepEqual(first, ["pdf"]);
+    assert.ok(existsSync(path.join(agentDir, "skills", "pdf", "SKILL.md")));
+    // re-sync overwrites the previous copy (update flow)
+    writeFileSync(path.join(cliDir, "pdf", "SKILL.md"), "# pdf skill v2");
+    const second = syncCliInstalledSkills(agentDir, path.join(root, "home"));
+    assert.deepEqual(second, ["pdf"]);
+    assert.equal(readFileSync(path.join(agentDir, "skills", "pdf", "SKILL.md"), "utf-8"), "# pdf skill v2");
+    // missing CLI dir degrades to []
+    assert.deepEqual(syncCliInstalledSkills(agentDir, path.join(root, "nohome")), []);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
   }
 });

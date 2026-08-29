@@ -18,6 +18,7 @@ import json
 import os
 import shutil
 import subprocess
+import time
 import sys
 import zipfile
 from datetime import datetime, timezone
@@ -27,7 +28,7 @@ PKG_ROOT = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = PKG_ROOT.parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-VERSION = "0.3.7"
+VERSION = "0.3.8"
 PLUGIN_ID = "next-trainer-pi-agent"
 PUBLISHER = "next-trainer-project"
 HOST_COMPAT = ">=2.9.2 <4.0.0"
@@ -80,14 +81,19 @@ def remove_tree(base: Path) -> None:
     stack = [raw_root]
     while stack:
         current = stack.pop()
-        try:
-            entries = list(os.scandir(current))
-        except OSError:
+        entries = None
+        for _attempt in range(40):
             try:
-                os.rmdir(current)
+                entries = list(os.scandir(current))
+                break
             except OSError:
-                pass
-            continue
+                # robocopy handles / AV scans can transiently lock freshly
+                # copied trees; retry briefly, then FAIL LOUDLY. Silently
+                # swallowing here once left a half-deleted stage dir that
+                # crashed the next build's mkdir with FileExistsError.
+                time.sleep(0.25)
+        if entries is None:
+            raise RuntimeError(f"cannot read stage directory (locked?): {current}")
         for entry in entries:
             try:
                 if entry.is_dir(follow_symlinks=False):
@@ -247,6 +253,7 @@ def main() -> int:
         copy_tree(git_src, STAGE / "runtime" / "git-mingw")
         if not (STAGE / "runtime" / "git-mingw" / "cmd" / "git.exe").is_file():
             raise SystemExit("bundled git staging incomplete")
+        (STAGE / "LICENSES").mkdir(parents=True, exist_ok=True)
         shutil.copy2(git_src / "LICENSE.txt", STAGE / "LICENSES" / "git-GPL-2.0.txt")
         print(f"[stage] portable git staged from {git_src}", flush=True)
     else:
@@ -298,7 +305,7 @@ def main() -> int:
     copy_tree(PKG_ROOT / "seeds", STAGE / "seeds")
 
     # 2. License inventory + notice.
-    (STAGE / "LICENSES").mkdir()
+    (STAGE / "LICENSES").mkdir(parents=True, exist_ok=True)
     (STAGE / "LICENSES" / "pi-web-MIT.txt").write_text(
         (PKG_ROOT / "pi-web" / "LICENSE").read_text(encoding="utf-8"), encoding="utf-8"
     )

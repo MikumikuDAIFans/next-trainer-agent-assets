@@ -20,7 +20,7 @@
  * overwritten (user sovereignty), and every failure degrades to a warning:
  * a broken npm setup must never take the chat runtime down.
  */
-import { existsSync, mkdirSync, writeFileSync } from "fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from "fs";
 import path from "path";
 import { execPath } from "process";
 
@@ -204,4 +204,38 @@ export function ensureBundledNpmEnv(agentDir: string, nodeBin = execPath): void 
   const nextPath = [...missing, currentPath].filter(Boolean).join(path.delimiter);
   process.env.PATH = nextPath;
   process.env.Path = nextPath; // Windows child inheritance reads `Path`
+}
+
+/**
+ * Bridge for `npx skills add -g --agent pi`: the CLI installs into the NATIVE
+ * pi global dir `$HOME/.pi/agent/skills`, but this deployment relocates the
+ * agent dir (NEXT_TRAINER_PI_AGENT_DIR), and the SDK resource loader scans
+ * <agentDir>/skills - so CLI-installed skills would be invisible to the agent.
+ * Copy each installed skill into <agentDir>/skills (replacing any previous
+ * copy). Returns the synced skill names; failures degrade to skips.
+ */
+export function syncCliInstalledSkills(agentDir: string, homeDir = process.env.HOME): string[] {
+  const home = homeDir || (process.env.USERPROFILE ?? "");
+  if (!home) return [];
+  const srcRoot = path.join(home, ".pi", "agent", "skills");
+  const synced: string[] = [];
+  let names: string[];
+  try {
+    names = readdirSync(srcRoot);
+  } catch {
+    return [];
+  }
+  for (const name of names) {
+    const src = path.join(srcRoot, name);
+    try {
+      if (!statSync(src).isDirectory() || !existsSync(path.join(src, "SKILL.md"))) continue;
+      const dst = path.join(agentDir, "skills", name);
+      rmSync(dst, { recursive: true, force: true });
+      cpSync(src, dst, { recursive: true });
+      synced.push(name);
+    } catch {
+      /* a broken skill dir must not fail the whole install */
+    }
+  }
+  return synced;
 }
