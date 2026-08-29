@@ -3,7 +3,7 @@
   "assetsVersion": "2026.08.29-2",
   "plugin": {
     "id": "next-trainer-pi-agent",
-    "version": "0.3.3"
+    "version": "0.3.4"
   },
   "protocolVersion": "1",
   "hostCompatibility": ">=2.9.2 <4.0.0",

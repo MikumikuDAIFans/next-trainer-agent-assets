@@ -6,7 +6,7 @@ Maps (content is owned by this repo; the snapshot is generated, never edited):
     plugin/next-trainer-pi-agent/**        -> <project>/plugin-packages/next-trainer-pi-agent/**
     assets/knowledge/**                    -> .../next-trainer-pi-agent/seeds/knowledge/**
     assets/templates/**                    -> .../next-trainer-pi-agent/seeds/templates/**
-    assets/skills/**                       -> .../next-trainer-pi-agent/pi-package/skills/**
+    assets/skills/**                       -> .../next-trainer-pi-agent/seeds/skills/**
 
 After a write run the snapshot gets a ``VENDORED-FROM.json`` provenance file
 (source repo, commit, dirty flag, UTC timestamp). ``--check`` reports drift
@@ -44,7 +44,12 @@ CONTENT_MAPS = [
     (Path("plugin") / PLUGIN_NAME, Path(".")),
     (Path("assets") / "knowledge", Path("seeds") / "knowledge"),
     (Path("assets") / "templates", Path("seeds") / "templates"),
-    (Path("assets") / "skills", Path("pi-package") / "skills"),
+    # Skills ride the SAME managed-content channel as knowledge/templates
+    # (F3-0 decision 1): seeded into the data root, then copied by the
+    # launcher to <dataRoot>/pi-agent/skills (the pi SDK user-scope discovery
+    # dir). They must NOT live under pi-package/ — the SDK would then load
+    # BOTH a package copy and the managed copy.
+    (Path("assets") / "skills", Path("seeds") / "skills"),
 ]
 
 # Name-based artifact/junk segments, excluded at any depth.

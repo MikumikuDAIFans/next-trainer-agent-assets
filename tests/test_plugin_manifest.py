@@ -74,3 +74,32 @@ def test_plugin_html_entries_have_no_inline_script_authority():
         html = f.read_text(encoding="utf-8")
         assert "http://" not in html
         assert "https://" not in html
+
+
+def test_pi_package_declares_no_skills_F3_0_single_source():
+    """F3-0 decision 1 is law: skills reach the agent ONLY through the pi SDK
+    user-scope dir (<dataRoot>/pi-agent/skills), seeded by the launcher and
+    updated by the managed content channel. A pi.skills declaration in
+    pi-package/package.json would make the SDK load a SECOND (package-scope)
+    copy and re-introduce the double-source drift this decision removed."""
+    package = json.loads((PLUGIN_ROOT / "pi-package" / "package.json").read_text(encoding="utf-8"))
+    assert "skills" not in (package.get("pi") or {}), (
+        "pi-package/package.json must NOT declare pi.skills — skills ship via "
+        "seeds/skills -> launcher -> <dataRoot>/pi-agent/skills (F3-0 decision 1)."
+    )
+    # The skills tree belongs to the managed-content seeds, not the package.
+    assert (REPO_ROOT / "assets" / "skills").is_dir()
+
+
+def test_launcher_seeds_skills_into_user_scope_dir():
+    """The launcher must copy seeds/skills into <agentDir>/skills so first
+    installs have skills offline AND the managed channel owns the same dir."""
+    launcher = (PLUGIN_ROOT / "launcher" / "src" / "main.ts").read_text(encoding="utf-8")
+    assert 'walk(path.join(seedsRoot, "skills"), path.join(agentDir, "skills"))' in launcher
+
+
+def test_manifest_grants_content_update_for_the_assets_tool():
+    """The assets_update Host Tool is exposed only when the manifest declares
+    the content-update permission (least privilege, F3-3)."""
+    manifest = load_manifest()
+    assert "content-update" in manifest.permissions
