@@ -12,3 +12,4 @@
 {"id":"cite-evidence-rules","question":"Civitai 下载量高是不是就说明这套参数好？","expect_files":["knowledge/parameters/parameter-evidence-rules.md"],"must":["流行度仅作发现性证据","缺失 trainingDetails 保持未知"]}
 {"id":"cite-template-fast","question":"给我一个 anima-fast 的保守起步模板。","expect_files":["templates/anima-lora-fast-conservative.toml","knowledge/engines/anima-fast-vs-standard.md"],"must":["模板仅作起点","提交前走 training_config_validate"]}
 {"id":"cite-bucket-dataset-toml","question":"anima-fast 的数据集参数写在哪？","expect_files":["knowledge/engines/anima-fast-vs-standard.md"],"must":["dataset_config 指向独立 dataset TOML 及 [[datasets]] 结构"]}
+{"id": "cite-civitai-base", "question": "Civitai 页面的基底模型信息怎么影响 LoRA 训练决策？", "expect_files": ["knowledge/workflows/civitai-model-to-lora.md"], "must": ["基底不匹配是硬停止", "样本图只是分布证据"]}

@@ -1,0 +1,14 @@
+# Next Trainer empirical template; validate and review before import.
+template_version = "2026-08-29"
+scope = "sdxl-lora-conservative"
+base_model = "sdxl"
+# Baseline: knowledge/model-families/sdxl-lora-parameter-baseline.md (heuristic).
+learning_rate = 0.0001
+learning_rate_te1 = 0.00005
+learning_rate_te2 = 0.00005
+network_dim = 16
+network_alpha = 8
+train_batch_size = 1
+max_train_steps = 1800
+resolution = 1024
+repeats = 1

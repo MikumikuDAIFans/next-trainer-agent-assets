@@ -45,8 +45,41 @@ COMPAT = REPO / "compat.json"
 # trust.canonical_assets_index_payload). Kept in sync deliberately; the matching
 # trust.json ships inside the release bundle only.
 PUBLISHER = "next-trainer-project"
-SIGNING_KEY_ID = "dev-local-signing"
-SIGNING_KEY_HEX = "6e6578742d747261696e65722d6c6f63616c2d746573742d7369676e696e672d6b6579"
+_DEV_KEY_ID = "dev-local-signing"
+_DEV_KEY_HEX = "6e6578742d747261696e65722d6c6f63616c2d746573742d7369676e696e672d6b6579"
+
+
+def _resolve_signing() -> tuple[str, str]:
+    """Release signing key: env pair > key file > dev default.
+
+    The key file is a JSON {"keyId": str, "keyHex": str} that must live
+    OUTSIDE every git repository (workspace .release-signing/signing-key.json
+    by convention, pointed to by MIKAZUKI_RELEASE_SIGNING_FILE). Rotation
+    policy: never re-sign published artifacts; cut a NEW release with the new
+    key and ship the dual-key trust.json so operators pinned on the old key
+    can migrate, then revoke the old key id in a later trust.json.
+    """
+    import os
+    key_id = os.environ.get("MIKAZUKI_RELEASE_SIGNING_KEY_ID", "").strip()
+    key_hex = os.environ.get("MIKAZUKI_RELEASE_SIGNING_KEY_HEX", "").strip().casefold()
+    if not (key_id or key_hex):
+        key_file = os.environ.get("MIKAZUKI_RELEASE_SIGNING_FILE", "").strip()
+        if key_file:
+            payload = json.loads(Path(key_file).read_text(encoding="utf-8"))
+            key_id, key_hex = str(payload["keyId"]), str(payload["keyHex"]).casefold()
+    if key_id or key_hex:
+        if not (key_id and re.fullmatch(r"[0-9a-f]{64,}", key_hex)):
+            raise SystemExit(
+                "release signing requires key id + >=32-byte hex key "
+                "(MIKAZUKI_RELEASE_SIGNING_KEY_ID/_HEX or MIKAZUKI_RELEASE_SIGNING_FILE)"
+            )
+        if key_id != _DEV_KEY_ID:
+            print(f"[signing] release key: {key_id}")
+        return key_id, key_hex
+    return _DEV_KEY_ID, _DEV_KEY_HEX
+
+
+SIGNING_KEY_ID, SIGNING_KEY_HEX = _resolve_signing()
 _ASSETS_SIGNED_FIELDS = (
     "schemaVersion", "assetsVersion", "file", "url", "size", "sha256",
     "generatedAt", "publisherId", "signingKeyId",
@@ -281,6 +314,24 @@ def mode_business_data(root: Path, remote_base: str) -> int:
 
     # Byte-exactness proof against the host verifier itself, when importable.
     trust_file = root / "plugin-packages" / PLUGIN / "dist-marketplace" / "trust.json"
+    # Self-check must verify against a trust root holding the ACTIVE key (and,
+    # during a rotation, the predecessor too), not the vendored dev-only file.
+    trust_keys = {SIGNING_KEY_ID: {"publisherId": PUBLISHER, "keyHex": SIGNING_KEY_HEX}}
+    if SIGNING_KEY_ID != _DEV_KEY_ID:
+        trust_keys[_DEV_KEY_ID] = {"publisherId": PUBLISHER, "keyHex": _DEV_KEY_HEX}
+    probe_trust = out / "trust-transition.json" if SIGNING_KEY_ID != _DEV_KEY_ID else trust_file
+    if SIGNING_KEY_ID != _DEV_KEY_ID:
+        probe_trust.write_text(
+            json.dumps(
+                {
+                    "keys": trust_keys,
+                    "revokedKeys": [],
+                    "note": "Key rotation transition trust root: active release key + predecessor dev key; revoke the old id after operators migrate.",
+                },
+                indent=2,
+            ) + "\n",
+            encoding="utf-8",
+        )
     if trust_file.is_file():
         probe = (
             "import json, sys\n"
@@ -291,7 +342,7 @@ def mode_business_data(root: Path, remote_base: str) -> int:
             "print('[self-check] host verify_assets_index: OK')\n"
         )
         result = subprocess.run(
-            [project_python(root), "-c", probe, str(index_path), str(trust_file)],
+            [project_python(root), "-c", probe, str(index_path), str(probe_trust)],
             capture_output=True, text=True, cwd=str(root),
         )
         if result.returncode != 0:

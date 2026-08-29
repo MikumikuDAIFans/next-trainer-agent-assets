@@ -99,6 +99,26 @@ def main(argv: list[str] | None = None) -> int:
             "inside the release package only. Also MIKAZUKI_RELEASE_SIGNING_KEY_HEX."
         ),
     )
+    parser.add_argument(
+        "--signing-key-file",
+        default=None,
+        help=(
+            "JSON {\"keyId\":..., \"keyHex\":...} stored OUTSIDE every git repository "
+            "(workspace .release-signing/signing-key.json by convention). Resolution "
+            "priority: CLI pair > MIKAZUKI_RELEASE_SIGNING_* env > this file / "
+            "MIKAZUKI_RELEASE_SIGNING_FILE > the built-in dev key."
+        ),
+    )
+    parser.add_argument(
+        "--trust-extra-keys-file",
+        default=None,
+        help=(
+            "JSON file (same {keys:{id:{publisherId,keyHex}}} shape) of ADDITIONAL "
+            "keys to merge into the emitted trust.json. Used once per key rotation "
+            "to ship a dual-key transition trust root so hosts pinned on the old "
+            "key keep verifying while operators migrate their catalog/trust files."
+        ),
+    )
     args = parser.parse_args(argv)
     remote_base = args.remote_base.rstrip("/") if args.remote_base else None
     if remote_base is not None:
@@ -114,6 +134,13 @@ def main(argv: list[str] | None = None) -> int:
     signing_key_hex = (
         args.signing_key_hex or os.environ.get("MIKAZUKI_RELEASE_SIGNING_KEY_HEX", "").strip()
     ).casefold()
+    if not (signing_key_id or signing_key_hex):
+        key_file = args.signing_key_file or os.environ.get("MIKAZUKI_RELEASE_SIGNING_FILE", "").strip()
+        if key_file:
+            payload = json.loads(Path(key_file).read_text(encoding="utf-8"))
+            signing_key_id = str(payload["keyId"])
+            signing_key_hex = str(payload["keyHex"]).casefold()
+            print(f"[signing] key loaded from file: {key_file}")
     if (signing_key_id and not signing_key_hex) or (signing_key_hex and not signing_key_id):
         raise SystemExit("release signing requires BOTH --signing-key-id and --signing-key-hex (or the MIKAZUKI_RELEASE_SIGNING_* env pair)")
     if signing_key_id and signing_key_hex:
@@ -212,18 +239,27 @@ def main(argv: list[str] | None = None) -> int:
         + "\n",
         encoding="utf-8",
     )
+    trust_keys = {SIGNING_KEY_ID: {"publisherId": PUBLISHER, "keyHex": SIGNING_KEY_HEX}}
+    if args.trust_extra_keys_file:
+        extra = json.loads(Path(args.trust_extra_keys_file).read_text(encoding="utf-8"))
+        for kid, rec in (extra.get("keys") or {}).items():
+            trust_keys.setdefault(str(kid), {"publisherId": str(rec["publisherId"]), "keyHex": str(rec["keyHex"]).casefold()})
     (OUT_DIR / "trust.json").write_text(
         json.dumps(
             {
-                "keys": {SIGNING_KEY_ID: {"publisherId": PUBLISHER, "keyHex": SIGNING_KEY_HEX}},
+                "keys": trust_keys,
                 "revokedKeys": [],
                 "note": (
-                    f"Release trust root (key {SIGNING_KEY_ID}). The signing key is held by the release operator and never committed to the repository."
-                    if SIGNING_KEY_ID != "dev-local-signing"
+                    "Key rotation transition trust root: both the active release key and the predecessor key verify; revoke the old key id after all operators migrated."
+                    if len(trust_keys) > 1
                     else (
-                        "Release trust root (dev HMAC key) for remote-distribution catalogs."
-                        if remote_base
-                        else "Development/test trust root only. Production signing is release-governed."
+                        f"Release trust root (key {SIGNING_KEY_ID}). The signing key is held by the release operator and never committed to the repository."
+                        if SIGNING_KEY_ID != "dev-local-signing"
+                        else (
+                            "Release trust root (dev HMAC key) for remote-distribution catalogs."
+                            if remote_base
+                            else "Development/test trust root only. Production signing is release-governed."
+                        )
                     )
                 ),
             },
