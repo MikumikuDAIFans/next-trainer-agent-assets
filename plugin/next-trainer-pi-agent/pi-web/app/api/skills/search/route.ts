@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { runNpx } from "@/lib/npx";
+import { getAgentDir } from "@earendil-works/pi-coding-agent";
+import { ensureBundledNpmEnv } from "@/lib/npm-runtime";
 import type { SkillSearchResult } from "@/lib/api-types";
 
 export const dynamic = "force-dynamic";
@@ -98,6 +100,7 @@ export async function POST(req: Request) {
       const results = await searchSkillsApi(query.trim(), limit);
       return NextResponse.json({ results });
     } catch {
+      ensureBundledNpmEnv(getAgentDir());
       const { stdout, stderr } = await runNpx(["skills", "find", query.trim()], {
         timeout: 20000,
         env: { ...process.env, FORCE_COLOR: "0" },

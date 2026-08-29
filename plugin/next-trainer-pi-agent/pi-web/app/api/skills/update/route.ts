@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { runNpx } from "@/lib/npx";
+import { getAgentDir } from "@earendil-works/pi-coding-agent";
+import { ensureBundledNpmEnv } from "@/lib/npm-runtime";
 import type { SkillInstallScope } from "@/lib/api-types";
 import { buildSkillUpdateArgs } from "@/lib/skill-updates";
 import { loadSkillsWithInstallInfo } from "@/lib/skills-service";
@@ -38,7 +40,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "This skill cannot be updated automatically" }, { status: 400 });
     }
 
-    const { stdout, stderr } = await runNpx(buildSkillUpdateArgs(skill.install), {
+    ensureBundledNpmEnv(getAgentDir());
+      const { stdout, stderr } = await runNpx(buildSkillUpdateArgs(skill.install), {
       timeout: 60_000,
       cwd: scope === "project" ? cwd : undefined,
       env: { ...process.env, FORCE_COLOR: "0" },

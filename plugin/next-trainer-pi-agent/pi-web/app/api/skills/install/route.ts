@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getAgentDir } from "@earendil-works/pi-coding-agent";
 import { runNpx } from "@/lib/npx";
+import { ensureBundledNpmEnv } from "@/lib/npm-runtime";
 import { getAllowedFileRoots, isExistingFilePathAllowed } from "@/lib/file-access";
 import { hasJsonContentType, isApiRequestAllowed } from "@/lib/request-security";
 import { getProjectTrustStatus } from "@/lib/project-trust";
@@ -40,6 +41,11 @@ export async function POST(req: Request) {
     if (isGlobal) args.push("-g");
 
     console.log(`[skills/install] running: npx ${args.join(" ")}`);
+    // Configure the bundled npm env (PATH w/ our node, npm_config_*) before
+    // spawning so `npx` — and the `skills` package bin it runs via
+    // `#!/usr/bin/env node` — resolve without a host-installed npm. The
+    // `{ ...process.env }` spread below then carries these into the child.
+    ensureBundledNpmEnv(getAgentDir());
     const { stdout, stderr } = await runNpx(args, {
       timeout: 60000,
       cwd: !isGlobal && cwd ? cwd : undefined,

@@ -27,7 +27,7 @@ PKG_ROOT = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = PKG_ROOT.parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-VERSION = "0.3.5"
+VERSION = "0.3.6"
 PLUGIN_ID = "next-trainer-pi-agent"
 PUBLISHER = "next-trainer-project"
 HOST_COMPAT = ">=2.9.2 <4.0.0"
@@ -198,6 +198,31 @@ def main() -> int:
     shutil.copy2(PKG_ROOT / "bin" / "next-trainer-pi-agent.exe", STAGE / "bin" / "next-trainer-pi-agent.exe")
     (STAGE / "runtime" / "node").mkdir(parents=True)
     shutil.copy2(PKG_ROOT / "runtime" / "node" / "node.exe", STAGE / "runtime" / "node" / "node.exe")
+    # Bundle the npm CLI next to the node binary (Windows node distro layout:
+    # node_modules shares the node.exe directory) so the plugin runtime can
+    # install packages and skills even though the host gives it no PATH/npm.
+    # The agent-dir settings get `npmCommand = [node, npm-cli.js, --userconfig,
+    # <agentDir>/npmrc]` (see pi-web/lib/npm-runtime.ts) and lib/npx.ts finds
+    # the sibling npx-cli.js. docs/man are pruned (~2 MB; runtime never reads
+    # them). This is a build-time input, like node.exe itself — not committed.
+    bundled_npm_src = NODE_RUNTIME / "node_modules" / "npm"
+    if not (bundled_npm_src / "bin" / "npm-cli.js").is_file():
+        raise SystemExit(f"missing build input: {bundled_npm_src / 'bin' / 'npm-cli.js'}")
+    npm_dst = STAGE / "runtime" / "node" / "node_modules" / "npm"
+    result = subprocess.run(
+        [
+            "robocopy", str(bundled_npm_src), str(npm_dst), "/E", "/MT:16",
+            "/NFL", "/NDL", "/NJH", "/NJS", "/NP",
+            "/XD", str(bundled_npm_src / "docs"), str(bundled_npm_src / "man"),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode > 7:
+        raise RuntimeError(f"bundled-npm robocopy failed ({result.returncode}): {result.stderr}")
+    if not (npm_dst / "bin" / "npm-cli.js").is_file() or not (npm_dst / "bin" / "npx-cli.js").is_file():
+        raise SystemExit("bundled npm staging incomplete (npm-cli.js / npx-cli.js missing)")
+    print("[stage] bundled npm runtime staged", flush=True)
     (STAGE / "ui").mkdir(parents=True)
     shutil.copy2(PKG_ROOT / "packaging" / "ui-fallback" / "index.html", STAGE / "ui" / "index.html")
 
@@ -270,6 +295,8 @@ def main() -> int:
         "SOFTWARE.\n",
         encoding="utf-8",
     )
+    npm_bundle_version = json.loads((bundled_npm_src / "package.json").read_text(encoding="utf-8")).get("version", "?")
+    shutil.copy2(bundled_npm_src / "LICENSE", STAGE / "LICENSES" / "npm-Artistic-2.0.txt")
     (STAGE / "NOTICE.md").write_text(
         "# Next Trainer Agent — third-party components\n\n"
         "This plugin embeds unmodified upstream projects (Goal v9 / CR-011):\n\n"
@@ -279,6 +306,9 @@ def main() -> int:
         "`@earendil-works/pi-agent-core`, `pi-ai`, `pi-coding-agent`, `pi-tui` (plus transitive `pi-telemetry`), "
         "MIT declared per package. See `LICENSES/pi-agent-MIT.txt`.\n"
         "- **Node.js 22.19.0 runtime** — `node.exe` under `runtime/node/`, Node.js project license.\n"
+        f"- **npm {npm_bundle_version}** — bundled with the Node.js distribution under "
+        "`runtime/node/node_modules/npm`, Artistic License 2.0 (npm Inc.). "
+        "See `LICENSES/npm-Artistic-2.0.txt`.\n"
         "- **Next.js 16.3.1 / React 19.2.4** and other runtime dependencies inside `pi-web/node_modules`, "
         "each under its own upstream license recorded by the npm registry.\n\n"
         "The launcher (`bin/next-trainer-pi-agent.exe`) is Next Trainer packaging glue: it only implements the "

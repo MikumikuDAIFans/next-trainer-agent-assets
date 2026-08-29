@@ -325,6 +325,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Access denied" }, { status: 403 });
     }
 
+    // Ensure the bundled pi package is registered and, crucially, that the
+    // bundled npm runtime (npmCommand) is configured on disk BEFORE a new
+    // SettingsManager/PackageManager is created below — install/remove/update
+    // all shell out to npm and would otherwise hit `spawn npm ENOENT` when
+    // this POST is the first plugin action in the process (no prior GET).
+    await ensureNextTrainerPackage();
+
     const agentDir = getAgentDir();
     const projectTrust = getProjectTrustStatus(body.cwd, agentDir);
     const settingsManager = SettingsManager.create(body.cwd, agentDir, {

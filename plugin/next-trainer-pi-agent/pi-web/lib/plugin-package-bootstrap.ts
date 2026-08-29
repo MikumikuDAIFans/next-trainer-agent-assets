@@ -29,6 +29,7 @@ import {
   SettingsManager,
   type PackageSource,
 } from "@earendil-works/pi-coding-agent";
+import { ensureBundledNpmDefaults } from "./npm-runtime";
 
 const PKG_NAME = "next-trainer-pi-assets";
 const GLOBAL_KEY = "__nextTrainerPackageBootstrapPromise";
@@ -96,10 +97,28 @@ function isOurStaleEntry(storedSource: string, currentRoot: string, agentDir: st
 
 async function installOnce(): Promise<void> {
   const root = resolvePiPackageRoot();
-  if (!root) return; // not a Next Trainer deployment -> no-op
   const agentDir = getAgentDir();
   const cwd = process.cwd();
   const settingsManager = SettingsManager.create(cwd, agentDir);
+
+  // Bundled-runtime npm defaults (npmCommand + agentDir npmrc) so the Plugins
+  // UI and skill installs work even though the host gives this process no
+  // PATH/HOME/npm. Gated on the launcher deployment signal so a plain
+  // ``npm run dev`` checkout never has its real ~/.pi settings touched.
+  // Independent of package registration; user settings are never overwritten
+  // and failures never affect the package flow below.
+  if (process.env.NEXT_TRAINER_PI_PACKAGE_ROOT) {
+    try {
+      await ensureBundledNpmDefaults(settingsManager, agentDir);
+    } catch (error: unknown) {
+      warn(
+        "failed to configure bundled npm defaults; package installs may need a manual npmCommand:",
+        error instanceof Error ? error.message : String(error),
+      );
+    }
+  }
+
+  if (!root) return; // not a Next Trainer deployment -> no package work
   const packageManager = new DefaultPackageManager({ cwd, agentDir, settingsManager });
 
   // Drop stale Next Trainer entries (an older version path) by resolved

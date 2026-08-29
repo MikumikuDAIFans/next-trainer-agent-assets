@@ -32,6 +32,23 @@ cp "$PKG_ROOT/bin/next-trainer-pi-agent" "$STAGE/bin/next-trainer-pi-agent"
 chmod 755 "$STAGE/bin/next-trainer-pi-agent"
 cp "$W/node-v22.19.0-linux-x64/bin/node" "$STAGE/runtime/node/node"
 chmod 755 "$STAGE/runtime/node/node"
+# Bundle the npm CLI in the unix layout (bin/node + lib/node_modules/npm) so
+# the runtime resolves `nodeDir/../lib/node_modules/npm/bin/{npm,npx}-cli.js`
+# (see pi-web/lib/npm-runtime.ts + lib/npx.ts). Prune docs/man (~2 MB).
+NPM_SRC="$W/node-v22.19.0-linux-x64/lib/node_modules/npm"
+if [ ! -f "$NPM_SRC/bin/npm-cli.js" ] || [ ! -f "$NPM_SRC/bin/npx-cli.js" ]; then
+  echo "missing bundled npm in linux build input: $NPM_SRC" >&2
+  exit 1
+fi
+mkdir -p "$STAGE/runtime/lib/node_modules"
+cp -a "$NPM_SRC" "$STAGE/runtime/lib/node_modules/npm"
+rm -rf "$STAGE/runtime/lib/node_modules/npm/docs" "$STAGE/runtime/lib/node_modules/npm/man"
+if [ ! -f "$STAGE/runtime/lib/node_modules/npm/bin/npm-cli.js" ] || [ ! -f "$STAGE/runtime/lib/node_modules/npm/bin/npx-cli.js" ]; then
+  echo "bundled npm staging incomplete" >&2
+  exit 1
+fi
+echo "[stage] bundled npm runtime staged"
+cp "$NPM_SRC/LICENSE" "$STAGE/LICENSES/npm-Artistic-2.0.txt"
 cp "$PKG_ROOT/packaging/ui-fallback/index.html" "$STAGE/ui/index.html"
 cp "$W/src/pi-web/LICENSE" "$STAGE/LICENSES/pi-web-MIT.txt"
 
@@ -71,6 +88,8 @@ This plugin embeds unmodified upstream projects (Goal v9 / CR-011):
   `@earendil-works/pi-agent-core`, `pi-ai`, `pi-coding-agent`, `pi-tui` (plus transitive `pi-telemetry`),
   MIT declared per package. See `LICENSES/pi-agent-MIT.txt`.
 - **Node.js 22.19.0 runtime** — `node` under `runtime/node/`, Node.js project license.
+- **npm CLI** — bundled with the Node.js distribution under `runtime/lib/node_modules/npm`,
+  Artistic License 2.0 (npm Inc.). See `LICENSES/npm-Artistic-2.0.txt`.
 - **Next.js 16.3.1 / React 19.2.4** and other runtime dependencies inside `pi-web/node_modules`,
   each under its own upstream license recorded by the npm registry.
 
