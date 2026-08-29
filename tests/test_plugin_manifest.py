@@ -103,3 +103,30 @@ def test_manifest_grants_content_update_for_the_assets_tool():
     the content-update permission (least privilege, F3-3)."""
     manifest = load_manifest()
     assert "content-update" in manifest.permissions
+
+
+def test_packaged_permission_lists_cannot_drift_across_platforms():
+    """The packaged manifest is written THREE times by the pipeline (win
+    build-pi-web-package.py, the WSL linux stager, and historically the catalog
+    builder — now derived from the win zip). A per-platform mismatch survives
+    locally but dies mid-release when the host's validate_manifest_entry
+    compares each platform zip against the single catalog entry — and there it
+    wastes a full 25-minute dual build (this exact drift failed the 0.3.4
+    build). Pin the equality HERE, where it costs milliseconds."""
+    import re
+
+    def literal_list(path: Path, marker: str) -> list[str]:
+        text = path.read_text(encoding="utf-8")
+        index = text.index(marker)
+        bracket_start = text.index("[", index)
+        bracket_end = text.index("]", bracket_start)
+        return re.findall(r'"([^"]+)"', text[bracket_start : bracket_end + 1])
+
+    scripts = PLUGIN_ROOT / "scripts"
+    win = literal_list(scripts / "build-pi-web-package.py", '"permissions":')
+    linux = literal_list(scripts / "wsl" / "wsl-stage-linux-package.sh", '"permissions":')
+    assert win == linux, f"win/linux packaged permissions drifted: {win} != {linux}"
+
+    source = json.loads((PLUGIN_ROOT / "plugin.json").read_text(encoding="utf-8"))
+    expected = [p for p in source["permissions"] if p != "model-provider"]
+    assert win == expected, f"packaged lists {win} != source plugin.json minus model-provider {expected}"
