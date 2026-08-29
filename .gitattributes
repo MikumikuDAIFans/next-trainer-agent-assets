@@ -3,3 +3,7 @@
 *.ps1 text eol=crlf
 *.bat text eol=crlf
 .githooks/* text eol=lf
+# WSL/bash scripts must stay LF everywhere (2026-08-29: CRLF in
+# wsl-stage-linux-package.sh broke &quot;set -euo pipefail&quot; inside WSL and
+# killed a linux packaging run).
+*.sh text eol=lf
