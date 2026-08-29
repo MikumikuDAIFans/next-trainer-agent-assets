@@ -27,7 +27,7 @@ PKG_ROOT = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = PKG_ROOT.parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-VERSION = "0.3.6"
+VERSION = "0.3.7"
 PLUGIN_ID = "next-trainer-pi-agent"
 PUBLISHER = "next-trainer-project"
 HOST_COMPAT = ">=2.9.2 <4.0.0"
@@ -223,6 +223,34 @@ def main() -> int:
     if not (npm_dst / "bin" / "npm-cli.js").is_file() or not (npm_dst / "bin" / "npx-cli.js").is_file():
         raise SystemExit("bundled npm staging incomplete (npm-cli.js / npx-cli.js missing)")
     print("[stage] bundled npm runtime staged", flush=True)
+    # Stage the portable MinGit next to the node runtime (runtime/git-mingw/)
+    # so skill installs can clone GitHub-hosted skill repos: the skills CLI
+    # spawns `git` and the host strips PATH down to System32. Build-time input
+    # like the node runtime (not committed); PI_WEB_GIT_RUNTIME overrides the
+    # upward .dev-runtimes lookup. Missing git fails open with a warning —
+    # plugins, npm packages and API-sourced skills keep working without it.
+    git_src = None
+    git_env = os.environ.get("PI_WEB_GIT_RUNTIME", "").strip()
+    if git_env:
+        if not (Path(git_env) / "cmd" / "git.exe").is_file():
+            raise SystemExit(f"PI_WEB_GIT_RUNTIME set but no cmd/git.exe inside: {git_env}")
+        git_src = Path(git_env)
+    else:
+        probe_dir = PKG_ROOT
+        for _ in range(8):
+            probe_dir = probe_dir.parent
+            candidate = probe_dir / ".dev-runtimes" / "MinGit-2.50.1-64-bit"
+            if (candidate / "cmd" / "git.exe").is_file():
+                git_src = candidate
+                break
+    if git_src is not None:
+        copy_tree(git_src, STAGE / "runtime" / "git-mingw")
+        if not (STAGE / "runtime" / "git-mingw" / "cmd" / "git.exe").is_file():
+            raise SystemExit("bundled git staging incomplete")
+        shutil.copy2(git_src / "LICENSE.txt", STAGE / "LICENSES" / "git-GPL-2.0.txt")
+        print(f"[stage] portable git staged from {git_src}", flush=True)
+    else:
+        print("[stage] WARNING: portable git not found; GitHub-sourced skill installs will need a system git", flush=True)
     (STAGE / "ui").mkdir(parents=True)
     shutil.copy2(PKG_ROOT / "packaging" / "ui-fallback" / "index.html", STAGE / "ui" / "index.html")
 
@@ -309,6 +337,9 @@ def main() -> int:
         f"- **npm {npm_bundle_version}** — bundled with the Node.js distribution under "
         "`runtime/node/node_modules/npm`, Artistic License 2.0 (npm Inc.). "
         "See `LICENSES/npm-Artistic-2.0.txt`.\n"
+        "- **MinGit 2.50.1 portable (when staged)** \u2014 `git.exe` under `runtime/git-mingw/cmd/`, "
+        "GPL-2.0 (git project). Enables GitHub-sourced skill installs without user-side git; "
+        "see `LICENSES/git-GPL-2.0.txt` and `runtime/git-mingw/LICENSE.txt`.\n"
         "- **Next.js 16.3.1 / React 19.2.4** and other runtime dependencies inside `pi-web/node_modules`, "
         "each under its own upstream license recorded by the npm registry.\n\n"
         "The launcher (`bin/next-trainer-pi-agent.exe`) is Next Trainer packaging glue: it only implements the "

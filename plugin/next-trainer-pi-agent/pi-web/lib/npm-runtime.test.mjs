@@ -9,6 +9,7 @@ import {
   ensureNpmRc,
   ensureBundledNpmDefaults,
   ensureBundledNpmEnv,
+  findRuntimeGitDir,
 } from "./npm-runtime.ts";
 
 /** Create a fake node distro: win = node_modules beside node.exe, unix = ../lib layout. */
@@ -44,7 +45,16 @@ function fakeSettings(initial = {}) {
   };
 }
 
-const ENV_KEYS = ["npm_config_cache", "npm_config_userconfig", "HOME", "PATH", "Path"];
+const ENV_KEYS = [
+  "npm_config_cache",
+  "npm_config_userconfig",
+  "HOME",
+  "PATH",
+  "Path",
+  "ProgramFiles",
+  "ProgramFiles(x86)",
+  "LOCALAPPDATA",
+];
 function withCleanEnv(fn) {
   const saved = Object.fromEntries(ENV_KEYS.map((k) => [k, process.env[k]]));
   for (const k of ENV_KEYS) delete process.env[k];
@@ -186,6 +196,62 @@ test("ensureBundledNpmEnv preserves explicit npm_config values", () => {
       process.env.npm_config_cache = "D:\\mine\\cache";
       ensureBundledNpmEnv(rt.agentDir, rt.nodeBin);
       assert.equal(process.env.npm_config_cache, "D:\\mine\\cache");
+    });
+  } finally {
+    rt.cleanup();
+  }
+});
+
+test("findRuntimeGitDir prefers the git bundled in the runtime over system dirs", () => {
+  const rt = makeFakeRuntime("win");
+  try {
+    const bundledCmd = path.join(rt.root, "runtime", "git-mingw", "cmd");
+    mkdirSync(bundledCmd, { recursive: true });
+    writeFileSync(path.join(bundledCmd, "git.exe"), "");
+    const systemCmd = path.join(rt.root, "Program Files", "Git", "cmd");
+    mkdirSync(systemCmd, { recursive: true });
+    writeFileSync(path.join(systemCmd, "git.exe"), "");
+    withCleanEnv(() => {
+      process.env.ProgramFiles = path.join(rt.root, "Program Files");
+      assert.equal(findRuntimeGitDir(rt.nodeBin, "win32"), bundledCmd);
+      rmSync(path.join(rt.root, "runtime", "git-mingw"), { recursive: true, force: true });
+      assert.equal(findRuntimeGitDir(rt.nodeBin, "win32"), systemCmd); // system fallback
+    });
+  } finally {
+    rt.cleanup();
+  }
+});
+
+test("findRuntimeGitDir reports null when no git exists anywhere", () => {
+  const root = mkdtempSync(path.join(tmpdir(), "nt-npm-nogit-"));
+  try {
+    withCleanEnv(() => {
+      process.env.ProgramFiles = path.join(root, "nope");
+      assert.equal(findRuntimeGitDir(path.join(root, "runtime", "node", "node.exe"), "win32"), null);
+    });
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("ensureBundledNpmEnv puts bundled node AND git dirs on PATH (in order)", () => {
+  const rt = makeFakeRuntime("win");
+  try {
+    mkdirSync(rt.agentDir, { recursive: true });
+    const gitCmd = path.join(rt.root, "runtime", "git-mingw", "cmd");
+    mkdirSync(gitCmd, { recursive: true });
+    writeFileSync(path.join(gitCmd, "git.exe"), "");
+    withCleanEnv(() => {
+      process.env.PATH = "C:\\Windows\\System32";
+      process.env.ProgramFiles = path.join(rt.root, "unused");
+      ensureBundledNpmEnv(rt.agentDir, rt.nodeBin);
+      const entries = process.env.PATH.split(path.delimiter);
+      assert.equal(entries[0].toLowerCase(), rt.nodeDir.toLowerCase());
+      assert.equal(entries[1].toLowerCase(), gitCmd.toLowerCase());
+      assert.equal(entries[2], "C:\\Windows\\System32");
+      // idempotent
+      ensureBundledNpmEnv(rt.agentDir, rt.nodeBin);
+      assert.equal(process.env.PATH.split(path.delimiter).length, 3);
     });
   } finally {
     rt.cleanup();

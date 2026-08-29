@@ -90,6 +90,8 @@ This plugin embeds unmodified upstream projects (Goal v9 / CR-011):
 - **Node.js 22.19.0 runtime** — `node` under `runtime/node/`, Node.js project license.
 - **npm CLI** — bundled with the Node.js distribution under `runtime/lib/node_modules/npm`,
   Artistic License 2.0 (npm Inc.). See `LICENSES/npm-Artistic-2.0.txt`.
+- **git** — not bundled on linux; skill installs from GitHub sources use the system
+  git when present (the runtime prepends standard locations to its PATH).
 - **Next.js 16.3.1 / React 19.2.4** and other runtime dependencies inside `pi-web/node_modules`,
   each under its own upstream license recorded by the npm registry.
 

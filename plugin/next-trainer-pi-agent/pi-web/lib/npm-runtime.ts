@@ -131,6 +131,38 @@ export async function ensureBundledNpmDefaults(
 }
 
 /**
+ * Locate a git directory to put on PATH. Skill installs run `npx skills add`,
+ * whose CLI spawns `git` to clone GitHub-hosted skill repos — in the stripped
+ * host environment that spawn dies with ENOENT. Prefer the git bundled with
+ * the plugin (runtime/git-mingw, Windows), then well-known Git-for-Windows
+ * install dirs, then the standard unix locations (once PATH is set
+ * explicitly, the loader's built-in default search paths no longer apply).
+ */
+export function findRuntimeGitDir(nodeBin = execPath, platform = process.platform): string | null {
+  const gitExe = platform === "win32" ? "git.exe" : "git";
+  const runtimeRoot = path.dirname(path.dirname(nodeBin)); // runtime/node/<exe> -> runtime
+  const dirs: string[] = [];
+  if (platform === "win32") {
+    dirs.push(path.join(runtimeRoot, "git-mingw", "cmd"));
+    const programFiles = process.env.ProgramFiles || process.env["ProgramFiles(x86)"] || "C:\\Program Files";
+    dirs.push(path.join(programFiles, "Git", "cmd"));
+    if (process.env.LOCALAPPDATA) {
+      dirs.push(path.join(process.env.LOCALAPPDATA, "Programs", "Git", "cmd"));
+    }
+  } else {
+    dirs.push("/usr/bin", "/usr/local/bin");
+  }
+  for (const dir of dirs) {
+    try {
+      if (existsSync(path.join(dir, gitExe))) return dir;
+    } catch {
+      /* ignore */
+    }
+  }
+  return null;
+}
+
+/**
  * Export npm's own env-override channel so npm/npx find a writable cache and
  * our scoped npmrc regardless of the (stripped) HOME. Never overwrites an
  * explicit value the operator already set.
@@ -149,18 +181,27 @@ export function ensureBundledNpmEnv(agentDir: string, nodeBin = execPath): void 
   // Some npm/npx code paths consult HOME even when a config is passed; give
   // them the agent dir so a missing home never derails the spawn.
   if (!process.env.HOME) process.env.HOME = agentDir;
-  // npx runs a target package's bin, whose `#!/usr/bin/env node` shebang must
-  // resolve `node` on PATH. The host launches this process with a stripped
-  // PATH (System32 only), so prepend OUR OWN bundled node dir — never the
-  // host's PATH (which could expose unrelated tooling). Idempotent.
-  const nodeDir = path.dirname(paths.nodeBin);
+  // Children need real executables on PATH: `node` (npx runs package bins via
+  // `#!/usr/bin/env node`) and `git` (the skills CLI clones GitHub repos).
+  // We prepend ONLY our bundled/known-good dirs — never the host's PATH,
+  // which the host stripped on purpose. Idempotent.
+  const prepend: string[] = [];
+  const pushDir = (dir: string | null): void => {
+    if (dir && !prepend.includes(dir)) prepend.push(dir);
+  };
+  pushDir(path.dirname(paths.nodeBin));
+  pushDir(findRuntimeGitDir(paths.nodeBin));
+  if (prepend.length === 0) return;
   const currentPath = process.env.PATH ?? process.env.Path ?? "";
-  const onPath = currentPath
-    .split(path.delimiter)
-    .some((entry) => entry && path.resolve(entry).toLowerCase() === nodeDir.toLowerCase());
-  if (!onPath) {
-    const nextPath = currentPath ? `${nodeDir}${path.delimiter}${currentPath}` : nodeDir;
-    process.env.PATH = nextPath;
-    process.env.Path = nextPath; // Windows child inheritance reads `Path`
-  }
+  const known = new Set(
+    currentPath
+      .split(path.delimiter)
+      .filter((entry) => entry)
+      .map((entry) => path.resolve(entry).toLowerCase()),
+  );
+  const missing = prepend.filter((dir) => !known.has(path.resolve(dir).toLowerCase()));
+  if (missing.length === 0) return;
+  const nextPath = [...missing, currentPath].filter(Boolean).join(path.delimiter);
+  process.env.PATH = nextPath;
+  process.env.Path = nextPath; // Windows child inheritance reads `Path`
 }
