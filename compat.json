@@ -3,7 +3,7 @@
   "assetsVersion": "2026.08.29-2",
   "plugin": {
     "id": "next-trainer-pi-agent",
-    "version": "0.3.2"
+    "version": "0.3.3"
   },
   "protocolVersion": "1",
   "hostCompatibility": ">=2.9.2 <4.0.0",
@@ -18,5 +18,5 @@
   "knowledgeDocs": 12,
   "templates": 3,
   "evalSeeds": { "behavior": 18, "knowledgeCitation": 14 },
-  "notes": "Initial extraction baseline from lora-scripts-next @ d19370f (feat/pi-agent-plugin)."
+  "notes": "assetsVersion is the managed business-data CHANNEL version (F3-3): content-only releases bump it and publish an assets-<assetsVersion> tag; installed clients update knowledge/templates/skills without a plugin upgrade. Baseline extracted from lora-scripts-next @ d19370f."
 }
