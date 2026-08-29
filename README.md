@@ -35,13 +35,21 @@ compat.json             资产 ↔ 插件版本 ↔ 宿主兼容声明
 三件套；模板 toml 必须能通过宿主 `training_config_validate`（页面 trainType
 匹配），不得含机器特定路径。
 
-## 发布顺序（便携包基线不变）
+## 发布架构（F1 过渡 → F2 目标，见 development-docs `07_架构与契约/agent-assets-repo-release-architecture.md`）
 
-```
-assets 修订 → sync-to-project.py → project 提交
-→ 插件构建（plugin/.../scripts/build-all-platforms.py + build-marketplace-catalog.py）
-→ build_portable.ps1 捆绑 plugin-marketplace 快照
-```
+- **F1（现状）**：`assets 修订 → sync-to-project.py → project 提交`；主项目便携包仍捆平台 zip。
+- **F1 可用能力**：本仓库直接构建双平台产物并生成发布形态 catalog
+  （`plugin/next-trainer-pi-agent/scripts/build-marketplace-catalog.py --remote-base <release 资产 URL>`）。
+- **F2（目标，按 `02_长程任务书/独立插件仓库发布体系_F2_任务书.md` 执行）**：本仓库
+  `scripts/release.py` 一键 release（zip×2 + catalog + trust 发布为本仓库 release 资产）；
+  主项目便携包改捆 catalog-only，安装时经 `HttpPackageAcquirer` 下载 zip（sha256 校验）；
+  主项目不再跟踪插件源码树。
+
+## 维护模型速览
+
+- 日常开发：本仓库工作树（dev-pi-web.py loop A），无需主项目。
+- 集成验证：build zip → 放主项目 marketplace `packages/` 目录（local-first 命中，零网络）。
+- 契约变更：兼容先行（宿主先兼容新旧），`compat.json` 版本门，禁止假设跨仓原子提交。
 
 ## 硬规则
 
