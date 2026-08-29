@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "assetsVersion": "2026.08.29-1",
+  "plugin": {
+    "id": "next-trainer-pi-agent",
+    "version": "0.3.2"
+  },
+  "protocolVersion": "1",
+  "hostCompatibility": ">=2.9.2 <4.0.0",
+  "skills": [
+    "next-trainer-train-params",
+    "next-trainer-dataset-review",
+    "next-trainer-curve-analysis",
+    "next-trainer-artifact-selection",
+    "next-trainer-knowledge",
+    "next-trainer-civitai-evidence"
+  ],
+  "knowledgeDocs": 6,
+  "templates": 2,
+  "notes": "Initial extraction baseline from lora-scripts-next @ d19370f (feat/pi-agent-plugin)."
+}

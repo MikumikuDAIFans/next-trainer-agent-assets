@@ -1,0 +1,17 @@
+# Keep text normalisation identical to the main project so vendored
+# snapshots and this repo's blobs hash-match. See project/.gitattributes.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+.githooks/* text eol=lf
+
+__pycache__/
+*.pyc
+.DS_Store
+.runtime/
+node_modules/
+.next/
+dist/
+dist-marketplace/
+.bun-cache/
+plugin/next-trainer-pi-agent/bin/
+plugin/next-trainer-pi-agent/runtime/
