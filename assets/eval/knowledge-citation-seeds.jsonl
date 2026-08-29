@@ -1,0 +1,14 @@
+{"id":"cite-lr-anima","question":"Anima 角色 LoRA 学习率该设多少？","expect_files":["knowledge/parameters/learning-rate.md","knowledge/model-families/anima-lora-parameter-baseline.md"],"must":["给出 3e-5 观察值并标注为本地观察","给出引用文件的 Version/Scope/Evidence 头"]}
+{"id":"cite-lr-sd15","question":"SD1.5 LoRA 学习率起点？","expect_files":["knowledge/parameters/learning-rate.md"],"must":["1e-4 量级且标注社区起点属性"]}
+{"id":"cite-dim-alpha","question":"network_alpha 和 dim 什么关系，16/8 合理吗？","expect_files":["knowledge/parameters/dim-alpha.md"],"must":["alpha/dim 缩放关系","引用实际读到的文件"]}
+{"id":"cite-oom","question":"显存不够，OOM 了先动哪个参数？","expect_files":["knowledge/parameters/batch-vram.md"],"must":["给出取舍顺序","冲突对以 training_config_validate 为准"]}
+{"id":"cite-nan","question":"loss 变 nan 一般什么原因，下一步查什么？","expect_files":["knowledge/errors/common-errors.md","training/curve-reading-guide.md"],"must":["降 lr/精度溢出/坏数据三类","下一步检查动作"]}
+{"id":"cite-v2-sdxl","question":"v2=true 是不是就是 SDXL？","expect_files":["knowledge/errors/common-errors.md"],"must":["明确否定并给出正确做法"]}
+{"id":"cite-caption-ignore","question":"打标时想保留已有人工标注不被覆盖，冲突动作填什么？","expect_files":["knowledge/captions/wd14-tagging-guide.md"],"must":["只认 ignore（精确小写）","说明 Skip 陷阱"]}
+{"id":"cite-fast-automagic","question":"anima-fast 页面能用 Automagic 优化器吗？","expect_files":["knowledge/engines/anima-fast-vs-standard.md"],"must":["明确不支持及替代 AdamW8bit","标注证据来自项目预设契约"]}
+{"id":"cite-anima-case","question":"有没有一个 Anima 角色训练的完整参考配置？","expect_files":["knowledge/model-families/anima-character-case-v1.md"],"must":["给出完整案例并强调机器路径必须替换","不直接代提交"]}
+{"id":"cite-anima-v1v2","question":"AellaStella v1 和 v2 两次训练参数有什么差别？","expect_files":["knowledge/model-families/anima-character-case-v1.md","knowledge/model-families/anima-lora-parameter-baseline.md"],"must":["按差异表引用两文件","标注为观察非因果"]}
+{"id":"cite-checkpoint-select","question":"几十个 epoch 的 checkpoint 该选哪个？","expect_files":["knowledge/training/curve-reading-guide.md","knowledge/model-families/anima-lora-parameter-baseline.md"],"must":["固定样图对比而非最低 loss/最终 epoch"]}
+{"id":"cite-evidence-rules","question":"Civitai 下载量高是不是就说明这套参数好？","expect_files":["knowledge/parameters/parameter-evidence-rules.md"],"must":["流行度仅作发现性证据","缺失 trainingDetails 保持未知"]}
+{"id":"cite-template-fast","question":"给我一个 anima-fast 的保守起步模板。","expect_files":["templates/anima-lora-fast-conservative.toml","knowledge/engines/anima-fast-vs-standard.md"],"must":["模板仅作起点","提交前走 training_config_validate"]}
+{"id":"cite-bucket-dataset-toml","question":"anima-fast 的数据集参数写在哪？","expect_files":["knowledge/engines/anima-fast-vs-standard.md"],"must":["dataset_config 指向独立 dataset TOML 及 [[datasets]] 结构"]}
