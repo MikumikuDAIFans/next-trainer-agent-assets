@@ -2,6 +2,8 @@
 """Release pipeline for the next-trainer-pi-agent plugin (F2-1).
 
 Modes
+  keygen  - generate an Ed25519 trust-v2 signing key file OUTSIDE every
+            repository (private seed stays here; trust ships public keys only).
   check   - version-point consistency across the plugin source, vendoring
             sync gate green, compat.json counts match the tree, and whether
             the platform zips are up to date with the current sources.
@@ -49,25 +51,70 @@ _DEV_KEY_ID = "dev-local-signing"
 _DEV_KEY_HEX = "6e6578742d747261696e65722d6c6f63616c2d746573742d7369676e696e672d6b6579"
 
 
-def _resolve_signing() -> tuple[str, str]:
-    """Release signing key: env pair > key file > dev default.
+class SigningIdentity:
+    """Release signing key: id + algorithm + material.
 
-    The key file is a JSON {"keyId": str, "keyHex": str} that must live
-    OUTSIDE every git repository (workspace .release-signing/signing-key.json
-    by convention, pointed to by MIKAZUKI_RELEASE_SIGNING_FILE). Rotation
-    policy: never re-sign published artifacts; cut a NEW release with the new
-    key and ship the dual-key trust.json so operators pinned on the old key
-    can migrate, then revoke the old key id in a later trust.json.
+    Two algorithms are supported:
+      * hmac-sha256 (trust v1, legacy) — carries a symmetric keyHex. That same
+        secret ships in trust.json to every client, which is exactly the C-2
+        exposure; retained only so published v1 artifacts keep verifying.
+      * ed25519 (trust v2) — carries a 32-byte private seed held on the release
+        machine. trust.json ships the DERIVED PUBLIC KEY only, so a client can
+        verify but never forge. This is the go-forward scheme.
+    """
+
+    def __init__(self, key_id: str, algorithm: str, secret_hex: str, public_hex: str | None):
+        self.key_id = key_id
+        self.algorithm = algorithm
+        self.secret_hex = secret_hex
+        self.public_hex = public_hex
+
+    def sign(self, payload: bytes) -> str:
+        if self.algorithm == "ed25519":
+            from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+
+            return Ed25519PrivateKey.from_private_bytes(bytes.fromhex(self.secret_hex)).sign(payload).hex()
+        return hmac.new(bytes.fromhex(self.secret_hex), payload, hashlib.sha256).hexdigest()
+
+    def public_key_hex(self) -> str | None:
+        if self.algorithm != "ed25519":
+            return None
+        from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+
+        return Ed25519PrivateKey.from_private_bytes(bytes.fromhex(self.secret_hex)).public_key().public_bytes_raw().hex()
+
+
+def _resolve_signing() -> SigningIdentity:
+    """Env pair > key file > dev default.
+
+    Key file shapes (JSON, kept OUTSIDE every git repository — workspace
+    .release-signing/signing-key.json by convention, pointed to by
+    MIKAZUKI_RELEASE_SIGNING_FILE):
+      {"keyId": str, "keyHex": <hex>}                                  — HMAC
+      {"keyId": str, "algorithm": "ed25519", "privateKeyHex": <64hex>}  — Ed25519
+    Rotation policy: never re-sign published artifacts; cut a NEW release with
+    the new key and ship a trust.json carrying the new key id, then revoke the
+    old id later. A new Ed25519 key needs no predecessor migration because its
+    trust root ships no secret.
     """
     import os
     key_id = os.environ.get("MIKAZUKI_RELEASE_SIGNING_KEY_ID", "").strip()
     key_hex = os.environ.get("MIKAZUKI_RELEASE_SIGNING_KEY_HEX", "").strip().casefold()
+    key_alg = os.environ.get("MIKAZUKI_RELEASE_SIGNING_ALGORITHM", "").strip().lower()
     if not (key_id or key_hex):
         key_file = os.environ.get("MIKAZUKI_RELEASE_SIGNING_FILE", "").strip()
         if key_file:
             payload = json.loads(Path(key_file).read_text(encoding="utf-8"))
-            key_id, key_hex = str(payload["keyId"]), str(payload["keyHex"]).casefold()
+            key_id = str(payload["keyId"])
+            key_alg = str(payload.get("algorithm") or "hmac-sha256").lower()
+            key_hex = str(payload.get("privateKeyHex") if key_alg == "ed25519" else payload.get("keyHex", "")).casefold()
     if key_id or key_hex:
+        if key_alg == "ed25519":
+            if not (key_id and re.fullmatch(r"[0-9a-f]{64}", key_hex)):
+                raise SystemExit("ed25519 release signing requires key id + 32-byte hex private seed")
+            if key_id != _DEV_KEY_ID:
+                print(f"[signing] release key: {key_id} (ed25519)")
+            return SigningIdentity(key_id, "ed25519", key_hex, None)
         if not (key_id and re.fullmatch(r"[0-9a-f]{64,}", key_hex)):
             raise SystemExit(
                 "release signing requires key id + >=32-byte hex key "
@@ -75,11 +122,12 @@ def _resolve_signing() -> tuple[str, str]:
             )
         if key_id != _DEV_KEY_ID:
             print(f"[signing] release key: {key_id}")
-        return key_id, key_hex
-    return _DEV_KEY_ID, _DEV_KEY_HEX
+        return SigningIdentity(key_id, "hmac-sha256", key_hex, None)
+    return SigningIdentity(_DEV_KEY_ID, "hmac-sha256", _DEV_KEY_HEX, None)
 
 
-SIGNING_KEY_ID, SIGNING_KEY_HEX = _resolve_signing()
+SIGNING = _resolve_signing()
+SIGNING_KEY_ID = SIGNING.key_id
 _ASSETS_SIGNED_FIELDS = (
     "schemaVersion", "assetsVersion", "file", "url", "size", "sha256",
     "generatedAt", "publisherId", "signingKeyId",
@@ -314,7 +362,7 @@ def mode_business_data(root: Path, remote_base: str) -> int:
     }
     body = {key: index.get(key) for key in _ASSETS_SIGNED_FIELDS}
     canonical = json.dumps(body, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
-    index["signature"] = hmac.new(bytes.fromhex(SIGNING_KEY_HEX), canonical, hashlib.sha256).hexdigest()
+    index["signature"] = SIGNING.sign(canonical)
     index_path = out / "assets-index.json"
     index_path.write_text(json.dumps(index, indent=2) + "\n", encoding="utf-8")
     print(f"[package] {zip_path.name}: {len(files)} files, {zip_path.stat().st_size} bytes")
@@ -322,24 +370,42 @@ def mode_business_data(root: Path, remote_base: str) -> int:
 
     # Byte-exactness proof against the host verifier itself, when importable.
     trust_file = root / "plugin-packages" / PLUGIN / "dist-marketplace" / "trust.json"
-    # Self-check must verify against a trust root holding the ACTIVE key (and,
-    # during a rotation, the predecessor too), not the vendored dev-only file.
-    trust_keys = {SIGNING_KEY_ID: {"publisherId": PUBLISHER, "keyHex": SIGNING_KEY_HEX}}
-    if SIGNING_KEY_ID != _DEV_KEY_ID:
-        trust_keys[_DEV_KEY_ID] = {"publisherId": PUBLISHER, "keyHex": _DEV_KEY_HEX}
-    probe_trust = out / "trust-transition.json" if SIGNING_KEY_ID != _DEV_KEY_ID else trust_file
-    if SIGNING_KEY_ID != _DEV_KEY_ID:
+    if SIGNING.algorithm == "ed25519":
+        # v2 self-check root: PUBLIC key only — the same bytes clients will
+        # receive. There is no secret to migrate and no dev-key fallback: a
+        # v2-signed envelope verifies ONLY under its public key.
+        probe_trust = out / "trust-v2.json"
         probe_trust.write_text(
             json.dumps(
                 {
-                    "keys": trust_keys,
+                    "schemaVersion": 2,
+                    "keys": {SIGNING_KEY_ID: {"publisherId": PUBLISHER, "algorithm": "ed25519", "publicKeyHex": SIGNING.public_key_hex()}},
                     "revokedKeys": [],
-                    "note": "Key rotation transition trust root: active release key + predecessor dev key; revoke the old id after operators migrate.",
+                    "note": "Trust-v2 root: public key only. Clients verify with this file and can never reproduce signatures from it.",
                 },
                 indent=2,
             ) + "\n",
             encoding="utf-8",
         )
+    else:
+        # Legacy HMAC path (v1): verify against the ACTIVE key (and, during a
+        # rotation, the predecessor too), not the vendored dev-only file.
+        trust_keys = {SIGNING_KEY_ID: {"publisherId": PUBLISHER, "keyHex": SIGNING.secret_hex}}
+        if SIGNING_KEY_ID != _DEV_KEY_ID:
+            trust_keys[_DEV_KEY_ID] = {"publisherId": PUBLISHER, "keyHex": _DEV_KEY_HEX}
+        probe_trust = out / "trust-transition.json" if SIGNING_KEY_ID != _DEV_KEY_ID else trust_file
+        if SIGNING_KEY_ID != _DEV_KEY_ID:
+            probe_trust.write_text(
+                json.dumps(
+                    {
+                        "keys": trust_keys,
+                        "revokedKeys": [],
+                        "note": "Key rotation transition trust root: active release key + predecessor dev key; revoke the old id after operators migrate.",
+                    },
+                    indent=2,
+                ) + "\n",
+                encoding="utf-8",
+            )
     if trust_file.is_file():
         probe = (
             "import json, sys\n"
@@ -372,13 +438,65 @@ def mode_business_data(root: Path, remote_base: str) -> int:
     return 0
 
 
+def mode_keygen(key_id: str, out_path: Path, force: bool) -> int:
+    """Generate an Ed25519 trust-v2 signing key OUTSIDE every git repository.
+
+    The private seed is the ability to publish catalogs/assets every installed
+    host will accept. Treat the emitted file like a password: offline backup,
+    never committed, never pasted into issues or chat.
+    """
+    import os
+    from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+
+    if not re.fullmatch(r"[0-9A-Za-z._-]{1,64}", key_id):
+        print("[keygen] FAIL: key id must match [0-9A-Za-z._-]{1,64}", file=sys.stderr)
+        return 1
+    resolved = Path(out_path).resolve()
+    for guarded in (REPO, project_root(None)):
+        try:
+            resolved.relative_to(Path(guarded).resolve())
+        except ValueError:
+            continue
+        print(f"[keygen] FAIL: refusing to write a private key inside a repository ({guarded})", file=sys.stderr)
+        return 1
+    if resolved.exists() and not force:
+        print(f"[keygen] FAIL: {resolved} exists (use --force to overwrite — that DESTROYS the ability to keep its key id)", file=sys.stderr)
+        return 1
+    resolved.parent.mkdir(parents=True, exist_ok=True)
+    private = Ed25519PrivateKey.generate()
+    payload = {
+        "keyId": key_id,
+        "algorithm": "ed25519",
+        "privateKeyHex": private.private_bytes_raw().hex(),
+        "publicKeyHex": private.public_key().public_bytes_raw().hex(),
+        "createdAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    resolved.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    try:
+        os.chmod(resolved, 0o600)  # best effort on Windows; ACLs are operator policy
+    except OSError:
+        pass
+    print(f"[keygen] wrote {resolved}")
+    print(f"[keygen] key id:     {key_id}")
+    print(f"[keygen] public key: {payload['publicKeyHex']}")
+    print("[keygen] trust record (what clients will ship):")
+    print(json.dumps({key_id: {"publisherId": PUBLISHER, "algorithm": "ed25519", "publicKeyHex": payload["publicKeyHex"]}}, indent=2))
+    print("[keygen] REMEMBER: back this file up offline NOW. Losing it means no further releases under this key id; leaking it means anyone can sign.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("mode", choices=("check", "assets", "business-data"))
+    ap.add_argument("mode", choices=("keygen", "check", "assets", "business-data"))
     ap.add_argument("--project-root")
     ap.add_argument("--remote-base", default="", help="release asset URL base (assets / business-data mode)")
     ap.add_argument("--build", action="store_true", help="assets mode: run the dual-platform build first")
+    ap.add_argument("--key-id", default="next-trainer-release-2026b", help="keygen: ed25519 key id")
+    ap.add_argument("--key-out", default=str(REPO.parent / ".release-signing" / "ed25519-2026b.json"), help="keygen: private key file path (must be OUTSIDE every repository)")
+    ap.add_argument("--force", action="store_true", help="keygen: overwrite an existing key file")
     args = ap.parse_args()
+    if args.mode == "keygen":
+        return mode_keygen(args.key_id, Path(args.key_out), args.force)
     root = project_root(args.project_root)
     if args.mode == "check":
         return mode_check(root)
