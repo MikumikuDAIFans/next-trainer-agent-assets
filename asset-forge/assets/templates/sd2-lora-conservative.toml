@@ -1,0 +1,28 @@
+# Next Trainer candidate template (staging; not migrated). SD 2.x LoRA branch of the LoRA master page.
+# Teaches the SD2 conditional-support contract pair; there is no separate SD2 workbench page.
+template_version = "2026-08-30"
+scope = "sd2-lora-conservative"
+base_model = "sd2"
+model_train_type = "sd-lora"
+
+# --- SD 2.x contract pair (schema branch: v2 for SD2+ bases; v-pred only for v-prediction checkpoints) ---
+v2 = true
+v_parameterization = true
+# v_parameterization applies to the 768-v class checkpoints. For an eps-prediction SD2 base,
+# remove this line before training — take the value from the checkpoint's own published spec.
+
+# --- family area class (SD 2.1-base is a 768-class model; adjust to the actual checkpoint) ---
+resolution = "768,768"
+enable_bucket = true
+bucket_no_upscale = true
+
+# --- in-training evaluation ---
+enable_preview = true
+sample_width = 768
+sample_height = 768
+sample_every_n_epochs = 2
+
+# --- intentionally NOT set (unknown-here; see evidence card) ---
+# learning_rate / text_encoder_lr : no shipped SD2 preset, no measured SD2 table
+# network_dim / network_alpha     : inherit page defaults (32/32); sweep before deviating
+# max_train_steps                 : exposure depends on dataset size/repeats

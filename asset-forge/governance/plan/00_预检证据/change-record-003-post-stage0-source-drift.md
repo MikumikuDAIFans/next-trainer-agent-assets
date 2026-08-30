@@ -1,0 +1,22 @@
+# Change Record
+
+- Change ID: `CR-003`
+- Date: `2026-08-30 02:39 +08:00`
+- Requested by: `本任务执行器（Stage 2 开工前漂移复核）`
+- Affected plan/stage/goal: `总控、G2 台账、Stage 2 gray 基线、Stage 3 模板基线、Stage 4 迁移 manifest`
+- Trigger: `触发条件 1/2：源仓状态与正式资产基线发生变化（源码 HEAD 前进、资产仓库结构升级、插件快照分发方式改变）`
+- Previous state:
+  - `project` HEAD = `9cd2399`（Stage 0 冻结点），且存在用户未提交的 marketplace 改动；
+  - 正式资产基线 = 12 篇知识 + 3 模板（总控“当前事实基线”第 3 条）；
+  - `project/plugin-packages/next-trainer-pi-agent` 为 git 跟踪的 vendored 快照。
+- New state:
+  - `project` HEAD = `a1a5797`，领先冻结点 14 个 commit，工作树 clean；训练契约路径（`frontend/src/training`、`mikazuki/schema`、`mikazuki/app/api.py`、`mikazuki/trainers`、`config`、`frontend/src/api/training.ts`）在 `9cd2399..a1a5797` 区间变更文件数为 0；
+  - 正式资产基线 = 14 篇知识 + 4 模板，assetsVersion `2026.08.29-4`，plugin 0.3.5，eval seeds = behavior 18 + knowledgeCitation 15；新增文档含 `errors/managed-channel-updates.md`、`workflows/civitai-model-to-lora.md`，新增模板 `sdxl-lora-conservative.toml`；
+  - 插件快照目录已从 project git 解除跟踪（commit `9121c47`，“release channel IS the distribution”），工作树目录仍存在且由 agent-assets `scripts/sync-to-project.py` 生成；agent-assets 仓库 README 明确其为禁止手改的生成快照，内容权威源是 `agent-assets/assets/**`。
+- Reason and evidence: `06_评测与校验/evidence/plan/drift-review-20260830.md`（命令、diff 清单、矩阵引用路径核对、Civitai 能力复测）。
+- Preserved evidence: Stage 0 支持矩阵及其 validation 记录全部保留且在契约路径零变更下继续有效；CR-001/002 历史保留。
+- Invalidated evidence: 总控“当前事实基线”第 3 条中的 `12 篇知识 + 3 模板` 计数（标记 superseded，由本记录取代）。
+- Affected gates: `GATE-11 边界更新（代理端口经 Python 复测有效；pwsh 网络栈在本环境不可用，采集工具必须继续走 Python）`；Stage 2/3 的 Gray 测试基线更新为 14/4 正式资产；Stage 4 迁移 manifest 的唯一内容权威目标为 `agent-assets/assets/{knowledge,templates,eval}` + `compat.json`；插件快照目录不再生成直接映射条目，快照更新属于经批准的 `sync-to-project.py` 动作而非独立迁移目标。
+- Risk delta: `P2`（信息性基线更新；无支持面结论变化，无迁移授权变化）
+- User authorization: `不需要（未扩大目标/范围/采样/下载/迁移边界；正式迁移仍等待用户明确批准）`
+- Next action: `以更新后的台账与 gray 基线执行 Stage 2 preflight 与 Phase 1 覆盖矩阵。`

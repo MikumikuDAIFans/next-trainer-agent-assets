@@ -1,0 +1,837 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-30T12:27:19Z",
+  "sourceRoot": "E:\\OpenSourceTeamWork\\AgentAssets",
+  "targetRepo": "E:\\OpenSourceTeamWork\\Kimi_Agent_lora-scripts-next-agent-dev\\agent-assets",
+  "execution": "NONE — describe-only preview; no copy/sync/commit/push/build/release performed or implied",
+  "whitelist": [
+    "assets/knowledge/",
+    "assets/templates/",
+    "assets/eval/",
+    "compat.json"
+  ],
+  "seedingPolicy": "seed-if-missing + user-file sovereignty; this manifest contains ONLY create/append ops, zero overwrite/delete; every target pre-checked not to exist",
+  "operations": [
+    {
+      "op": "create",
+      "source": "04_知识库候选/datasets/caption-tag-trigger-strategy.md",
+      "target": "assets/knowledge/datasets/caption-tag-trigger-strategy.md",
+      "sha256": "0519d39fe0afc478a9e222044e28fa44fd8f4e61b41b6df74b1864c14b282196",
+      "size": 4200,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/datasets/preparation-checklist.md",
+      "target": "assets/knowledge/datasets/preparation-checklist.md",
+      "sha256": "7e16c16177c0c802db2f30bc717f6e2257a76c31aab7836a42fbfc3c4941e31b",
+      "size": 4116,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/datasets/regularization-images.md",
+      "target": "assets/knowledge/datasets/regularization-images.md",
+      "sha256": "8f010dbecb2ec63177952c6ce70796e1bcea57193a40e114487ca9b91e06925a",
+      "size": 3596,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/character-identity.md",
+      "target": "assets/knowledge/directions/character-identity.md",
+      "sha256": "187625d921b5ab7dd1d911ddf0d94c2d630c71c270a052c90ec454c65ac39dad",
+      "size": 4626,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/clothing-accessory.md",
+      "target": "assets/knowledge/directions/clothing-accessory.md",
+      "sha256": "597a92a909b4b07aec317f823755a6561b8ff22ccdcfa67dcf271ebd635e760e",
+      "size": 3515,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/multi-concept-training.md",
+      "target": "assets/knowledge/directions/multi-concept-training.md",
+      "sha256": "7a4e04cc58a96ccfac65055aaa424dbadad491ce2046933395ad17288702646a",
+      "size": 3114,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/object-product-concept.md",
+      "target": "assets/knowledge/directions/object-product-concept.md",
+      "sha256": "802d9c09aeb2506a26629ba41f920db1c3a4d30bf360c6aa3c6c071b672dc9ca",
+      "size": 3327,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/pose-expression-features.md",
+      "target": "assets/knowledge/directions/pose-expression-features.md",
+      "sha256": "babf099c49513cea06ff75e27df04d25c1ffa38f9a1c6dc661e5037ac2d5c186",
+      "size": 3874,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/scene-domain-migration.md",
+      "target": "assets/knowledge/directions/scene-domain-migration.md",
+      "sha256": "618e50fa78ba1f499210b2cec72ec015fe68ea89d789452585821da53a71ee1e",
+      "size": 3060,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/slider-erasure-boundaries.md",
+      "target": "assets/knowledge/directions/slider-erasure-boundaries.md",
+      "sha256": "665669618c2236c6b1e6e70d3a1c2a9ad9c4ced2341be3adaa2685e743a545e3",
+      "size": 4197,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/style-training.md",
+      "target": "assets/knowledge/directions/style-training.md",
+      "sha256": "9d1a1dd28e2d9ac3a709e2894a33125074c8a32b294cd56ea1c91d03f766f46e",
+      "size": 3919,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/directions/utility-correction-lora.md",
+      "target": "assets/knowledge/directions/utility-correction-lora.md",
+      "sha256": "3dd75c886901783607101b1c4dbf3a73b616d54bf71d3b7c42befe64824eb506",
+      "size": 3112,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/engines/anima-fast-workflow-guide.md",
+      "target": "assets/knowledge/engines/anima-fast-workflow-guide.md",
+      "sha256": "464ef00d19366faec689cd4d3f340c12d051e741664918014a7aa75805d189c1",
+      "size": 3953,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/errors/oom-performance-playbook.md",
+      "target": "assets/knowledge/errors/oom-performance-playbook.md",
+      "sha256": "d116032485dbf3a8bc3c744241e8ca7267ea467ace1bddf495d8e8bb6b30153f",
+      "size": 5198,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/alternative-tooling-evidence.md",
+      "target": "assets/knowledge/external-channels/alternative-tooling-evidence.md",
+      "sha256": "958bfa3fd5e7ecb7679331080d363b0eedebe6f059202e9c3fa9fe59052270d2",
+      "size": 1990,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/attention-memory-runtime.md",
+      "target": "assets/knowledge/external-channels/attention-memory-runtime.md",
+      "sha256": "f52489fa55ec33ee8dd4628e5c270d39fa896fca527165b18b83f3073ca3fbfe",
+      "size": 1400,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/bitsandbytes-optimizer-context.md",
+      "target": "assets/knowledge/external-channels/bitsandbytes-optimizer-context.md",
+      "sha256": "f622df649bbd109f3fc3cd4894fc0a4d718f1cd972fd5d8ce29a3b68065eb1ee",
+      "size": 1440,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/captioning-blip-lavis-review.md",
+      "target": "assets/knowledge/external-channels/captioning-blip-lavis-review.md",
+      "sha256": "c1aece0072cd9348be6235371c5871d76de0193b8317e24a02cf0a8b92b63af3",
+      "size": 1494,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/clip-evaluation-boundaries.md",
+      "target": "assets/knowledge/external-channels/clip-evaluation-boundaries.md",
+      "sha256": "986d96014b7304e2ca19308645c87a8028ee334d028a76496142e9a37198a612",
+      "size": 1405,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/concept-sliders-research-channel.md",
+      "target": "assets/knowledge/external-channels/concept-sliders-research-channel.md",
+      "sha256": "31163f30a93ee867141ce63ce6ccc965ee786f6564d16d8e1ea3a5d4b16b0b72",
+      "size": 1729,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/dataset-curation-datacomp.md",
+      "target": "assets/knowledge/external-channels/dataset-curation-datacomp.md",
+      "sha256": "bceb12130ddb6cc7b5f5454514bb5a15c7de62030bf2d26cd82eb47e572ea5e2",
+      "size": 1287,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/dataset-ingestion-provenance.md",
+      "target": "assets/knowledge/external-channels/dataset-ingestion-provenance.md",
+      "sha256": "0a562a27d9050bd765cfe384d61f20f7183c90b850417acc4ccacc99fae5b0e4",
+      "size": 1418,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/dataset-visual-qa-fiftyone.md",
+      "target": "assets/knowledge/external-channels/dataset-visual-qa-fiftyone.md",
+      "sha256": "77be4e1f1373c0efe8fb2bacaa1bef63779b27aef41ffa949fea343d27600103",
+      "size": 1293,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/diffusers-dreambooth-prior-preservation.md",
+      "target": "assets/knowledge/external-channels/diffusers-dreambooth-prior-preservation.md",
+      "sha256": "751739b5089bce5f32ba4ff84791b25ff12ca1992f806c778e4e19a8099461fc",
+      "size": 2063,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/diffusers-lora-translation.md",
+      "target": "assets/knowledge/external-channels/diffusers-lora-translation.md",
+      "sha256": "addd8f1e39ae60d2fafb6416d673037532d3927ad9ca18cfb019959a09b2d592",
+      "size": 2275,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/examples-config-translation.md",
+      "target": "assets/knowledge/external-channels/examples-config-translation.md",
+      "sha256": "4208ad185a8d26245e48f9404541b9858e0430758d791ce079f589cc6ba210ee",
+      "size": 1746,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/hf-metadata-missingness.md",
+      "target": "assets/knowledge/external-channels/hf-metadata-missingness.md",
+      "sha256": "b2d60206bfddce453ef69c29aab860c7ef8c579ee3704d4c37c9f56cc733211a",
+      "size": 1505,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/hf-model-card-provenance.md",
+      "target": "assets/knowledge/external-channels/hf-model-card-provenance.md",
+      "sha256": "bc18b8c9d883bea0127d6d04f17555590e4e1cc95e9b0ff7c399d96fdf1d99d0",
+      "size": 1813,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/instruction-editing-objective-boundary.md",
+      "target": "assets/knowledge/external-channels/instruction-editing-objective-boundary.md",
+      "sha256": "0a56150bf89a02b7a17d1157afc7bcdda6fdc2563ef6873b98ef7fd4ce19d971",
+      "size": 1466,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/joycaption-caption-review.md",
+      "target": "assets/knowledge/external-channels/joycaption-caption-review.md",
+      "sha256": "15487c3a2fbcfc15bc83d980adcafb0ef5daf2bfc772a11c642f7c47ad24cc76",
+      "size": 1817,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/kohya-gui-comparison.md",
+      "target": "assets/knowledge/external-channels/kohya-gui-comparison.md",
+      "sha256": "ef56f5f35b7cd81cf1bd58577678829e910b071b7ab77a3d01192c8e21009cdf",
+      "size": 1105,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/lycoris-upstream-boundaries.md",
+      "target": "assets/knowledge/external-channels/lycoris-upstream-boundaries.md",
+      "sha256": "ee17c247e7decfbcf539ffbe7d6e9afa82080686776ec83c4e737d89a95e5fb7",
+      "size": 1976,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/musubi-tuner-krea2-contract.md",
+      "target": "assets/knowledge/external-channels/musubi-tuner-krea2-contract.md",
+      "sha256": "6ae294ee1496a520182ac6e05eb3d7a8c64d08ffbd9e7127c7a6a4a307147d14",
+      "size": 2420,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/onetrainer-comparison.md",
+      "target": "assets/knowledge/external-channels/onetrainer-comparison.md",
+      "sha256": "823f590d693c541503d293d90c045db636910480fa365a303281dbf3a1b93a93",
+      "size": 1827,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/peft-adapter-taxonomy.md",
+      "target": "assets/knowledge/external-channels/peft-adapter-taxonomy.md",
+      "sha256": "c87f63ed1912624cbcdbd841ca7b60f145ce94603084ea0eb424a700d89f2b4f",
+      "size": 1442,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/pytorch-runtime-reproducibility.md",
+      "target": "assets/knowledge/external-channels/pytorch-runtime-reproducibility.md",
+      "sha256": "ccd37701e985e66217007402a7ac9ee83c9ca96547f2511eb6df0208e449d379",
+      "size": 1455,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/safetensors-checkpoint-metadata.md",
+      "target": "assets/knowledge/external-channels/safetensors-checkpoint-metadata.md",
+      "sha256": "d740142d3a0988bc8bb1c768f6a326088a677789e6158c6a4d9427d3cbe9330a",
+      "size": 1443,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/external-channels/sd-scripts-config-reading.md",
+      "target": "assets/knowledge/external-channels/sd-scripts-config-reading.md",
+      "sha256": "fc9cdeba0bfbec70b95ede69005ed979894a00196dd539941a666da68f5dee74",
+      "size": 2964,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/anima-full-finetune-guide.md",
+      "target": "assets/knowledge/model-families/anima-full-finetune-guide.md",
+      "sha256": "d9866375643fd0121b59dd556ea948456f6a5473cf852e63c1e5c76b3f3cdb63",
+      "size": 3641,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/anima-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/anima-lora-workflow-guide.md",
+      "sha256": "cf27f9ae185b2b88146ab24ea79278a8a48556f8b95bffd7db995a697bc71265",
+      "size": 5256,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/chroma-flux-page-variant.md",
+      "target": "assets/knowledge/model-families/chroma-flux-page-variant.md",
+      "sha256": "fed4fd83d66dca89ae83229ea99398b4a697409ff9a44b5793765d150faae22c",
+      "size": 3091,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/flux-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/flux-lora-workflow-guide.md",
+      "sha256": "423f4c75e808fee3eb06902da4dd4d7612e5f5c74622377e1009e122258de276",
+      "size": 4527,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/hidden-and-unsupported-boundaries.md",
+      "target": "assets/knowledge/model-families/hidden-and-unsupported-boundaries.md",
+      "sha256": "5c0295aa51d31f891e5b7657b6f97754c46ee540d5302ccac738dca9cc78ac19",
+      "size": 3757,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/krea2-lora-musubi-guide.md",
+      "target": "assets/knowledge/model-families/krea2-lora-musubi-guide.md",
+      "sha256": "6190c338bc32e17a9e46f905733ece96957585ebb5fc4d021416ad26097e6f92",
+      "size": 5701,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/lumina2-known-breakage.md",
+      "target": "assets/knowledge/model-families/lumina2-known-breakage.md",
+      "sha256": "e3ec915a703e28fdd872c0ac5eae06d4ee68e18f668c29058bf3676e25f38f17",
+      "size": 3051,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/sd-dreambooth-finetune-guide.md",
+      "target": "assets/knowledge/model-families/sd-dreambooth-finetune-guide.md",
+      "sha256": "4680be1f4a8bf4a3047ee913375bd8499e2c8c95db9df30dbb1146988f8a1422",
+      "size": 4432,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/sd15-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/sd15-lora-workflow-guide.md",
+      "sha256": "a66c3c68b1d00ec695407a5638ae59ed1aba4ea1d6a929eb279a82901767c40c",
+      "size": 3854,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/sd2-lora-conditions.md",
+      "target": "assets/knowledge/model-families/sd2-lora-conditions.md",
+      "sha256": "8a196df3e4b2f7aa69a3b2069da3d368c5e28af105c700a1496056212364a2f0",
+      "size": 2784,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/sdxl-derived-cohorts.md",
+      "target": "assets/knowledge/model-families/sdxl-derived-cohorts.md",
+      "sha256": "a8edb8f1177e97826eff01fc7154e08c90ea08511cbc5a1e760d046f9460d8ed",
+      "size": 3637,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/sdxl-full-finetune-guide.md",
+      "target": "assets/knowledge/model-families/sdxl-full-finetune-guide.md",
+      "sha256": "1cb1d433aef6dbce2f7e70835c2e7b57a6a5c07d525de6b5f1092a7721925c3e",
+      "size": 4158,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/model-families/sdxl-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/sdxl-lora-workflow-guide.md",
+      "sha256": "9008223f14cf0930dca7a5da3c42960f4a6695ed793de4f22ce7531ab5a4fea8",
+      "size": 3803,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/network-algos/anima-schema-only-adapters.md",
+      "target": "assets/knowledge/network-algos/anima-schema-only-adapters.md",
+      "sha256": "dd0ed3139737604abbd9a60caa3dc53d32a7ed2c5be501430a7b7c3601384413",
+      "size": 4088,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/network-algos/dylora-guide.md",
+      "target": "assets/knowledge/network-algos/dylora-guide.md",
+      "sha256": "385ee2613a6ace0fa6d6564914dd7e0f8921af743b49274b657350b675286561",
+      "size": 3183,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/network-algos/lokr-guide.md",
+      "target": "assets/knowledge/network-algos/lokr-guide.md",
+      "sha256": "fab486847f24b088efb981367b39c451347ff0311c59de0edf3b5709539efa52",
+      "size": 3624,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/network-algos/lycoris-family-guide.md",
+      "target": "assets/knowledge/network-algos/lycoris-family-guide.md",
+      "sha256": "16e2adbf0c25ced0e0ede368ab7bbe0dafd1d660295bc5ee93e9814b69cc2a6a",
+      "size": 3669,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/network-algos/oft-guide.md",
+      "target": "assets/knowledge/network-algos/oft-guide.md",
+      "sha256": "f5270102debb5454adf47f1d58a1866bf7821c686c1c7f1991fbbad7caa0bc98",
+      "size": 3155,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/network-algos/tlora-anima-guide.md",
+      "target": "assets/knowledge/network-algos/tlora-anima-guide.md",
+      "sha256": "4e600db5c68ed145f94401f61ca9012bb1283806dea66a31be4a64a6ca51eb79",
+      "size": 3189,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/parameters/cache-precision-guide.md",
+      "target": "assets/knowledge/parameters/cache-precision-guide.md",
+      "sha256": "c954da20f198e0d070ce12cdd82eda77d8bb6c202023d5a24aa9001c8265406e",
+      "size": 3806,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/parameters/exposure-budget-steps.md",
+      "target": "assets/knowledge/parameters/exposure-budget-steps.md",
+      "sha256": "a46ddeea21ba1615d036a69a16438f0f6c18956833157dacc1802d5d2f24b370",
+      "size": 3821,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/parameters/optimizer-scheduler-guide.md",
+      "target": "assets/knowledge/parameters/optimizer-scheduler-guide.md",
+      "sha256": "2f97a1e786f6c57a4b2c3d66ac459d9d1a735bee51cdae94db9dfa6466b84266",
+      "size": 5114,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/parameters/resolution-bucket.md",
+      "target": "assets/knowledge/parameters/resolution-bucket.md",
+      "sha256": "0338a0171625e9df9cd72ffe484995783a5e30119b235a9abe4f56e3f0406a1b",
+      "size": 3670,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/training/checkpoint-selection.md",
+      "target": "assets/knowledge/training/checkpoint-selection.md",
+      "sha256": "f33ad1b84a5c01c1a7efc6b0ea605ce499a352fcf035e5b1eea1f429445e1885",
+      "size": 3729,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/training/preview-sampling-evaluation.md",
+      "target": "assets/knowledge/training/preview-sampling-evaluation.md",
+      "sha256": "5cc0b99d79fc5f1029e4907af851a2e5a19678e0c771e38ee879fa5e578501e3",
+      "size": 3752,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "04_知识库候选/training/repro-publishing-workflow.md",
+      "target": "assets/knowledge/training/repro-publishing-workflow.md",
+      "sha256": "084d64527a947a67468420f169fdd8768852b29cbf498b4f496f992713c972b7",
+      "size": 3929,
+      "kind": "knowledge"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-fast-lora-character.toml",
+      "target": "assets/templates/anima-fast-lora-character.toml",
+      "sha256": "85098f53084ef289c711ab5e922273984ddc521b8de59a8074dc2e100b13e062",
+      "size": 759,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-fast-lora-style.toml",
+      "target": "assets/templates/anima-fast-lora-style.toml",
+      "sha256": "dcd215664663361d9f87b88e0e56c7496bc4d1de4810ac9c3fa705331b818395",
+      "size": 756,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-character-automagic.toml",
+      "target": "assets/templates/anima-lora-character-automagic.toml",
+      "sha256": "b0661130ad80f694b4627d8dbd005c8f08fce2bfcb8598b92964df822953f7bf",
+      "size": 798,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-lokr-conservative.toml",
+      "target": "assets/templates/anima-lora-lokr-conservative.toml",
+      "sha256": "596996ca3ea50da13761e38310c01d2fb655a9af6830d86a2aa7545acecf70b9",
+      "size": 567,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-style-automagic.toml",
+      "target": "assets/templates/anima-lora-style-automagic.toml",
+      "sha256": "960faa0c90f699523a5e61c8c5a01ae89d7edda93c37e05d28abffee081f62eb",
+      "size": 796,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-tlora-conservative.toml",
+      "target": "assets/templates/anima-lora-tlora-conservative.toml",
+      "sha256": "af063e359202a011be388252f9f7cb835fa7d6073a3bad471899afcde4f5c1ae",
+      "size": 618,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/chroma-lora-conservative.toml",
+      "target": "assets/templates/chroma-lora-conservative.toml",
+      "sha256": "6e9ff1a3fba009e325fc5bfbd93aae66a491f200c9f25e8218ac647a2d44d1e8",
+      "size": 1014,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/flux-lora-conservative.toml",
+      "target": "assets/templates/flux-lora-conservative.toml",
+      "sha256": "3a24288080c99a8041218191eefe847569d25dcd5bb8e2ded2979e36046faca5",
+      "size": 1289,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/flux-lora-oft-conservative.toml",
+      "target": "assets/templates/flux-lora-oft-conservative.toml",
+      "sha256": "98a34d8e3e91cad9de91e1af044cb6d98b8dc16ea880c2f99868fa0a66693dfd",
+      "size": 535,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/krea2-lora-conservative.toml",
+      "target": "assets/templates/krea2-lora-conservative.toml",
+      "sha256": "a4c3bf7cf7e7fcb7f12c2e53203d6983e1384940bf04a6dfb99ea83cf935d0b7",
+      "size": 1446,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/sd-dreambooth-conservative.toml",
+      "target": "assets/templates/sd-dreambooth-conservative.toml",
+      "sha256": "ef135c5bd0367f1dac9186b229c2292eaa49c2230ef71d7ba4562c5e5412c3af",
+      "size": 1108,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/sd-dylora-conservative.toml",
+      "target": "assets/templates/sd-dylora-conservative.toml",
+      "sha256": "9ded60b6e1c382f739b59f9bf44f524a53e5d69aa455c04edfc146d4d3be1358",
+      "size": 680,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/sd2-lora-conservative.toml",
+      "target": "assets/templates/sd2-lora-conservative.toml",
+      "sha256": "c5d3bbc5186f5813ebf2ed9e7822323b13d2983c7309d1dc5f34e6c9d2ccc215",
+      "size": 1245,
+      "kind": "template"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-fast-lora-character.evidence.md",
+      "target": "assets/templates/anima-fast-lora-character.evidence.md",
+      "sha256": "c9045771366c889694709588f86a7f8fb79c9fa1871cef4f5fa9708806e6b17e",
+      "size": 997,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-fast-lora-style.evidence.md",
+      "target": "assets/templates/anima-fast-lora-style.evidence.md",
+      "sha256": "fd4884e7622b8f9b99ac6ab0036b401f15db3b12a69a8b936c77c087a7ffd201",
+      "size": 1036,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-character-automagic.evidence.md",
+      "target": "assets/templates/anima-lora-character-automagic.evidence.md",
+      "sha256": "7f7e70b7712b2da8fd1a6617914a8b37786c3d2e42f0f3f6ca84ae4228e7ebfc",
+      "size": 1001,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-lokr-conservative.evidence.md",
+      "target": "assets/templates/anima-lora-lokr-conservative.evidence.md",
+      "sha256": "95bc01c1b46413cc1fa6fab187c750c4aec8cefcc212886af921ba3e23927498",
+      "size": 944,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-style-automagic.evidence.md",
+      "target": "assets/templates/anima-lora-style-automagic.evidence.md",
+      "sha256": "9e0f5152bde761be95c80a69a134979f80b9e6ca1943f9ec20a4db94f8551d59",
+      "size": 1064,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/anima-lora-tlora-conservative.evidence.md",
+      "target": "assets/templates/anima-lora-tlora-conservative.evidence.md",
+      "sha256": "bb422494ea60ef86e5c6873e6917f4c52799a2dc011dd41a40faeec5b718e13a",
+      "size": 903,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/chroma-lora-conservative.evidence.md",
+      "target": "assets/templates/chroma-lora-conservative.evidence.md",
+      "sha256": "834f6d02e28d7d3b4764511b6d0b672fa588e77d9c7dea81825db5bfedad7d35",
+      "size": 2115,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/flux-lora-conservative.evidence.md",
+      "target": "assets/templates/flux-lora-conservative.evidence.md",
+      "sha256": "a821e71e5198fbd8a05a66e2a15c982a52aaaf8ff477ae8119b14e804d62bc1e",
+      "size": 2285,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/flux-lora-oft-conservative.evidence.md",
+      "target": "assets/templates/flux-lora-oft-conservative.evidence.md",
+      "sha256": "7ee0578b13f3291abf465f5aa164c39d12a120eaa8a222d0a5baadc155f48318",
+      "size": 852,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/krea2-lora-conservative.evidence.md",
+      "target": "assets/templates/krea2-lora-conservative.evidence.md",
+      "sha256": "c55bc8228e144c07e6fa059b60d26dd2dce3844f632d866456156fe8e28759fc",
+      "size": 2660,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/sd-dreambooth-conservative.evidence.md",
+      "target": "assets/templates/sd-dreambooth-conservative.evidence.md",
+      "sha256": "c46c37e66e8b948dd5a09598120f2ba924d88eb87562838cadb55b6f545e22ba",
+      "size": 2085,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/sd-dylora-conservative.evidence.md",
+      "target": "assets/templates/sd-dylora-conservative.evidence.md",
+      "sha256": "32112d9a2864307b5f49d5e5fd64ecd31c0e58b9091f758da4733cb4097dd75d",
+      "size": 1440,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "create",
+      "source": "05_模板库候选/sd2-lora-conservative.evidence.md",
+      "target": "assets/templates/sd2-lora-conservative.evidence.md",
+      "sha256": "0046f770d9ea473b03092abed75cbebb0139a8978ab05519813c1d3c80f59c0c",
+      "size": 2162,
+      "kind": "template-evidence"
+    },
+    {
+      "op": "append",
+      "source": "06_评测与校验/eval-candidates/knowledge-citation-migration-rows.jsonl",
+      "target": "assets/eval/knowledge-citation-seeds.jsonl",
+      "rows": 64,
+      "row_ids": [
+        "kc-001",
+        "kc-002",
+        "kc-003",
+        "kc-004",
+        "kc-005",
+        "kc-006",
+        "kc-007",
+        "kc-008",
+        "kc-009",
+        "kc-010",
+        "kc-011",
+        "kc-012",
+        "kc-013",
+        "kc-014",
+        "kc-015",
+        "kc-016",
+        "kc-017",
+        "kc-018",
+        "kc-019",
+        "kc-020",
+        "kc-021",
+        "kc-022",
+        "kc-023",
+        "kc-024",
+        "kc-025",
+        "kc-026",
+        "kc-027",
+        "kc-028",
+        "kc-029",
+        "kc-030",
+        "kc-031",
+        "kc-032",
+        "kc-033",
+        "kc-034",
+        "kc-035",
+        "kc-036",
+        "kc-037",
+        "kc-038",
+        "kc-039",
+        "kc-040",
+        "kc-041",
+        "kc-042",
+        "kc-043",
+        "kc-044",
+        "kc-045",
+        "kc-046",
+        "kc-047",
+        "kc-048",
+        "kc-049",
+        "kc-050",
+        "kc-051",
+        "kc-052",
+        "kc-053",
+        "kc-054",
+        "kc-055",
+        "kc-056",
+        "kc-057",
+        "kc-058",
+        "kc-059",
+        "kc-060",
+        "kc-061",
+        "kc-062",
+        "kc-063",
+        "kc-064"
+      ],
+      "kind": "eval-append"
+    }
+  ],
+  "compatCountsDraft": {
+    "schemaVersion": 1,
+    "plugin": {
+      "id": "next-trainer-pi-agent",
+      "version": "0.3.8"
+    },
+    "protocolVersion": "1",
+    "hostCompatibility": ">=2.9.2 <4.0.0",
+    "skills": [
+      "next-trainer-train-params",
+      "next-trainer-dataset-review",
+      "next-trainer-curve-analysis",
+      "next-trainer-artifact-selection",
+      "next-trainer-knowledge",
+      "next-trainer-civitai-evidence"
+    ],
+    "notes": "assetsVersion is the managed business-data CHANNEL version (F3-3): content-only releases bump it and publish an assets-<assetsVersion> tag; installed clients update knowledge/templates/skills without a plugin upgrade. Baseline extracted from lora-scripts-next @ d19370f.",
+    "assetsVersion_draft": "2026.08.30-5",
+    "assetsVersion_current": "2026.08.29-4",
+    "knowledgeDocs": 78,
+    "templates": 17,
+    "evalSeeds": {
+      "behavior": 18,
+      "knowledgeCitation": 79
+    },
+    "note": "DRAFT ONLY: compat.json is not modified by this task; counts show post-approval state if the manifest were applied as-is."
+  },
+  "problems": []
+}

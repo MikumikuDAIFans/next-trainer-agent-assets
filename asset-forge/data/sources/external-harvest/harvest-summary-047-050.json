@@ -1,0 +1,8 @@
+{
+  "requested": 4,
+  "http200": 4,
+  "failed": 0,
+  "limit": 10,
+  "proxy": "http://127.0.0.1:11809",
+  "result": "pass"
+}

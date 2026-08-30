@@ -1,0 +1,30 @@
+# Next Trainer candidate template (staging; not migrated). SDXL full finetune (DreamBooth page, sdxl branch).
+# Full-weight update: evaluate against the untouched base. No paths on purpose.
+template_version = "2026-08-30"
+scope = "sdxl-finetune-conservative"
+base_model = "sdxl"
+model_train_type = "sdxl-finetune"
+
+# --- full-model learning rates incl. per-encoder TE fields (schema defaults) ---
+learning_rate = "1e-6"
+learning_rate_te1 = "5e-7"        # ViT-L encoder
+learning_rate_te2 = "5e-7"        # BiG-G encoder
+
+# --- family area class (do not silently inherit the shared 512 default) ---
+resolution = "1024,1024"
+
+# --- optimizer (union default) ---
+optimizer_type = "AdamW8bit"
+
+# --- resumable saving (full runs need state) ---
+save_state = true
+save_every_n_epochs = 2
+
+# --- optional exposure helper (schema note: recommended 0.1 when enabled; delete if not wanted) ---
+noise_offset = 0.1
+
+# --- intentionally NOT set (unknown-here; see evidence card) ---
+# gradient_accumulation_steps / max_data_loader_n_workers : environment-dependent
+# stop_text_encoder_training                              : belongs to the sd-dreambooth branch semantics
+# reg_data_dir / prior_loss_weight                        : prior-loss flow is the sd-dreambooth branch
+# full_bf16                                               : SDXL-only experiment, not a conservative default

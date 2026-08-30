@@ -1,0 +1,24 @@
+# Next Trainer candidate template (staging; not migrated). SD 1.x/2.x DreamBooth (full-model) page.
+# Output is a full checkpoint, not a LoRA. No paths on purpose — fill dataset/model paths at import.
+template_version = "2026-08-30"
+scope = "sd-dreambooth-conservative"
+base_model = "sd1"
+model_train_type = "sd-dreambooth"
+
+# --- full-model learning rates (schema defaults; three orders below LoRA-class LRs by contract) ---
+learning_rate = "1e-6"
+learning_rate_te = "5e-7"
+
+# --- dataset class & batch (schema defaults) ---
+resolution = "512,512"
+train_batch_size = 1
+
+# --- horizon & resumable saving (schema defaults; save_state pairs with resume) ---
+max_train_epochs = 10
+save_state = true
+save_every_n_epochs = 2
+
+# --- intentionally NOT set (unknown-here; see evidence card) ---
+# reg_data_dir / prior_loss_weight   : regularization is a dataset-design decision (datasets/regularization doc)
+# v2 / v_parameterization            : only for SD2.x bases — template does not guess the base model
+# stop_text_encoder_training         : optional technique, no product-side default preference evidence

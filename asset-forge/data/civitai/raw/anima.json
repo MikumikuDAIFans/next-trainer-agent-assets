@@ -1,0 +1,569 @@
+{
+  "items": [
+    {
+      "id": 2899278,
+      "name": "[ANIMA] Ruby Kurosawa 黒澤ルビィ | Love Live! School Idol Festival All Stars ラブライブ！スクールアイドルフェスティバル ALL STARS - COMMISSION",
+      "description": "<h2 id=\"commissions-are-open-if-you-have-character-wish-to-be-made-please-check-my-profile-for-details.\"><span style=\"color:rgb(253, 126, 20)\"><strong><em>Commissions are open if you have character wish to be made, please check my profile for details.</em></strong></span></h2><p></p><p><span style=\"color:rgb(76, 110, 245)\"><strong>---Commissioned LoRA---</strong></span></p><p></p><p>Appearance - Twintails</p><pre><code>&lt;lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1&gt;, ruby kurosawa (love live! all stars), hairstyle 1, medium hair, red hair, twintails, green eyes, hair between eyes</code></pre><p>Outfit - Uranohoshi school uniform (summer)</p><pre><code>uranohoshi school uniform, summer uniform, white serafuku, grey sailor collar, orange neckerchief, tie clip, short sleeves, grey pleated skirt, black kneehighs, brown loafers</code></pre><p>Outfit - Uranohoshi school uniform (winter)</p><pre><code>uranohoshi school uniform, winter uniform, off-white serafuku, grey sailor collar, orange neck bow, double-breasted, long sleeves, grey pleated skirt, black kneehighs, brown loafers</code></pre><p>Appearance - Braided hair rings</p><pre><code>&lt;lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1&gt;, ruby kurosawa (love live! all stars), hairstyle 2, medium hair, red hair, braided hair rings, green eyes, hair between eyes</code></pre><p>Outfit - A Moment on a Spring Evening</p><pre><code>hair ornament, kanzashi, hair flower, a moment on a spring evening, purple choker, hapanese clothes, off-shoulder kimono, floral print, long sleeves, furisode sleeves, flower, red obi, obijime, layered skirt, white skirt, single criss-cross thigh strap, thigh flower, single criss-cross leg strap, single criss-cross ankle strap, okobo</code></pre><p>Appearance - Medium hair</p><pre><code>&lt;lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1&gt;, ruby kurosawa (love live! all stars), hairstyle 2, medium hair, red hair, wavy hair, green eyes, hair between eyes</code></pre><p>Outfit - Cyber World</p><pre><code>hair ornament, hoop earrings, microphone, navy beret, hairstyle 3, cyber world, choker, idol clothes, frills, navy dress, short sleeves, black gloves, bracelet, white belt, geometric pattern, layered dress, plaid dress, criss-cross, purple pantyhose, ankle lace-up, purple heels</code></pre><p>Appearance - Twintails</p><pre><code>&lt;lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1&gt;, ruby kurosawa (love live! all stars), hairstyle 3, medium hair, red hair, twintails, green eyes, hair between eyes, hair ribbon</code></pre><p>Outfit - Dream-Filled Ruby Land</p><pre><code>dream-filled ruby land, idol clothes, ribbon choker, frills, bodice, cropped vest, ribbon brooch, short sleeves, plaid skirt, pleated skirt, shorts under skirt, hoop ornament, candy ornament, black shorts, frilled shorts, pink thighhighs, fold-over thighhighs, striped thighhighs, black shoes</code></pre><p>Appearance - Twintails</p><pre><code>&lt;lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1&gt;, ruby kurosawa (love live! all stars), hairstyle 4, medium hair, red hair, twintails, green eyes, hair between eyes, hair bow, hairband</code></pre><p>Outfit - Step! ZERO to ONE</p><pre><code>step zero to one, idol clothes, white collared shirt, pink necktie, puffy sleeves, short sleeves, pink vest, pink wristbands, white gloves, frills, pleated skirt, musical note print, white thighhighs, pink bow on thighhighs, pink mary janes</code></pre><p></p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "RentCivit"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": true,
+      "sfwOnly": true,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 3,
+      "availability": "Public",
+      "userId": 442187,
+      "baseModels": [
+        "Anima"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 1,
+        "thumbsUpCount": 0,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "soralz",
+        "image": "https://lh3.googleusercontent.com/a/AGNmyxaCp315U3XOix1BZ4nuqjFrIaWgxNrpRPGCgSlKOg=s96-c"
+      },
+      "tags": [
+        "character",
+        "game",
+        "ruby kurosawa",
+        "ラブライブ！スクールアイドルフェスティバル all stars",
+        "love live! school idol festival all stars",
+        "黒澤ルビィ"
+      ],
+      "modelVersions": [
+        {
+          "id": 3278109,
+          "index": 0,
+          "name": "ana-v1.0",
+          "baseModel": "Anima",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T16:49:05.665Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 3,
+          "description": "<p>ana-v1.0 - Dataset from game wiki &amp; custom.</p>",
+          "trainedWords": [
+            "<lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1>, ruby kurosawa (love live! all stars), hairstyle 1, medium hair, red hair, twintails, green eyes, hair between eyes",
+            "uranohoshi school uniform, summer uniform, white serafuku, grey sailor collar, orange neckerchief, tie clip, short sleeves, grey pleated skirt, black kneehighs, brown loafers",
+            "uranohoshi school uniform, winter uniform, off-white serafuku, grey sailor collar, orange neck bow, double-breasted, long sleeves, grey pleated skirt, black kneehighs, brown loafers",
+            "<lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1>, ruby kurosawa (love live! all stars), hairstyle 2, medium hair, red hair, braided hair rings, green eyes, hair between eyes",
+            "hair ornament, kanzashi, hair flower, a moment on a spring evening, purple choker, hapanese clothes, off-shoulder kimono, floral print, long sleeves, furisode sleeves, flower, red obi, obijime, layered skirt, white skirt, single criss-cross thigh strap, thigh flower, single criss-cross leg strap, single criss-cross ankle strap, okobo",
+            "<lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1>, ruby kurosawa (love live! all stars), hairstyle 2, medium hair, red hair, wavy hair, green eyes, hair between eyes",
+            "hair ornament, hoop earrings, microphone, navy beret, hairstyle 3, cyber world, choker, idol clothes, frills, navy dress, short sleeves, black gloves, bracelet, white belt, geometric pattern, layered dress, plaid dress, criss-cross, purple pantyhose, ankle lace-up, purple heels",
+            "<lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1>, ruby kurosawa (love live! all stars), hairstyle 3, medium hair, red hair, twintails, green eyes, hair between eyes, hair ribbon",
+            "dream-filled ruby land, idol clothes, ribbon choker, frills, bodice, cropped vest, ribbon brooch, short sleeves, plaid skirt, pleated skirt, shorts under skirt, hoop ornament, candy ornament, black shorts, frilled shorts, pink thighhighs, fold-over thighhighs, striped thighhighs, black shoes",
+            "<lora:ruby_kurosawa-love_live_all_stars-ana-game-soralz:1>, ruby kurosawa (love live! all stars), hairstyle 4, medium hair, red hair, twintails, green eyes, hair between eyes, hair bow, hairband",
+            "step zero to one, idol clothes, white collared shirt, pink necktie, puffy sleeves, short sleeves, pink vest, pink wristbands, white gloves, frills, pleated skirt, musical note print, white thighhighs, pink bow on thighhighs, pink mary janes"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 1,
+            "thumbsUpCount": 0,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3162161,
+              "sizeKB": 89712.09375,
+              "name": "ruby_kurosawa-love_live_all_stars-ana-game-soralz.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T16:48:42.063Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "9D1870CA",
+                "AutoV2": "43B2D09857",
+                "SHA256": "43B2D0985730F6714BA056684628E55995CEA8E05D5315C2698F7EAE80D42907",
+                "CRC32": "D60E6715",
+                "BLAKE3": "ABB754B3DEE23028ADEA73045947EE0ECA940ADB5FCEF9BE2AC7110EC2B11B66",
+                "AutoV3": "0102C596C103",
+                "SHA256_12": "43B2D0985730"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3278109",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 141209964,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9eb82a74-8ba2-4b7c-a524-d659b9da5ca0/original=true/141209964.jpeg",
+              "nsfwLevel": 1,
+              "width": 896,
+              "height": 1152,
+              "hash": "UYP$RMxa.TxuU{aeRiay%Lj[yDbG%~j[%MkC",
+              "type": "image",
+              "minor": true,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3278109"
+        }
+      ]
+    },
+    {
+      "id": 2899268,
+      "name": "[Dekinai] Fuwi Eek ; Fuwieek Anima (2 outfits) | Virtual Youtuber",
+      "description": "<p><span style=\"color:rgb(193, 194, 197)\">Trained with 16 images, using just the standalone keyword is sometimes enough, but using more specific descriptions yields better results.</span></p><p></p><pre><code>fuwi \\(default\\), crop top, skirt, randoseru, fishnet thighhigh,</code></pre><pre><code>fuwi \\(bunny\\), bandaid, detached sleeves, single thighhigh,</code></pre><p></p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "RentCivit",
+        "Rent"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 7,
+      "availability": "Public",
+      "userId": 4681550,
+      "baseModels": [
+        "Anima"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 3,
+        "thumbsUpCount": 0,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "BenkyouDekinAI",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bd4cd631-0aa6-4c12-b41c-db5797faf788/width=96/BenkyouDekinAI.jpeg"
+      },
+      "tags": [
+        "anime",
+        "character",
+        "streamer",
+        "virtual youtuber",
+        "bunny",
+        "asmr",
+        "indie vtuber"
+      ],
+      "modelVersions": [
+        {
+          "id": 3278094,
+          "index": 0,
+          "name": "1.0 Anima",
+          "baseModel": "Anima",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T16:43:43.059Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 0,
+          "description": "<p>Initial release</p>",
+          "trainedWords": [
+            "fuwi \\(default\\), crop top, skirt, randoseru, fishnet thighhigh,",
+            "fuwi \\(bunny\\), bandaid, detached sleeves, single thighhigh,"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 3,
+            "thumbsUpCount": 0,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3162145,
+              "sizeKB": 32427.109375,
+              "name": "fuwieekanimabase1.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T16:42:22.552Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "fp16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "BC54A9CA",
+                "AutoV2": "4B15945B48",
+                "SHA256": "4B15945B48D63A071D5D9FC9A76A3842C8643D0FAC1E7605EB669622A930A0B7",
+                "CRC32": "9ED8318A",
+                "BLAKE3": "5B19CDD6FEF72889BDC31E7FA6B4E8A787DDEDCCD21897F55A503F5C9DCEC5BA",
+                "AutoV3": "19240C191ABA",
+                "SHA256_12": "4B15945B48D6"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3278094",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 141209466,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8cd4e672-a2dc-49f2-9296-0630c3ddcf38/original=true/141209466.jpeg",
+              "nsfwLevel": 1,
+              "width": 1024,
+              "height": 1408,
+              "hash": "UWLWhuozyDx].lni%Lxa%hR+-Ut7?bW-t7oz",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3278094"
+        }
+      ]
+    },
+    {
+      "id": 2899252,
+      "name": "Mini Yaemori (Rent a Girlfriend) - Anima LoRA",
+      "description": "<p><a target=\"_blank\" rel=\"ugc\" href=\"https://tavern-ai.fr\"><img src=\"https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/82e071c4-d14f-4624-b214-7efdfcb8e788/original=true/82e071c4-d14f-4624-b214-7efdfcb8e788.jpeg\" /></a></p><h2 id=\"mini-yaemori-rent-a-girlfriend-(anima-lora)\"><span style=\"color:rgb(239, 68, 68)\">Mini Yaemori</span> — Rent a Girlfriend <span style=\"color:rgb(139, 92, 246)\">(Anima LoRA)</span></h2><p><strong>Trigger:</strong> <code>mini yaemori, rent a girlfriend</code> · <strong>Weight:</strong> 0.7-1.2</p><h3 id=\"anima-comfyui-usage\"><span style=\"color:rgb(34, 197, 94)\">⚙️ Anima / ComfyUI usage</span></h3><p>ComfyUI-format LoRA for <strong>Anima</strong>. Load with <code>LoraLoaderModelOnly</code> on <code>anima-aesthetic-v1.1</code> (or base), <code>ModelSamplingAuraFlow</code> shift 3, sampler <code>er_sde</code> + <code>simple</code> scheduler, CFG 4-5, 30 steps. Start prompts with <code>masterpiece, best quality</code>.</p><h3 id=\"outfits-and-styling\"><span style=\"color:rgb(59, 130, 246)\">👗 Outfits &amp; styling</span></h3><ul><li><p><strong>Look 1</strong>: <code>shirt, blue shirt, t-shirt, green shirt, black shirt, yellow shirt, shorts, black shorts, short sleeves</code></p></li><li><p><strong>Look 2</strong>: <code>shirt, white shirt, collared shirt, skirt, blue skirt, t-shirt, short sleeves, bag, frills</code></p></li><li><p><strong>Look 3</strong>: <code>jacket, black jacket, track jacket, wavy mouth, zipper</code></p></li><li><p><strong>Identity boost</strong>: <code>multicolored hair, blue hair, long hair, streaked hair, fang</code></p></li></ul><p><em>Suggested negative:</em> <code>worst quality, low quality, blurry, jpeg artifacts, bad anatomy</code></p><hr /><p>💬 <strong>Chat with her here:</strong> <a target=\"_blank\" rel=\"ugc\" href=\"http://tavern-ai.fr\">tavern-ai.fr</a><br />🔥 Full uncensored sets &amp; exclusive drops: <a target=\"_blank\" rel=\"ugc\" href=\"https://www.patreon.com/stayzen06\">patreon.com/stayzen06</a></p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit",
+        "Rent",
+        "Sell"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 29,
+      "availability": "Public",
+      "userId": 2597232,
+      "baseModels": [
+        "Anima"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 6,
+        "thumbsUpCount": 0,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "Stayzen",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/efedcdba-1124-4eca-a306-568e5d3721b3/width=96/Stayzen.jpeg"
+      },
+      "tags": [
+        "character"
+      ],
+      "modelVersions": [
+        {
+          "id": 3278072,
+          "index": 0,
+          "name": "v1.0",
+          "baseModel": "Anima",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T16:33:36.887Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 25,
+          "description": null,
+          "trainedWords": [
+            "mini yaemori, rent a girlfriend, black hair, long hair, blue streaked hair, blunt bangs, red eyes, fang",
+            "black track jacket, zipper, white shirt underneath",
+            "oversized t-shirt, black shorts, short sleeves",
+            "white frilled blouse, blue skirt, shoulder bag"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 8,
+            "thumbsUpCount": 0,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3162123,
+              "sizeKB": 64714.59375,
+              "name": "mini_yaemori-anima-comfy.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T16:33:14.258Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "fp16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "3BD97FC1",
+                "AutoV2": "B9B56EE83B",
+                "SHA256": "B9B56EE83B0AE5A1C3DD68988858241817F0FA9A7C415AE2823BF82329491B26",
+                "CRC32": "9DE9C7AF",
+                "BLAKE3": "D00583BF386015581999696E754B0490AB8F646BCE84C669CA47E78DE8167FDD",
+                "AutoV3": "80DD8DC526A0",
+                "SHA256_12": "B9B56EE83B0A"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3278072",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 141208382,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4be06fe0-b056-420b-ae99-47e4e3627f0c/original=true/141208382.jpeg",
+              "nsfwLevel": 1,
+              "width": 1248,
+              "height": 1824,
+              "hash": "UcHBe~E2IAR*~BIVxaR*RNRQ%MR+%LV@R*j?",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208386,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c6f273bd-0b65-41ab-b299-995b43d88520/original=true/141208386.jpeg",
+              "nsfwLevel": 1,
+              "width": 1248,
+              "height": 1824,
+              "hash": "UGKT-{0300I^00oIxuV[00^j_N%0ovE3R5Rk",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208390,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e48ddc5b-6659-4d8e-9076-122059a7d910/original=true/141208390.jpeg",
+              "nsfwLevel": 1,
+              "width": 1248,
+              "height": 1824,
+              "hash": "UEGRD4aQ0QIvD*jF}[n,0MRj~CV[VpRkxAoM",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3278072"
+        }
+      ]
+    },
+    {
+      "id": 2861089,
+      "name": "苏连雁 Sulianyan",
+      "description": "<p>苏连雁原创角色 LoRA，基于 Anima Base v1.0 训练。</p><p>主要用于还原苏连雁的脸部、发型、紫色头花与金色发饰。支持原设汉服，也可以更换服装。</p><p>触发词：</p><p>sulianyan</p><p>基础提示词：</p><p>1girl, sulianyan, hair ornament, hair flower, purple flower</p><p>原设汉服提示词：</p><p>1girl, sulianyan, hair ornament, hair flower, purple flower, hanfu, round fan, holding fan, necklace, hair tassel</p><p>更换服装时请删除 hanfu、round fan、holding fan，只保留角色及发饰相关提示词。</p><p>推荐 LoRA 权重：0.8-1.0</p><p>推荐起始权重：0.9</p><p>本版本为 ep10。</p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit",
+        "Rent",
+        "Sell"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 15,
+      "availability": "Public",
+      "userId": 11754562,
+      "baseModels": [
+        "Anima"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 79,
+        "thumbsUpCount": 18,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "soda_Cookie",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9462218a-1e44-45aa-a385-46dcfcd3999a/width=96/soda_Cookie.jpeg"
+      },
+      "tags": [
+        "anime",
+        "character",
+        "hanfu",
+        "woman",
+        "anima"
+      ],
+      "modelVersions": [
+        {
+          "id": 3278033,
+          "index": 0,
+          "name": "v2",
+          "baseModel": "Anima",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T16:32:06.621Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 6,
+          "description": "<pre><code># 苏连雁 Sulianyan - v2\n\n《哀鸿：城破十日记》角色苏怜烟（苏连雁）的 Anima 角色 LoRA。\n\n本版本基于 Anima 系列底模训练，最终使用 24 epochs checkpoint。\n\n## 相比 V1 的改进\n\nv2 相比 V1，本版本主要改进如下：\n\n- 修复眼睛，瞳孔特征\n- 修复发饰左右镜像的问题\n- 换成现代服装、日常服装后，角色脸部仍能保持\n- 对近脸、半身和全身构图的适应性更好\n- 基础角色 LoRA 单独使用时已经可以完成大部分角色还原，不依赖辅助 LoRA 或 Detailer\n\n## 推荐设置\n\n推荐 LoRA 权重：0.80\n\n建议测试范围：0.70–1.00\n\n如果角色特征不明显，可以提高到 0.90–1.00。\n\n如果脸部、发型或原设服装绑定过强，可以降低到 0.70–0.75。\n\n## 触发词\n\n角色专属触发词：\n\nsulianyan\n\n基础提示词：\n\n1girl, sulianyan, solo, black hair, very long hair, grey eyes, small pupils, parted bangs, hair ornament, purple flower, hair tassel\n\ngrey eyes 和 small pupils 是普通提示词，不使用 sulianyaneyes 等特殊眼睛触发词。\n\n## 原服饰＋团扇\n\n1girl, sulianyan, solo, black hair, very long hair, grey eyes, small pupils, parted bangs, hair ornament, purple flower, hair tassel, hanfu, white robe, purple floral print, dark blue skirt, wide sleeves, holding fan, round fan, standing, looking at viewer\n\n## 原服饰、不持团扇\n\n1girl, sulianyan, solo, black hair, very long hair, grey eyes, small pupils, parted bangs, hair ornament, purple flower, hair tassel, hanfu, white robe, purple floral print, dark blue skirt, wide sleeves, standing, looking at viewer, empty hands\n\n如仍然出现团扇，可在负面提示中加入：\n\nholding fan, round fan\n\n## 非原服饰、不持团扇\n\n1girl, sulianyan, solo, black hair, very long hair, grey eyes, small pupils, parted bangs, hair ornament, purple flower, hair tassel, modern clothes, white blouse, black jacket, black skirt, standing, looking at viewer, empty hands\n\n换装时如出现汉服残留，可在负面提示中加入：\n\nhanfu, white robe, purple floral print, dark blue skirt, wide sleeves\n\n## 换发型\n\n马尾：\n\nponytail\n\n低扎长发：\n\nlow-tied long hair\n\n发髻：\n\nhair bun, single hair bun\n\n短发：\n\nshort hair\n\n使用短发时如仍然残留长发，可追加：\n\nlong hair, very long hair, hair over shoulder\n\n## 通用负面提示词\n\nworst quality, low quality, score_1, score_2, score_3, artist name, old, normal quality, anatomical nonsense, bad anatomy, bad hands, extra fingers, missing fingers, interlocked fingers, malformed hands, deformed face, asymmetrical eyes, blurry, watermark, logo, text, signature, transparent, cropped, out of frame, face backlighting, backlighting\n\n## 防止眼睛颜色漂移\n\n正面提示建议保留：\n\ngrey eyes, small pupils</code></pre>",
+          "trainedWords": [],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 3,
+            "thumbsUpCount": 1,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3162088,
+              "sizeKB": 179299.2578125,
+              "name": "sulianyan-anima_v2.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T16:19:58.713Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "E228241F",
+                "AutoV2": "A69C607967",
+                "SHA256": "A69C607967739A73371DA941D3CD77E8F52EE77034040BF8BF188FABFE79841F",
+                "CRC32": "A29F4D64",
+                "BLAKE3": "842060FC166067F36A901CE30DCC8CFCFB66213770077633A1AD2B0D3624E92E",
+                "AutoV3": "31A06B470542",
+                "SHA256_12": "A69C60796773"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3278033",
+              "primary": true
+            }
+          ],
+          "images": [],
+          "downloadUrl": "https://civitai.com/api/download/models/3278033"
+        },
+        {
+          "id": 3231946,
+          "index": 1,
+          "name": "v1.0",
+          "baseModel": "Anima",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-15T16:08:26.977Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 11,
+          "description": "<p># 苏连雁 Sulianyan - v1</p><p>《哀鸿：城破十日记》角色苏怜烟（苏连雁）的 Anima 角色 LoRA。 </p><p> 本版本基于 Anima 系列底模训练</p><p><br /><br />基础提示词：</p><p>sulianyan, 1girl, solo, black hair, very long hair, grey eyes, parted bangs, hair ornament, purple flower, hair tassel</p><p>原服饰＋团扇：</p><p>sulianyan, 1girl, solo, black hair, very long hair, grey eyes, parted bangs, hair ornament, purple flower, hair tassel, hanfu, white robe, purple floral print, dark blue skirt, wide sleeves, holding fan, round fan, standing, looking at viewer</p><p>推荐人物 LoRA 权重：先从 0.80 开始尝试。</p><p>原服饰、不持团扇：</p><p>sulianyan, 1girl, solo, black hair, very long hair, grey eyes, parted bangs, hair ornament, purple flower, hair tassel, hanfu, white robe, purple floral print, dark blue skirt, wide sleeves, standing, looking at viewer, empty hands</p><p>可在负面提示加入：</p><p>holding fan, round fan</p>",
+          "trainedWords": [],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 77,
+            "thumbsUpCount": 17,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3114335,
+              "sizeKB": 89698.421875,
+              "name": "sulianyan-2_v1.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-15T16:04:50.949Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "7AB2D202",
+                "AutoV2": "126BB7CF9B",
+                "SHA256": "126BB7CF9BA40A4AA3F6EA90567B18D1E7EF7D1E19DA70288D7AEF0BA1BAA8DE",
+                "CRC32": "445DB2FB",
+                "BLAKE3": "12A66D3C9AEEC350F7F7914F403DD9811361593B902B6803FBA7883B8B355D62",
+                "AutoV3": "FE92CBE49584",
+                "SHA256_12": "126BB7CF9BA4"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3231946",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 139791677,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/dfd3b645-ccbe-4dd6-a687-eaa8c218a4cf/original=true/139791677.jpeg",
+              "nsfwLevel": 1,
+              "width": 1920,
+              "height": 3072,
+              "hash": "U7ECnV01otk500-T9atT9XN1.An%58t9^+xB",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3231946"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "nextCursor": "2026-08-29 16:27:51.155|2899225",
+    "nextPage": "https://civitai.com/api/v1/models?types=LORA&baseModels=Anima&sort=Newest&period=AllTime&nsfw=false&limit=5&cursor=2026-08-29%2016%3A27%3A51.155%7C2899225"
+  }
+}

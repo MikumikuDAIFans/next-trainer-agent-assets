@@ -1,0 +1,7 @@
+{
+  "template": "sdxl-finetune-conservative.toml",
+  "page": "dreambooth",
+  "expected": "redirect",
+  "got": "redirect",
+  "normalized_type": "sdxl-finetune"
+}

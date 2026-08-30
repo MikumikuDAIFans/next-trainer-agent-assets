@@ -1,0 +1,17 @@
+{
+  "template": "anima-lora-style-automagic.toml",
+  "page": "anima-lora",
+  "result": "ok",
+  "forced_train_type": "anima-lora",
+  "inferred_train_type": "anima-lora",
+  "notice": null,
+  "negative_control": {
+    "page": "flux-lora",
+    "result": "redirect"
+  },
+  "normalized_diff": {
+    "added": {},
+    "removed": {},
+    "changed": {}
+  }
+}

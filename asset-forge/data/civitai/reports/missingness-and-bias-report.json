@@ -1,0 +1,48 @@
+{
+  "stage": "Stage 1 Phase 2/3 MVP sample",
+  "startedAt": "2026-08-29T16:55:38Z",
+  "completedAt": "2026-08-29T16:55:43Z",
+  "strata": {
+    "sd15": "SD 1.5",
+    "sd2": "SD 2.1",
+    "sdxl": "SDXL 1.0",
+    "flux": "Flux.1 D",
+    "anima": "Anima",
+    "krea2": "Krea 2",
+    "lumina2": "Lumina 2"
+  },
+  "requestCount": 7,
+  "successfulResponses": 7,
+  "failedResponses": 0,
+  "versionLevelCount": 28,
+  "modelLevelUniqueCount": 21,
+  "perStratumVersionCounts": {
+    "sd15": 5,
+    "sd2": 4,
+    "sdxl": 5,
+    "flux": 5,
+    "anima": 4,
+    "krea2": 5,
+    "lumina2": 0
+  },
+  "missingnessDescriptionExtractedFields": {
+    "rank": 1.0,
+    "alpha": 1.0,
+    "batch_size": 1.0,
+    "steps": 1.0,
+    "epochs": 1.0,
+    "learning_rate": 1.0,
+    "resolution": 1.0
+  },
+  "structuredTrainingDetailsPresentCount": 0,
+  "confidencePolicy": "description extraction is low confidence; structured trainingDetails is retained separately",
+  "popularityPolicy": "download/favorite/rating fields are not used as technical correctness evidence",
+  "samplingStatus": "exploratory; no stratum reaches the 8 model-level threshold from this MVP batch",
+  "limits": {
+    "batchMaxRequests": 100,
+    "minSpacingSeconds": 0.5,
+    "maxRetries": 3,
+    "rawSoftLimitBytes": 524288000,
+    "workers": 2
+  }
+}

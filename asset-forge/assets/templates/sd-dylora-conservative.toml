@@ -1,0 +1,16 @@
+# reconstructed-2026-08-30; original bytes unavailable
+template_version = "2026-08-30-reconstructed"
+scope = "sd-dylora-conservative"
+base_model = "sd"
+model_train_type = "sd-lora"
+network_module = "networks.dylora"
+dylora_unit = 4
+network_dim = 32
+network_alpha = 32
+resolution = "512,512"
+enable_bucket = true
+bucket_no_upscale = true
+enable_preview = true
+sample_width = 512
+sample_height = 512
+sample_every_n_epochs = 2

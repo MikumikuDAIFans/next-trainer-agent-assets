@@ -1,0 +1,17 @@
+{
+  "template": "anima-fast-lora-style.toml",
+  "page": "anima-lora-fast",
+  "result": "ok",
+  "forced_train_type": "anima-lora-fast",
+  "inferred_train_type": "anima-lora-fast",
+  "notice": null,
+  "negative_control": {
+    "page": "flux-lora",
+    "result": "redirect"
+  },
+  "normalized_diff": {
+    "added": {},
+    "removed": {},
+    "changed": {}
+  }
+}

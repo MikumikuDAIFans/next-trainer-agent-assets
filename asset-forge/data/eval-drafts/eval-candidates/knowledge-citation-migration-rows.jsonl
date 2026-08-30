@@ -1,0 +1,64 @@
+{"id": "kc-001", "question": "开 shuffle_caption 后触发词怎么保稳定？weighted 语法和 shuffle 能同开吗？", "expect_files": ["knowledge/datasets/caption-tag-trigger-strategy.md"], "must": ["keep_tokens", "不推荐", "必须明确边界：承诺 dropout 率最优值"]}
+{"id": "kc-002", "question": "train_data_dir 直接铺图有什么风险？合法子目录长什么样？", "expect_files": ["knowledge/datasets/preparation-checklist.md"], "must": ["zkz", "move", "必须明确边界：说自动移动是无害便利"]}
+{"id": "kc-003", "question": "LoRA 页面加正则化图有产品依据吗？prior loss 属于哪个流程？", "expect_files": ["knowledge/datasets/regularization-images.md"], "must": ["DreamBooth", "unproven", "必须明确边界：把 reg 图说成 LoRA 防遗忘特性"]}
+{"id": "kc-004", "question": "角色 LoRA 的触发词怎么定？覆盖矩阵指什么？", "expect_files": ["knowledge/directions/character-identity.md"], "must": ["trigger", "覆盖", "必须明确边界：给出保证身份一致的具体步数"]}
+{"id": "kc-005", "question": "只想学服装不想学模特脸，数据集要怎么设计？", "expect_files": ["knowledge/directions/clothing-accessory.md"], "must": ["wearer", "解耦", "必须明确边界：说单模特单服装就够"]}
+{"id": "kc-006", "question": "多概念一个 LoRA 训练要注意什么？组合是保证吗？", "expect_files": ["knowledge/directions/multi-concept-training.md"], "must": ["token", "balance", "必须明确边界：承诺 N 概念等于 N 个单独 LoRA"]}
+{"id": "kc-007", "question": "产品 LoRA 文字 logo 复刻靠谱吗？视角覆盖为什么关键？", "expect_files": ["knowledge/directions/object-product-concept.md"], "must": ["不可靠", "视角", "必须明确边界：承诺精确 logo 复刻"]}
+{"id": "kc-008", "question": "姿势 LoRA 能当 ControlNet 用吗？", "expect_files": ["knowledge/directions/pose-expression-features.md"], "must": ["tendency", "ControlNet", "必须明确边界：承诺受控姿态输出"]}
+{"id": "kc-009", "question": "场景/领域迁移选 LoRA 还是全量微调？风险差在哪？", "expect_files": ["knowledge/directions/scene-domain-migration.md"], "must": ["遗忘", "first-class", "必须明确边界：把 LoRA 说成能注入任意能力"]}
+{"id": "kc-010", "question": "本产品能训练概念 slider 或擦除概念吗？", "expect_files": ["knowledge/directions/slider-erasure-boundaries.md"], "must": ["not first-class", "erasure", "必须明确边界：给出 slider 教程"]}
+{"id": "kc-011", "question": "画风 LoRA 最容易泄漏什么？光影质感算画风方向吗？", "expect_files": ["knowledge/directions/style-training.md"], "must": ["co-varies", "style", "必须明确边界：把风格强度给出校准数值"]}
+{"id": "kc-012", "question": "修手 LoRA 靠什么起效？enable_base_weight 是修正机制吗？", "expect_files": ["knowledge/directions/utility-correction-lora.md"], "must": ["contrast", "差异炼丹", "必须明确边界：承诺自动质量修正"]}
+{"id": "kc-013", "question": "Anima Fast 为什么 preset 用 AdamW8bit 而不是 Automagic？它的运行环境要求是什么？", "expect_files": ["knowledge/engines/anima-fast-workflow-guide.md"], "must": ["Automagic", "独立", "必须明确边界：承诺 2.5x 实测提速"]}
+{"id": "kc-014", "question": "训练步 OOM 的降载梯子顺序是什么？低显存能承诺 dim-X@1024 装进 8G 吗？", "expect_files": ["knowledge/errors/oom-performance-playbook.md"], "must": ["cache", "gradient_checkpointing", "必须明确边界：给 VRAM 数字承诺"]}
+{"id": "kc-015", "question": "SimpleTuner 的 dataset manifest 能否直接放进 Next Trainer？", "expect_files": ["knowledge/external-channels/alternative-tooling-evidence.md"], "must": ["no", "mapping", "必须明确边界：承诺跨工具配置兼容"]}
+{"id": "kc-016", "question": "xFormers 支持某 attention 实现，是否意味着所有 Next Trainer 页面都能开启？", "expect_files": ["knowledge/external-channels/attention-memory-runtime.md"], "must": ["no", "schema", "必须明确边界：把外部 runtime 能力当作页面支持"]}
+{"id": "kc-017", "question": "看到 AdamW8bit 就能保证低显存训练成功吗？", "expect_files": ["knowledge/external-channels/bitsandbytes-optimizer-context.md"], "must": ["no", "runtime", "必须明确边界：承诺低显存成功"]}
+{"id": "kc-018", "question": "自动 caption 是否可以跳过人工抽样直接训练？", "expect_files": ["knowledge/external-channels/captioning-blip-lavis-review.md"], "must": ["不可以", "抽样", "必须明确边界：跳过人工复核"]}
+{"id": "kc-019", "question": "CLIP 分数最高的 checkpoint 是否必然是最佳发布版本？", "expect_files": ["knowledge/external-channels/clip-evaluation-boundaries.md"], "must": ["不必然", "人工抽样", "必须明确边界：单一总分决定"]}
+{"id": "kc-020", "question": "Concept Sliders 论文是否证明当前 Next Trainer 支持 slider？", "expect_files": ["knowledge/external-channels/concept-sliders-research-channel.md"], "must": ["no", "unsupported", "必须明确边界：把论文当作产品支持证明"]}
+{"id": "kc-021", "question": "DataComp 的过滤阈值能否直接作为本地数据集默认值？", "expect_files": ["knowledge/external-channels/dataset-curation-datacomp.md"], "must": ["不能", "重新验证", "必须明确边界：直接作为默认值"]}
+{"id": "kc-022", "question": "改变分片顺序后能否复用原 exposure budget？", "expect_files": ["knowledge/external-channels/dataset-ingestion-provenance.md"], "must": ["不能", "重新记录", "必须明确边界：直接复用"]}
+{"id": "kc-023", "question": "FiftyOne 默认视图是否能替代按方向分层抽样？", "expect_files": ["knowledge/external-channels/dataset-visual-qa-fiftyone.md"], "must": ["不能", "分层", "必须明确边界：默认视图替代"]}
+{"id": "kc-024", "question": "Diffusers 的 prior-preservation 参数能否直接填入 LoRA 模板？", "expect_files": ["knowledge/external-channels/diffusers-dreambooth-prior-preservation.md"], "must": ["DreamBooth", "no", "必须明确边界：把 prior preservation 说成通用 LoRA 能力"]}
+{"id": "kc-025", "question": "能否把 Diffusers LoRA YAML 直接改名为 Next Trainer TOML？", "expect_files": ["knowledge/external-channels/diffusers-lora-translation.md"], "must": ["no", "validator", "必须明确边界：直接复制外部配置"]}
+{"id": "kc-026", "question": "复制 Diffusers example 的字段到 Next Trainer TOML 是否足够？", "expect_files": ["knowledge/external-channels/examples-config-translation.md"], "must": ["不足", "validator", "必须明确边界：盲抄默认值"]}
+{"id": "kc-027", "question": "API 响应被截断时，是否可以按空字段统计缺失？", "expect_files": ["knowledge/external-channels/hf-metadata-missingness.md"], "must": ["unknown", "size-limit", "必须明确边界：补默认值"]}
+{"id": "kc-028", "question": "Hugging Face 模型卡能否直接决定 Next Trainer 的模板字段？", "expect_files": ["knowledge/external-channels/hf-model-card-provenance.md"], "must": ["不能", "validator", "必须明确边界：把下载量当作技术证据"]}
+{"id": "kc-029", "question": "编辑指令数据能否直接套用角色 LoRA 模板？", "expect_files": ["knowledge/external-channels/instruction-editing-objective-boundary.md"], "must": ["不能", "目标函数", "必须明确边界：直接套用"]}
+{"id": "kc-030", "question": "使用 JoyCaption 生成 caption 后，是否可以跳过触发词和泄漏检查？", "expect_files": ["knowledge/external-channels/joycaption-caption-review.md"], "must": ["no", "review", "必须明确边界：跳过触发词检查"]}
+{"id": "kc-031", "question": "Kohya GUI 的 preset 能否直接作为 Next Trainer TOML？", "expect_files": ["knowledge/external-channels/kohya-gui-comparison.md"], "must": ["no", "mapping", "必须明确边界：直接复制 GUI preset"]}
+{"id": "kc-032", "question": "LyCORIS 仓库有 LoHa，是否可以在每个页面生成 LoHa 模板？", "expect_files": ["knowledge/external-channels/lycoris-upstream-boundaries.md"], "must": ["page", "validator", "必须明确边界：把上游算法存在当作全页面支持"]}
+{"id": "kc-033", "question": "Musubi-Tuner README 是否足以证明 Krea 2 模板可导入？", "expect_files": ["knowledge/external-channels/musubi-tuner-krea2-contract.md"], "must": ["validator", "upstream", "必须明确边界：把上游引擎文档当成导入证明"]}
+{"id": "kc-034", "question": "OneTrainer 的字段名能否直接加入 Next Trainer？", "expect_files": ["knowledge/external-channels/onetrainer-comparison.md"], "must": ["no", "contract", "必须明确边界：承诺跨工具字段兼容"]}
+{"id": "kc-035", "question": "PEFT 支持某 adapter 是否代表 Next Trainer 页面支持它？", "expect_files": ["knowledge/external-channels/peft-adapter-taxonomy.md"], "must": ["no", "validator", "必须明确边界：把 PEFT 库支持当作产品支持"]}
+{"id": "kc-036", "question": "启用 AMP 是否可以不记录精度和硬件条件？", "expect_files": ["knowledge/external-channels/pytorch-runtime-reproducibility.md"], "must": ["不可以", "复现", "必须明确边界：省略硬件"]}
+{"id": "kc-037", "question": "safetensors 文件没有 metadata 时能否按常见值补齐？", "expect_files": ["knowledge/external-channels/safetensors-checkpoint-metadata.md"], "must": ["unknown", "no", "必须明确边界：用默认值填补缺失 metadata"]}
+{"id": "kc-038", "question": "sd-scripts 中出现的字段能否直接加入 Next Trainer 模板？", "expect_files": ["knowledge/external-channels/sd-scripts-config-reading.md"], "must": ["route", "validator", "必须明确边界：把外部示例值当作产品默认"]}
+{"id": "kc-039", "question": "Anima 全量微调有出厂 preset 吗？参数怎么给？", "expect_files": ["knowledge/model-families/anima-full-finetune-guide.md"], "must": ["unknown", "必须明确边界：编造 finetune LR/步数"]}
+{"id": "kc-040", "question": "Anima 角色 LoRA 应该从哪套出厂参数起步？预览图约定是什么？", "expect_files": ["knowledge/model-families/anima-lora-workflow-guide.md"], "must": ["anima-lora-character-automagic", "1024", "必须明确边界：把 1000-3000 步说成保证值"]}
+{"id": "kc-041", "question": "Chroma 在本产品里是什么？preset 里哪几个字段必须整体保留？", "expect_files": ["knowledge/model-families/chroma-flux-page-variant.md"], "must": ["model_type", "guidance_scale", "必须明确边界：说有独立 Chroma 页面"]}
+{"id": "kc-042", "question": "Flux 页面必须配齐哪四个资产？网络默认 dim/alpha 为什么和 SD 不同？", "expect_files": ["knowledge/model-families/flux-lora-workflow-guide.md"], "must": ["t5xxl", "network_dim", "必须明确边界：把默认值说成实测最优组合"]}
+{"id": "kc-043", "question": "Flux 全量微调 / SD3 / ControlNet / TextualInversion 支持吗？", "expect_files": ["knowledge/model-families/hidden-and-unsupported-boundaries.md"], "must": ["unsupported", "必须明确边界：把隐藏后端说成可用"]}
+{"id": "kc-044", "question": "Krea 2 训练需要哪些资产和运行时？官方推荐措辞能直接引用吗？", "expect_files": ["knowledge/model-families/krea2-lora-musubi-guide.md"], "must": ["qwen3-vl", "musubi", "必须明确边界：把项目 preset 措辞当外部官方事实"]}
+{"id": "kc-045", "question": "现在能用 Lumina2 页面训练吗？错在哪一层？", "expect_files": ["knowledge/model-families/lumina2-known-breakage.md"], "must": ["unsupported", "backend", "必须明确边界：给出可绕过的工作流"]}
+{"id": "kc-046", "question": "SD DreamBooth 页面 schema 默认学习率是多少？和 LoRA 页面差几个数量级？", "expect_files": ["knowledge/model-families/sd-dreambooth-finetune-guide.md"], "must": ["1e-6", "5e-7", "必须明确边界：把默认值说成实测最优"]}
+{"id": "kc-047", "question": "SD1.5 LoRA 页面默认网络维度是多少？有什么页面陷阱？", "expect_files": ["knowledge/model-families/sd15-lora-workflow-guide.md"], "must": ["sdxl-lora", "32", "必须明确边界：给出实测最优步数表"]}
+{"id": "kc-048", "question": "给 SD2.1 v-pred 底模训 LoRA 必须设置哪些字段？", "expect_files": ["knowledge/model-families/sd2-lora-conditions.md"], "must": ["v2", "v_parameterization", "必须明确边界：说有独立 SD2 工作台"]}
+{"id": "kc-049", "question": "Pony/NoobXL 在本产品里是独立训练器吗？LoRA 能跨派系直接混用吗？", "expect_files": ["knowledge/model-families/sdxl-derived-cohorts.md"], "must": ["sdxl-lora", "base", "必须明确边界：承诺跨派系兼容"]}
+{"id": "kc-050", "question": "SDXL 全量微调的 TE 学习率字段是什么？full_bf16 适用条件？", "expect_files": ["knowledge/model-families/sdxl-full-finetune-guide.md"], "must": ["learning_rate_te1", "SDXL", "必须明确边界：说这个页面能出 LoRA"]}
+{"id": "kc-051", "question": "SDXL LoRA 的 starting box 数值出自哪里？能当实测保证吗？", "expect_files": ["knowledge/model-families/sdxl-lora-workflow-guide.md"], "must": ["heuristic", "sdxl-lora-parameter-baseline", "必须明确边界：把 heuristic 升格为推荐值"]}
+{"id": "kc-052", "question": "在 Anima 页面选了 VeRA/LoRA-FA 实际训到的是什么？", "expect_files": ["knowledge/network-algos/anima-schema-only-adapters.md"], "must": ["networks.lora_anima", "plain", "必须明确边界：把 UI 选项当后端能力"]}
+{"id": "kc-053", "question": "DyLoRA 的两个入口分别是什么？能直接从工作台导出多 rank 吗？", "expect_files": ["knowledge/network-algos/dylora-guide.md"], "must": ["networks.dylora", "lycoris", "必须明确边界：承诺 slice-export"]}
+{"id": "kc-054", "question": "LoKr 在哪些路径有产品级证明？lokr_factor=-1 什么意思？", "expect_files": ["knowledge/network-algos/lokr-guide.md"], "must": ["Anima", "无穷", "必须明确边界：宣称 LoKr 全面优于 LoRA"]}
+{"id": "kc-055", "question": "LyCORIS 有哪些 algo？LoHa/LoKr/IA3 的 dropout 有什么特殊性？", "expect_files": ["knowledge/network-algos/lycoris-family-guide.md"], "must": ["locon", "不支持", "必须明确边界：把页面可用性说成实测效果"]}
+{"id": "kc-056", "question": "SD1.5 页面选 OFT 为什么报错？Flux 的 OFT 和 SDXL 的是同一个模块吗？", "expect_files": ["knowledge/network-algos/oft-guide.md"], "must": ["sdxl-lora", "oft_flux", "必须明确边界：建议绕过前端诊断"]}
+{"id": "kc-057", "question": "T-LoRA 能用在哪？收敛比 LoRA 慢正常吗？", "expect_files": ["knowledge/network-algos/tlora-anima-guide.md"], "must": ["Anima", "慢", "必须明确边界：把动态 rank 说成动态采样"]}
+{"id": "kc-058", "question": "cache_text_encoder_outputs 和哪个字段硬冲突？cache_latents 呢？", "expect_files": ["knowledge/parameters/cache-precision-guide.md"], "must": ["shuffle_caption", "color_aug", "必须明确边界：承诺 fp8 质量等价"]}
+{"id": "kc-059", "question": "平铺目录自动建议的 repeat 档位是什么？步数公式和日志谁为准？", "expect_files": ["knowledge/parameters/exposure-budget-steps.md"], "must": ["7", "日志", "必须明确边界：给 universal 最优步数"]}
+{"id": "kc-060", "question": "用 Prodigy 时 unet_lr 必须是多少？DAdapt 系配什么 scheduler？", "expect_files": ["knowledge/parameters/optimizer-scheduler-guide.md"], "must": ["1", "constant", "必须明确边界：承诺某优化器最优"]}
+{"id": "kc-061", "question": "共享默认 512,512 直接拿去训 SDXL 行吗？SDXL bucket step 下限？", "expect_files": ["knowledge/parameters/resolution-bucket.md"], "must": ["1024", "32", "必须明确边界：给出分辨率质量对照表"]}
+{"id": "kc-062", "question": "save_state/resume 在哪类页面有契约？LoRA 页等价能力未知吗？", "expect_files": ["knowledge/training/checkpoint-selection.md"], "must": ["DreamBooth", "unknown", "必须明确边界：说 epoch 越靠后越好"]}
+{"id": "kc-063", "question": "enable_preview 默认值是什么？Anima 的预览约定是什么？", "expect_files": ["knowledge/training/preview-sampling-evaluation.md"], "must": ["false", "1024", "必须明确边界：把预览设置当推理推荐"]}
+{"id": "kc-064", "question": "发布 LoRA 时 base 和触发词字段为什么要逐字？strength band 没有实测怎么写？", "expect_files": ["knowledge/training/repro-publishing-workflow.md"], "must": ["verbatim", "test from low strength", "必须明确边界：把借用数值写进发布说明"]}

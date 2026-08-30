@@ -1,0 +1,215 @@
+{
+  "templates": 13,
+  "failures": [],
+  "result": "pass",
+  "rows": [
+    {
+      "template": "anima-fast-lora-character.toml",
+      "page": "anima-lora-fast",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "5caa130e2e8663a11ef8c3710073418d2ed2201d2f0004e48f918633db7c43fc",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "anima-fast-lora-style.toml",
+      "page": "anima-lora-fast",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "ceeabe675d2c005531a9cc12b5205c18f5c97f6f5aa8bd9005e2bc3b0fbd1a1a",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "anima-lora-character-automagic.toml",
+      "page": "anima-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "041f73ef739a713263ed167b1c8332fd5b2e42dbc54c2f790d0c0d163d996179",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "anima-lora-lokr-conservative.toml",
+      "page": "anima-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "76825fff93f1da61ce90317ea1962febd7f3e0c93b6d0404ba127ebc24da40b0",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "anima-lora-style-automagic.toml",
+      "page": "anima-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "0e94e5fdcdaa2cdb89eb55f6965ac6b6c8893ba710910d09d68410d1d588d73c",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "anima-lora-tlora-conservative.toml",
+      "page": "anima-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "78f296812db4812e5c940358a82fda000abcedce905ce16d9fd8d765ec4cb571",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "chroma-lora-conservative.toml",
+      "page": "flux-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "krea2-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "6e9ff1a3fba009e325fc5bfbd93aae66a491f200c9f25e8218ac647a2d44d1e8",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": false
+    },
+    {
+      "template": "flux-lora-conservative.toml",
+      "page": "flux-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "sdxl-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "3a24288080c99a8041218191eefe847569d25dcd5bb8e2ded2979e36046faca5",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": false
+    },
+    {
+      "template": "flux-lora-oft-conservative.toml",
+      "page": "flux-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "sdxl-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "4c621a0b5521bb3bf406c168071871a32f64ec1aebf91c98d70d373754cca75e",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "krea2-lora-conservative.toml",
+      "page": "krea2-lora",
+      "result": "ok",
+      "negativeControl": {
+        "page": "lora-master",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "a4c3bf7cf7e7fcb7f12c2e53203d6983e1384940bf04a6dfb99ea83cf935d0b7",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": false
+    },
+    {
+      "template": "sd-dreambooth-conservative.toml",
+      "page": "dreambooth",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "ef135c5bd0367f1dac9186b229c2292eaa49c2230ef71d7ba4562c5e5412c3af",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": false
+    },
+    {
+      "template": "sd-dylora-conservative.toml",
+      "page": "lora-master",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "a7c3f5e24e29bd2fae75ffab1229a94ce98a89d64f8b9e254ca4b50446054757",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": true
+    },
+    {
+      "template": "sd2-lora-conservative.toml",
+      "page": "lora-master",
+      "result": "ok",
+      "negativeControl": {
+        "page": "flux-lora",
+        "result": "redirect"
+      },
+      "normalizedConfigSha256": "c5d3bbc5186f5813ebf2ed9e7822323b13d2983c7309d1dc5f34e6c9d2ccc215",
+      "normalizedDiff": {
+        "added": {},
+        "removed": {},
+        "changed": {}
+      },
+      "reconstructed": false
+    }
+  ]
+}

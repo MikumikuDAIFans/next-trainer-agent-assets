@@ -1,0 +1,8 @@
+{
+  "rebuilt_files": 90,
+  "hash_parity": true,
+  "gates": "lint+templates re-run on temp root",
+  "unexpected_files": [],
+  "failures": [],
+  "result": "pass"
+}

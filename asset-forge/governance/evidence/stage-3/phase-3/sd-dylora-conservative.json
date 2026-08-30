@@ -1,0 +1,17 @@
+{
+  "template": "sd-dylora-conservative.toml",
+  "page": "lora-master",
+  "result": "ok",
+  "forced_train_type": "sd-lora",
+  "inferred_train_type": "sd-lora",
+  "notice": null,
+  "negative_control": {
+    "page": "flux-lora",
+    "result": "redirect"
+  },
+  "normalized_diff": {
+    "added": {},
+    "removed": {},
+    "changed": {}
+  }
+}

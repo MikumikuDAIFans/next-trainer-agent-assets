@@ -1,0 +1,71 @@
+{
+  "capturedAt": "2026-08-30T00:29:47.6708452+08:00",
+  "stage": "Stage 1",
+  "status": "ready-to-start",
+  "stage0Gate": "pass-with-boundary",
+  "supportMatrix": {
+    "entries": 17,
+    "sourceCommit": "9cd23996d1bd830b4a4fc0187e063e8a2ab2860a",
+    "errors": 0
+  },
+  "proxy": {
+    "url": "http://127.0.0.1:11809",
+    "available": true
+  },
+  "civitaiProbe": {
+    "modelId": 264290,
+    "trainingStatus": null,
+    "trainingDetails": null,
+    "modelVersionId": 882225,
+    "httpStatus": 200,
+    "elapsedMs": 1069,
+    "responseBytes": 16783,
+    "descriptionPresent": true,
+    "url": "https://civitai.com/api/v1/model-versions/882225"
+  },
+  "boundedConcurrency": {
+    "networkSamplingStarted": false,
+    "capabilityTest": "ThreadPoolExecutor(max_workers=2)",
+    "passed": true
+  },
+  "limits": {
+    "minIntervalSeconds": 0.5,
+    "batchMaxRequests": 100,
+    "safetensorsTotalMaxBytes": 52428800,
+    "maxRetries": 3,
+    "rawSoftLimitBytes": 524288000,
+    "safetensorsRangeMaxBytes": 2097152
+  },
+  "credentials": {
+    "privateApi": false,
+    "token": false,
+    "cookie": false
+  },
+  "downloads": {
+    "root": "E:\\OpenSourceTeamWork\\AgentAssets",
+    "images": false,
+    "defaultFullWeights": false,
+    "analysisOnly": true,
+    "unnecessaryFiles": false
+  },
+  "pathChecks": [
+    {
+      "path": "E:\\OpenSourceTeamWork\\AgentAssets\\02_来源与证据",
+      "withinAgentAssets": true
+    },
+    {
+      "path": "E:\\OpenSourceTeamWork\\AgentAssets\\03_Civitai样本",
+      "withinAgentAssets": true
+    },
+    {
+      "path": "E:\\OpenSourceTeamWork\\AgentAssets\\06_评测与校验\\evidence\\stage-1",
+      "withinAgentAssets": true
+    }
+  ],
+  "repositories": {
+    "projectStatus": "dirty-user-changes-recorded",
+    "gitWritesPerformed": false,
+    "agentAssetsStatus": "clean"
+  },
+  "migration": "awaiting-user-approval"
+}

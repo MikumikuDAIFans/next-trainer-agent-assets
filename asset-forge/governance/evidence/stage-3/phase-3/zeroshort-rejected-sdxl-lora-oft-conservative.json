@@ -1,0 +1,7 @@
+{
+  "template": "sdxl-lora-oft-conservative.toml",
+  "page": "sdxl-lora",
+  "expected": "ok",
+  "got": "ok",
+  "normalized_type": "sdxl-lora"
+}

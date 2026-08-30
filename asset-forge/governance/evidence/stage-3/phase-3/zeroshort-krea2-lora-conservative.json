@@ -1,0 +1,17 @@
+{
+  "template": "krea2-lora-conservative.toml",
+  "page": "krea2-lora",
+  "result": "ok",
+  "forced_train_type": "krea2-lora",
+  "inferred_train_type": "krea2-lora",
+  "notice": null,
+  "negative_control": {
+    "page": "lora-master",
+    "result": "redirect"
+  },
+  "normalized_diff": {
+    "added": {},
+    "removed": {},
+    "changed": {}
+  }
+}

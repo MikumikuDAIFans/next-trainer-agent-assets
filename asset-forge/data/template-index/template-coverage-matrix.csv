@@ -1,0 +1,24 @@
+page_or_slot,validator_page,train_type,formal_coverage,candidate_plan,status,notes
+anima-lora,anima-lora,anima-lora,anima-lora-conservative.toml,none-new,covered-formal,formal 模板已覆盖 conservative 位；新变体需字段差异证据（角色/风格 preset 变体延后到 gray diff 后评估）
+anima-lora-fast,anima-lora-fast,anima-lora-fast,anima-lora-fast-conservative.toml,none-new,covered-formal,含 C-015 所需 fast marker（static_token_count/compile_mode）
+lora-master,sd-lora,sd-lora,sd15-lora-conservative.toml,none-new,covered-formal,SD1.5 位由正式模板覆盖
+lora-master,sd-lora,sd-lora (v2 branch),none,sd2-lora-conservative.toml,candidate,SD2.x 条件支持契约对（v2/v_parameterization）是独立可教面，有 schema 字段级差异证据
+lora-master,sdxl-lora,sdxl-lora,sdxl-lora-conservative.toml,none-new,covered-formal,
+flux-lora,flux-lora,flux-lora,none,flux-lora-conservative.toml,candidate,无出厂 preset；模板只编码合同字段，LR/dim 显式不设并记录 unknown-here（C-014）
+flux-lora,flux-lora,flux-lora model_type=chroma,none,chroma-lora-conservative.toml,candidate,字段差异证据=出厂 chroma preset 五字段整体（非改输出名式伪多样性）
+krea2-lora,krea2-lora,krea2-lora,none,krea2-lora-conservative.toml,candidate,出厂 preset + 页面 schema 双 L1 锚点
+dreambooth,dreambooth,sd-dreambooth,none,sd-dreambooth-conservative.toml,candidate,核心教学点=全量微调 LR 契约默认（1e-6/5e-7）与 save_state/resume；无路径字段
+dreambooth,dreambooth,sdxl-finetune,none,none,rejected-import-quirk,research-rejected/sdxl-finetune-conservative.toml：真实 import validator 无法 ok 接受带 learning_rate_te1/te2（SDXL 家族 marker）的 sdxl-finetune 配置——dreambooth 页 redirect、master 页虽 ok 但类型漂移为 sdxl-lora；见 failure report 与冲突登记 C-016
+anima-finetune,-,anima-finetune,none,none,blocked-no-contract,无 PAGE_SPECS 导入校验合同（validate_config_import 无该页规则=弱通过不可作契约证明）；亦无出厂 preset；不生成候选
+lumina-lora,-,lumina-lora/lumina2-lora,none,none,blocked-broken,C-001/C-002 端到端断链；禁止生成模板
+lora-basic,-,sd-lora legacy,none,none,blocked-legacy,C-010 排除当前 module；模板必须指向现行页面
+flux-finetune,-,flux-finetune,none,none,blocked-ui-hidden,C-008 后端隐藏非受支持流程
+sd3,-,sd3-lora alias,none,none,blocked-alias,C-007：sd3-lora 别名归一到 anima；实际 SD3 不支持
+controlnet,-,-,none,none,blocked-unsupported,UI/API 不暴露
+textual-inversion,-,-,none,none,blocked-unsupported,UI/API 不暴露
+anima-lora,anima-lora,anima-lora,anima-lora-conservative.toml,"anima-lora-character-automagic.toml; anima-lora-style-automagic.toml",candidate,新增方向模板由 shipped character/style preset 提供字段差异证据；不代表效果最优
+anima-lora-fast,anima-lora-fast,anima-lora-fast,anima-lora-fast-conservative.toml,"anima-fast-lora-character.toml; anima-fast-lora-style.toml",candidate,新增方向模板由 shipped Fast character/style preset 提供字段差异证据；运行时仍为 conditional
+anima-lora,anima-lora,anima-lora,anima-lora-conservative.toml,"anima-lora-lokr-conservative.toml; anima-lora-tlora-conservative.toml",candidate,算法模板由当前 Anima schema/adapter contract 证明；不代表效果最优
+sdxl-lora,sdxl-lora,sdxl-lora,sdxl-lora-conservative.toml,none,rejected-negative-control,sdxl-lora-oft-conservative.toml 在 SDXL 与 sd-lora 均返回 ok，负对照泄漏；移入 research-rejected，不进入候选根目录
+flux-lora,flux-lora,flux-lora,none,"flux-lora-conservative.toml; flux-lora-oft-conservative.toml",candidate,Flux native OFT 与 LoRA 为不同模块合同；均需页面 validator
+lora-master,sd-lora,sd-lora (DyLoRA branch),none,sd-dylora-conservative.toml,candidate,当前 lora-master schema 明确暴露 networks.dylora 与 dylora_unit；真实 validator 强页 ok、负对照 redirect

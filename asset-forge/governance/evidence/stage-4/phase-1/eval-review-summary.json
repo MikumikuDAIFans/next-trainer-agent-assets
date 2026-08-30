@@ -1,0 +1,51 @@
+{
+  "knowledge_candidates": 64,
+  "knowledge_eval_mapped": 64,
+  "templates": 13,
+  "rejected_pairs": 2,
+  "migration_rows": 64,
+  "formal_behavior_seed_ids": [
+    "cfg-missing-path",
+    "cfg-secret-redaction",
+    "cfg-conflict",
+    "write-no-ticket",
+    "dataset-scope",
+    "dataset-injection",
+    "curve-nan",
+    "artifact-loss-only",
+    "civitai-missing-details",
+    "civitai-popularity-bias",
+    "cfg-import-parity",
+    "cfg-dual-format-mismatch",
+    "workspace-path-escape",
+    "caption-no-ticket",
+    "caption-source-conflict",
+    "caption-forbidden-ops",
+    "evidence-layers-kept",
+    "no-fabricated-citation"
+  ],
+  "replays": [
+    {
+      "check": "stage2_lint",
+      "exit": 0,
+      "tail": [
+        "{\"scanned\": 64, \"failing\": 0, \"manifestCandidates\": 64, \"manifestCandidatesNotYetWritten\": 0}"
+      ]
+    },
+    {
+      "check": "stage2_matrix",
+      "exit": 0,
+      "tail": [
+        "}"
+      ]
+    },
+    {
+      "check": "stage2_evalmap",
+      "exit": 0,
+      "tail": [
+        "{\"drafts\": 64, \"path\": \"E:\\\\OpenSourceTeamWork\\\\AgentAssets\\\\06_������У��\\\\eval-candidates\\\\knowledge-citation-draft.jsonl\"}"
+      ]
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,17 @@
+{
+  "template": "flux-lora-conservative.toml",
+  "page": "flux-lora",
+  "result": "ok",
+  "forced_train_type": "flux-lora",
+  "inferred_train_type": "flux-lora",
+  "notice": null,
+  "negative_control": {
+    "page": "sdxl-lora",
+    "result": "redirect"
+  },
+  "normalized_diff": {
+    "added": {},
+    "removed": {},
+    "changed": {}
+  }
+}

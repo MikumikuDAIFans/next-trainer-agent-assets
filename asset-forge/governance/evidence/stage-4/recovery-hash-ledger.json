@@ -1,0 +1,164 @@
+{
+  "files": 26,
+  "byteExactRecovered": 10,
+  "reconstructed": 16,
+  "missing": 0,
+  "rows": [
+    {
+      "file": "anima-fast-lora-character.evidence.md",
+      "oldFrozenSha256": "c9045771366c889694709588f86a7f8fb79c9fa1871cef4f5fa9708806e6b17e",
+      "currentSha256": "a8f781a3e1813155419ffc86f8441c9bfbb29a5bdc98b41546baf2bc1c0afad1",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-fast-lora-character.toml",
+      "oldFrozenSha256": "85098f53084ef289c711ab5e922273984ddc521b8de59a8074dc2e100b13e062",
+      "currentSha256": "5caa130e2e8663a11ef8c3710073418d2ed2201d2f0004e48f918633db7c43fc",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-fast-lora-style.evidence.md",
+      "oldFrozenSha256": "fd4884e7622b8f9b99ac6ab0036b401f15db3b12a69a8b936c77c087a7ffd201",
+      "currentSha256": "15447d3590ee88b8705bd9625f22baa55015a56e09f1856863f08d4434dc8279",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-fast-lora-style.toml",
+      "oldFrozenSha256": "dcd215664663361d9f87b88e0e56c7496bc4d1de4810ac9c3fa705331b818395",
+      "currentSha256": "ceeabe675d2c005531a9cc12b5205c18f5c97f6f5aa8bd9005e2bc3b0fbd1a1a",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-character-automagic.evidence.md",
+      "oldFrozenSha256": "7f7e70b7712b2da8fd1a6617914a8b37786c3d2e42f0f3f6ca84ae4228e7ebfc",
+      "currentSha256": "cc4fdc1ff047eafbcb83ca61e58b8fd78a9f1f731805b1e723e7e6ba352856be",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-character-automagic.toml",
+      "oldFrozenSha256": "b0661130ad80f694b4627d8dbd005c8f08fce2bfcb8598b92964df822953f7bf",
+      "currentSha256": "041f73ef739a713263ed167b1c8332fd5b2e42dbc54c2f790d0c0d163d996179",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-lokr-conservative.evidence.md",
+      "oldFrozenSha256": "95bc01c1b46413cc1fa6fab187c750c4aec8cefcc212886af921ba3e23927498",
+      "currentSha256": "5207189235c14eb2aa7d53b5b0ea211781797dc0948fc884b62853feaa4b3832",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-lokr-conservative.toml",
+      "oldFrozenSha256": "596996ca3ea50da13761e38310c01d2fb655a9af6830d86a2aa7545acecf70b9",
+      "currentSha256": "76825fff93f1da61ce90317ea1962febd7f3e0c93b6d0404ba127ebc24da40b0",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-style-automagic.evidence.md",
+      "oldFrozenSha256": "9e0f5152bde761be95c80a69a134979f80b9e6ca1943f9ec20a4db94f8551d59",
+      "currentSha256": "41ab80fe529df83cda380eb79b1ea91e03c411716b64cb35b0c9b7524264f311",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-style-automagic.toml",
+      "oldFrozenSha256": "960faa0c90f699523a5e61c8c5a01ae89d7edda93c37e05d28abffee081f62eb",
+      "currentSha256": "0e94e5fdcdaa2cdb89eb55f6965ac6b6c8893ba710910d09d68410d1d588d73c",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-tlora-conservative.evidence.md",
+      "oldFrozenSha256": "bb422494ea60ef86e5c6873e6917f4c52799a2dc011dd41a40faeec5b718e13a",
+      "currentSha256": "691fc3af4bdd59006855abc13a64b4019b3917f26513270a9b31eab0734abb0e",
+      "status": "reconstructed"
+    },
+    {
+      "file": "anima-lora-tlora-conservative.toml",
+      "oldFrozenSha256": "af063e359202a011be388252f9f7cb835fa7d6073a3bad471899afcde4f5c1ae",
+      "currentSha256": "78f296812db4812e5c940358a82fda000abcedce905ce16d9fd8d765ec4cb571",
+      "status": "reconstructed"
+    },
+    {
+      "file": "chroma-lora-conservative.evidence.md",
+      "oldFrozenSha256": "834f6d02e28d7d3b4764511b6d0b672fa588e77d9c7dea81825db5bfedad7d35",
+      "currentSha256": "834f6d02e28d7d3b4764511b6d0b672fa588e77d9c7dea81825db5bfedad7d35",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "chroma-lora-conservative.toml",
+      "oldFrozenSha256": "6e9ff1a3fba009e325fc5bfbd93aae66a491f200c9f25e8218ac647a2d44d1e8",
+      "currentSha256": "6e9ff1a3fba009e325fc5bfbd93aae66a491f200c9f25e8218ac647a2d44d1e8",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "flux-lora-conservative.evidence.md",
+      "oldFrozenSha256": "a821e71e5198fbd8a05a66e2a15c982a52aaaf8ff477ae8119b14e804d62bc1e",
+      "currentSha256": "a821e71e5198fbd8a05a66e2a15c982a52aaaf8ff477ae8119b14e804d62bc1e",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "flux-lora-conservative.toml",
+      "oldFrozenSha256": "3a24288080c99a8041218191eefe847569d25dcd5bb8e2ded2979e36046faca5",
+      "currentSha256": "3a24288080c99a8041218191eefe847569d25dcd5bb8e2ded2979e36046faca5",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "flux-lora-oft-conservative.evidence.md",
+      "oldFrozenSha256": "7ee0578b13f3291abf465f5aa164c39d12a120eaa8a222d0a5baadc155f48318",
+      "currentSha256": "913a553a74d9aeb2af2a3e10aa2d089cb31eca8b74262222e1c6c737e6583ee4",
+      "status": "reconstructed"
+    },
+    {
+      "file": "flux-lora-oft-conservative.toml",
+      "oldFrozenSha256": "98a34d8e3e91cad9de91e1af044cb6d98b8dc16ea880c2f99868fa0a66693dfd",
+      "currentSha256": "4c621a0b5521bb3bf406c168071871a32f64ec1aebf91c98d70d373754cca75e",
+      "status": "reconstructed"
+    },
+    {
+      "file": "krea2-lora-conservative.evidence.md",
+      "oldFrozenSha256": "c55bc8228e144c07e6fa059b60d26dd2dce3844f632d866456156fe8e28759fc",
+      "currentSha256": "c55bc8228e144c07e6fa059b60d26dd2dce3844f632d866456156fe8e28759fc",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "krea2-lora-conservative.toml",
+      "oldFrozenSha256": "a4c3bf7cf7e7fcb7f12c2e53203d6983e1384940bf04a6dfb99ea83cf935d0b7",
+      "currentSha256": "a4c3bf7cf7e7fcb7f12c2e53203d6983e1384940bf04a6dfb99ea83cf935d0b7",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "sd-dreambooth-conservative.evidence.md",
+      "oldFrozenSha256": "c46c37e66e8b948dd5a09598120f2ba924d88eb87562838cadb55b6f545e22ba",
+      "currentSha256": "c46c37e66e8b948dd5a09598120f2ba924d88eb87562838cadb55b6f545e22ba",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "sd-dreambooth-conservative.toml",
+      "oldFrozenSha256": "ef135c5bd0367f1dac9186b229c2292eaa49c2230ef71d7ba4562c5e5412c3af",
+      "currentSha256": "ef135c5bd0367f1dac9186b229c2292eaa49c2230ef71d7ba4562c5e5412c3af",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "sd-dylora-conservative.evidence.md",
+      "oldFrozenSha256": "32112d9a2864307b5f49d5e5fd64ecd31c0e58b9091f758da4733cb4097dd75d",
+      "currentSha256": "629b1e1e9bb79bb74547b7548929accfa04e476015f9460b35bd709a7d08b441",
+      "status": "reconstructed"
+    },
+    {
+      "file": "sd-dylora-conservative.toml",
+      "oldFrozenSha256": "9ded60b6e1c382f739b59f9bf44f524a53e5d69aa455c04edfc146d4d3be1358",
+      "currentSha256": "a7c3f5e24e29bd2fae75ffab1229a94ce98a89d64f8b9e254ca4b50446054757",
+      "status": "reconstructed"
+    },
+    {
+      "file": "sd2-lora-conservative.evidence.md",
+      "oldFrozenSha256": "0046f770d9ea473b03092abed75cbebb0139a8978ab05519813c1d3c80f59c0c",
+      "currentSha256": "0046f770d9ea473b03092abed75cbebb0139a8978ab05519813c1d3c80f59c0c",
+      "status": "byte-exact-recovered"
+    },
+    {
+      "file": "sd2-lora-conservative.toml",
+      "oldFrozenSha256": "c5d3bbc5186f5813ebf2ed9e7822323b13d2983c7309d1dc5f34e6c9d2ccc215",
+      "currentSha256": "c5d3bbc5186f5813ebf2ed9e7822323b13d2983c7309d1dc5f34e6c9d2ccc215",
+      "status": "byte-exact-recovered"
+    }
+  ]
+}

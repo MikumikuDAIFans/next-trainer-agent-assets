@@ -1,0 +1,79 @@
+Captured: 2026-08-30 00:28:48 +08:00
+=== E:\OpenSourceTeamWork\Kimi_Agent_lora-scripts-next-agent-dev\project ===
+branch: feat/pi-agent-plugin
+head: 9121c47 chore(F2-4): untrack the vendored plugin snapshot — release channel IS the distribution
+status --short:
+ D frontend/dist/assets/DatasetPage-CdK-A0Xe.js
+ D frontend/dist/assets/GenericArtifactDetailPage--zsj0-RS.js
+ D frontend/dist/assets/GenericPluginSettingsPage-Bgagrk0P.js
+ D frontend/dist/assets/GuidePage-BAAwfGFQ.js
+ D frontend/dist/assets/HomePage-B0gey8BE.js
+ D frontend/dist/assets/IntegrationPage-B1G62yNu.js
+ D frontend/dist/assets/NotFoundPage-_6RMLKp_.js
+ D frontend/dist/assets/ParamsPage-DJQZjTu8.js
+ D frontend/dist/assets/SettingsContainerPage-BjpYAm6z.js
+ D frontend/dist/assets/TasksPage-Bxm04Xvo.js
+ D frontend/dist/assets/ToolsPage-61yB1JVv.js
+ D frontend/dist/assets/TrainingWorkbenchPage-M4MZYN2s.js
+ D frontend/dist/assets/index-CY_-VJdt.js
+ D frontend/dist/assets/index-DlKqdFUP.js
+ D frontend/dist/assets/index-OF9ieDJe.js
+ D frontend/dist/assets/prefs-tmS4AEZk.js
+ D frontend/dist/assets/useServerPathPick-Cc8uyjWX.js
+ M frontend/dist/index.html
+ M frontend/src/api/plugins.ts
+ M frontend/src/pages/MarketplaceSettingsPage.test.ts
+ M frontend/src/pages/MarketplaceSettingsPage.vue
+ M mikazuki/plugin_marketplace/api.py
+ M tests/test_plugin_marketplace_http_catalog.py
+?? frontend/dist/assets/DatasetPage-M8JITT85.js
+?? frontend/dist/assets/GenericArtifactDetailPage-DVftUxKr.js
+?? frontend/dist/assets/GenericPluginSettingsPage-CDOSVvz6.js
+?? frontend/dist/assets/GuidePage-DIgIhkG0.js
+?? frontend/dist/assets/HomePage-CkStSQyO.js
+?? frontend/dist/assets/IntegrationPage-DA95Cgr8.js
+?? frontend/dist/assets/NotFoundPage-C7RxZHtW.js
+?? frontend/dist/assets/ParamsPage-xKHYZHDV.js
+?? frontend/dist/assets/SettingsContainerPage-I5kP-tTV.js
+?? frontend/dist/assets/TasksPage-BPk30BfY.js
+?? frontend/dist/assets/ToolsPage-D8qwKhgr.js
+?? frontend/dist/assets/TrainingWorkbenchPage-DfAVep3X.js
+?? frontend/dist/assets/index-BOUJxyi3.js
+?? frontend/dist/assets/index-BokT85Yr.js
+?? frontend/dist/assets/index-DPZmdIby.js
+?? frontend/dist/assets/prefs-CB2Jsv27.js
+?? frontend/dist/assets/useServerPathPick-C-g1jFsQ.js
+?? frontend/src/extensions/hostRefresh.test.ts
+?? frontend/src/extensions/hostRefresh.ts
+diff --stat:
+ frontend/dist/assets/DatasetPage-CdK-A0Xe.js       |  1 -
+ .../assets/GenericArtifactDetailPage--zsj0-RS.js   |  1 -
+ .../assets/GenericPluginSettingsPage-Bgagrk0P.js   |  1 -
+ frontend/dist/assets/GuidePage-BAAwfGFQ.js         |  1 -
+ frontend/dist/assets/HomePage-B0gey8BE.js          |  1 -
+ frontend/dist/assets/IntegrationPage-B1G62yNu.js   |  1 -
+ frontend/dist/assets/NotFoundPage-_6RMLKp_.js      |  1 -
+ frontend/dist/assets/ParamsPage-DJQZjTu8.js        |  1 -
+ .../dist/assets/SettingsContainerPage-BjpYAm6z.js  |  2 -
+ frontend/dist/assets/TasksPage-Bxm04Xvo.js         |  3 -
+ frontend/dist/assets/ToolsPage-61yB1JVv.js         |  1 -
+ .../dist/assets/TrainingWorkbenchPage-M4MZYN2s.js  | 37 ---------
+ frontend/dist/assets/index-CY_-VJdt.js             |  1 -
+ frontend/dist/assets/index-DlKqdFUP.js             | 51 ------------
+ frontend/dist/assets/index-OF9ieDJe.js             |  1 -
+ frontend/dist/assets/prefs-tmS4AEZk.js             |  1 -
+ frontend/dist/assets/useServerPathPick-Cc8uyjWX.js |  1 -
+ frontend/dist/index.html                           |  2 +-
+ frontend/src/api/plugins.ts                        |  8 ++
+ frontend/src/pages/MarketplaceSettingsPage.test.ts | 96 ++++++++++++++++++++++
+ frontend/src/pages/MarketplaceSettingsPage.vue     | 47 ++++++++---
+ mikazuki/plugin_marketplace/api.py                 | 10 +++
+ tests/test_plugin_marketplace_http_catalog.py      | 39 +++++++++
+ 23 files changed, 189 insertions(+), 119 deletions(-)
+=== E:\OpenSourceTeamWork\Kimi_Agent_lora-scripts-next-agent-dev\agent-assets ===
+branch: main
+head: 047d767 docs(readme): production signing key live (next-trainer-release-2026a since assets-2026.08.29-4)
+status --short:
+(clean)
+diff --stat:
+(empty)

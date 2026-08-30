@@ -1,0 +1,23 @@
+# reconstructed-2026-08-30; original bytes unavailable
+template_version = "2026-08-30-reconstructed"
+scope = "anima-fast-lora-style"
+base_model = "anima"
+model_train_type = "anima-lora-fast"
+network_module = "networks.lora_anima"
+network_dim = 32
+network_alpha = 16
+resolution = "1024,1024"
+enable_bucket = true
+train_batch_size = 1
+gradient_checkpointing = true
+optimizer_type = "AdamW8bit"
+learning_rate = 0.00005
+mixed_precision = "bf16"
+cache_latents = false
+cache_text_encoder_outputs = false
+skip_cache_check = true
+torch_compile = true
+static_token_count = 4096
+compile_mode = "blocks"
+dynamo_backend = "inductor"
+attn_mode = "flash"

@@ -1,0 +1,17 @@
+# reconstructed-2026-08-30; original bytes unavailable
+template_version = "2026-08-30-reconstructed"
+scope = "anima-lora-tlora-conservative"
+base_model = "anima"
+model_train_type = "anima-lora"
+lora_type = "tlora"
+network_module = "networks.tlora_anima"
+tlora_min_rank = 1
+network_dim = 16
+network_alpha = 16
+resolution = "1024,1024"
+enable_bucket = true
+train_batch_size = 1
+gradient_checkpointing = true
+optimizer_type = "Automagic"
+learning_rate = 0.0001
+mixed_precision = "bf16"

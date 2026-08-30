@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "9cd23996d1bd830b4a4fc0187e063e8a2ab2860a",
+  "inspectedAt": "2026-08-29T17:50:00+08:00",
+  "models": ["anima", "sd15", "sdxl", "flux", "lumina", "krea2"],
+  "engines": ["kohya", "anima-fast", "musubi"],
+  "targets": ["lora", "finetune"],
+  "modules": [
+    {
+      "id": "anima-kohya-lora",
+      "model": "anima",
+      "engine": "kohya",
+      "target": "lora",
+      "schemaName": "sd3-lora",
+      "schemaDeclaredTrainType": "anima-lora",
+      "serializedTrainType": "anima-lora",
+      "backendKind": "trainer_mapping",
+      "backendEntrypoint": "./scripts/dev/anima_train_network.py",
+      "chain": "complete"
+    },
+    {
+      "id": "anima-fast-lora",
+      "model": "anima",
+      "engine": "anima-fast",
+      "target": "lora",
+      "schemaName": "anima-lora-fast",
+      "schemaDeclaredTrainType": "anima-lora-fast",
+      "serializedTrainType": "anima-lora-fast",
+      "backendKind": "special-runtime",
+      "backendEntrypoint": "mikazuki.anima_fast_backend",
+      "chain": "complete-conditional"
+    },
+    {
+      "id": "anima-kohya-finetune",
+      "model": "anima",
+      "engine": "kohya",
+      "target": "finetune",
+      "schemaName": "anima-finetune",
+      "schemaDeclaredTrainType": "anima-finetune",
+      "serializedTrainType": "anima-finetune",
+      "backendKind": "trainer_mapping",
+      "backendEntrypoint": "./scripts/dev/anima_train.py",
+      "chain": "complete"
+    },
+    {
+      "id": "sdxl-kohya-lora",
+      "model": "sdxl",
+      "engine": "kohya",
+      "target": "lora",
+      "schemaName": "lora-master",
+      "schemaDeclaredTrainType": "sdxl-lora",
+      "serializedTrainType": "sdxl-lora",
+      "backendKind": "trainer_mapping",
+      "backendEntrypoint": "./vendor/sd-scripts/sdxl_train_network.py",
+      "chain": "complete"
+    },
+    {
+      "id": "sd15-kohya-lora",
+      "model": "sd15",
+      "engine": "kohya",
+      "target": "lora",
+      "schemaName": "lora-master",
+      "schemaDeclaredTrainType": "sd-lora",
+      "serializedTrainType": "sd-lora",
+      "backendKind": "trainer_mapping",
+      "backendEntrypoint": "./scripts/stable/train_network.py",
+      "chain": "complete"
+    },
+    {
+      "id": "sdxl-kohya-finetune",
+      "model": "sdxl",
+      "engine": "kohya",
+      "target": "finetune",
+      "schemaName": "dreambooth",
+      "schemaDeclaredTrainType": "sdxl-finetune",
+      "serializedTrainType": "sdxl-finetune",
+      "backendKind": "trainer_mapping",
+      "backendEntrypoint": "./scripts/stable/sdxl_train.py",
+      "chain": "complete"
+    },
+    {
+      "id": "sd15-kohya-dreambooth",
+      "model": "sd15",
+      "engine": "kohya",
+      "target": "finetune",
+      "schemaName": "dreambooth",
+      "schemaDeclaredTrainType": "sd-dreambooth",
+      "serializedTrainType": "sd-dreambooth",
+      "backendKind": "trainer_mapping",
+      "backendEntrypoint": "./scripts/stable/train_db.py",
+      "chain": "complete"
+    },
+    {
+      "id": "flux-kohya-lora",
+      "model": "flux",
+      "engine": "kohya",
+      "target": "lora",
+      "schemaName": "flux-lora",
+      "schemaDeclaredTrainType": "flux-lora",
+      "serializedTrainType": "flux-lora",
+      "backendKind": "trainer_mapping",
+      "backendEntrypoint": "./scripts/dev/flux_train_network.py",
+      "chain": "complete"
+    },
+    {
+      "id": "lumina-kohya-lora",
+      "model": "lumina",
+      "engine": "kohya",
+      "target": "lora",
+      "schemaName": "lumina2-lora",
+      "schemaDeclaredTrainType": "lumina-lora",
+      "serializedTrainType": "lumina2-lora",
+      "backendKind": null,
+      "backendEntrypoint": null,
+      "chain": "broken"
+    },
+    {
+      "id": "krea2-musubi-lora",
+      "model": "krea2",
+      "engine": "musubi",
+      "target": "lora",
+      "schemaName": "krea2-lora",
+      "schemaDeclaredTrainType": "krea2-lora",
+      "serializedTrainType": "krea2-lora",
+      "backendKind": "special-runtime",
+      "backendEntrypoint": "mikazuki.musubi_backend",
+      "chain": "complete-conditional"
+    }
+  ],
+  "extraContracts": [
+    {
+      "id": "flux-finetune-backend-only",
+      "trainType": "flux-finetune",
+      "backendEntrypoint": "./scripts/dev/flux_train.py",
+      "workbenchModule": false,
+      "status": "backend-capable-ui-hidden"
+    },
+    {
+      "id": "lora-basic-legacy-schema",
+      "trainType": "sd-lora",
+      "schemaName": "lora-basic",
+      "workbenchModule": false,
+      "status": "legacy-schema-hidden"
+    },
+    {
+      "id": "sd3-lora-legacy-alias",
+      "trainType": "sd3-lora",
+      "normalizesTo": "anima-lora",
+      "backendEntrypoint": "./scripts/dev/anima_train_network.py",
+      "status": "alias-not-stability-sd3"
+    }
+  ],
+  "evidence": [
+    "frontend/src/training/modules.ts:3-43",
+    "frontend/src/training/params.ts:37-45",
+    "mikazuki/app/api.py:152-164",
+    "mikazuki/app/api.py:741-849",
+    "mikazuki/utils/config_import.py:12-211"
+  ]
+}
+

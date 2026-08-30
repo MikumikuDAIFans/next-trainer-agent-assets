@@ -1,0 +1,19 @@
+# REJECTED: negative control leak. Retained only as a tested failure sample.
+template_version = "2026-08-30"
+scope = "sdxl-lora-oft-conservative"
+base_model = "sdxl"
+model_train_type = "sdxl-lora"
+lora_type = "oft"
+network_module = "networks.oft"
+network_dim = 16
+network_alpha = 16
+resolution = "1024,1024"
+enable_bucket = true
+train_batch_size = 1
+gradient_checkpointing = true
+learning_rate = 0.0001
+unet_lr = 0.0001
+text_encoder_lr = 0.0
+lr_scheduler = "constant"
+mixed_precision = "fp16"
+save_precision = "fp16"

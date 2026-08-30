@@ -1,0 +1,17 @@
+{
+  "template": "sd-dreambooth-conservative.toml",
+  "page": "dreambooth",
+  "result": "ok",
+  "forced_train_type": "sd-dreambooth",
+  "inferred_train_type": "sd-dreambooth",
+  "notice": null,
+  "negative_control": {
+    "page": "flux-lora",
+    "result": "redirect"
+  },
+  "normalized_diff": {
+    "added": {},
+    "removed": {},
+    "changed": {}
+  }
+}

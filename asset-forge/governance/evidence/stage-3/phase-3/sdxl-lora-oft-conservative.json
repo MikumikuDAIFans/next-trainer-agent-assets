@@ -1,0 +1,17 @@
+{
+  "template": "sdxl-lora-oft-conservative.toml",
+  "page": "sdxl-lora",
+  "result": "ok",
+  "forced_train_type": "sdxl-lora",
+  "inferred_train_type": "sdxl-lora",
+  "notice": null,
+  "negative_control": {
+    "page": "sd-lora",
+    "result": "ok"
+  },
+  "normalized_diff": {
+    "added": {},
+    "removed": {},
+    "changed": {}
+  }
+}

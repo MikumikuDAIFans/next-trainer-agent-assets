@@ -1,0 +1,4 @@
+project HEAD: e09db947342077b83eae0be9f4ea41dd8e46d289
+project porcelain: clean
+agent-assets porcelain: clean
+Scope: Stage 7 did not write either formal repository.

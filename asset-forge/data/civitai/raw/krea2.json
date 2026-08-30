@@ -1,0 +1,1161 @@
+{
+  "items": [
+    {
+      "id": 2839398,
+      "name": "Country Roads - KREA 2",
+      "description": "<p><span style=\"color:rgb(250, 176, 5)\"><strong>Finding all my models or profile elsewhere than Civitai is without my consent !</strong></span></p><p><span style=\"color:rgb(250, 176, 5)\">Please don't repost my files. Send people to my Civitai profile, thanks :)</span></p><p>-</p><p><span style=\"color:rgb(250, 176, 5)\">This is the second chapter of my thank you models for 3K followers (above 3k ^^).</span></p><p><span style=\"color:rgb(250, 176, 5)\"><strong>These loras are Special Editions.</strong></span></p><p>--</p><h3 id=\"country-roads\"><span style=\"color:rgb(130, 201, 30)\"><strong>Country Roads</strong></span></h3><h3 id=\"city-worlds-part-2\"><span style=\"color:rgb(250, 176, 5)\"><strong>City Worlds Part 2</strong></span></h3><p>Reworked all captions so she can appear ^^</p><h3 id=\"city-worlds-part-1\"><span style=\"color:rgb(250, 176, 5)\"><strong>City Worlds Part 1</strong></span></h3><p>Follow a student on her way to school... but because of Civitai flagging her as a minor when published (and not when generated), I have taken her away from all my sample pics.</p><p>If you want to generate her, look at the Anima version, even if the prompt style is different.</p><p>On \"her\" way, some of her imagination become alive.</p><p>Pics in the dataset are in horizontal format ;)</p><p>--</p><p></p><p><strong>Strength :</strong> 1 / <strong>Steps :</strong> 40 tested</p><p>--</p><p><span style=\"color:rgb(250, 176, 5)\"><strong>Trigger words :</strong></span></p><ul><li><p><span style=\"color:rgb(250, 176, 5)\"><strong>z1os, </strong></span><span style=\"color:rgb(250, 176, 5)\"><strong>animation style, </strong></span><span style=\"color:rgb(250, 176, 5)\"><strong>ultra detailed.</strong></span></p></li></ul><p>--</p><p>see pictures for prompt exemples :)</p><p>--</p><p></p><p><strong>Have fun ^^</strong></p>",
+      "allowNoCredit": false,
+      "allowCommercialUse": [
+        "RentCivit"
+      ],
+      "allowDerivatives": false,
+      "allowDifferentLicense": false,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 3,
+      "availability": "Public",
+      "userId": 2617621,
+      "baseModels": [
+        "Krea 2"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 165,
+        "thumbsUpCount": 15,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "Z1os",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/aa4f4f56-f3e1-4001-bd4c-c992d0841013/width=96/Z1os.jpeg"
+      },
+      "tags": [
+        "city",
+        "nature",
+        "spaceship",
+        "medieval",
+        "technology",
+        "mountains",
+        "scenery",
+        "flowers",
+        "background",
+        "indoors",
+        "river",
+        "outdoors",
+        "tower",
+        "castle",
+        "bridge",
+        "city worlds",
+        "medieval worlds",
+        "space worlds"
+      ],
+      "modelVersions": [
+        {
+          "id": 3278049,
+          "index": 0,
+          "name": "City Worlds Part 2",
+          "baseModel": "Krea 2",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T16:51:47.200Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 0,
+          "description": "<p>Made by Z1os on civitai. <a target=\"_blank\" rel=\"ugc\" href=\"https://civitai.com/user/Z1os\">https://civitai.com/user/Z1os</a></p><p><strong>Finding all my models or profile elsewhere than Civitai is without my consent !</strong></p><p><strong>If you see this model or my profile elsewhere, then this site is a stealer.</strong></p><p><em>--</em></p><p>Please don't repost my files. Send people to my Civitai profile, thanks :)</p><p>--</p><p>Like my other loras, you are not allowed to use this lora for any commercial project without my consent and you are not allowed to use it to make another lora or for merging. You are not allowed to distribute it or sell it on other platforms or to anyone.</p><p>For pictures generated with this lora, you can show them on social media and keep them for yourself, etc.. , however you are not allowed to sell them or any design made with this lora or my other loras and models.</p><p>For commercial use, contact me.</p>",
+          "trainedWords": [
+            "z1os, animation style, ultra detailed."
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 4,
+            "thumbsUpCount": 1,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3162108,
+              "sizeKB": 223231.390625,
+              "name": "Country_Roads_CWp2_krea2.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T16:27:05.944Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "62116955",
+                "AutoV2": "5943EB4BCF",
+                "SHA256": "5943EB4BCF9356B59A322DC5A9C4AE173FB5603AD169687470371E9A2F30FB9B",
+                "CRC32": "91F7ED6D",
+                "BLAKE3": "DFE3AA38BEA64AD07844E4B669B8364412C07B6EDD9F896F047A636B413992E6",
+                "AutoV3": "EF6C9334C5C3",
+                "SHA256_12": "5943EB4BCF93"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3278049",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 141209801,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/eeb8aa32-2e14-4f48-bd7d-38e03296e09f/original=true/141209801.jpeg",
+              "nsfwLevel": 1,
+              "width": 928,
+              "height": 1152,
+              "hash": "UFFEca9G9uf*~WE1Ios:}[NGNGoMERxsI:WE",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 141209960,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/60e026e8-d45c-4246-9e5d-cebdcb6eb5a2/original=true/141209960.jpeg",
+              "nsfwLevel": 1,
+              "width": 1184,
+              "height": 896,
+              "hash": "U5EeV?1,Fg}o.TtT={E2{[n2s8={00rURiS$",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 141209985,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d54a9e0c-088e-451e-bff3-1129fcef447c/original=true/141209985.jpeg",
+              "nsfwLevel": 1,
+              "width": 1184,
+              "height": 896,
+              "hash": "U8FEozBYJDr=^*~BxZIq004.ay-o00M_-Sof",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 141210198,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/898f8ba3-c5a9-40a3-a280-62c8c7680c54/original=true/141210198.jpeg",
+              "nsfwLevel": 1,
+              "width": 1184,
+              "height": 896,
+              "hash": "UJFEAU0#0h?F~ANH58=_f9ocNHs:59kB^OE3",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 141210216,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ff151ff1-d11c-4b5e-a541-5fc2768764de/original=true/141210216.jpeg",
+              "nsfwLevel": 1,
+              "width": 1184,
+              "height": 896,
+              "hash": "U4C5n$E4~T0gX-9a-n0N0M9uJW^N0Nj=}?%K",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 141210256,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/23d56142-0601-4057-a0af-ca31df247b05/original=true/141210256.jpeg",
+              "nsfwLevel": 1,
+              "width": 1184,
+              "height": 896,
+              "hash": "UKIWiq^*x]x]~U?Hxv%MEOX9tRtR9vWFbvxa",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 141210311,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c069701d-4ac8-4861-938d-cf6f0d5a36ac/original=true/141210311.jpeg",
+              "nsfwLevel": 1,
+              "width": 1184,
+              "height": 896,
+              "hash": "UGJ6vQ~V%g%M?G^*x]%M9|JVxu?G59Rmxaa~",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 141210347,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bdc604e0-e9dd-460d-b2e8-5598ff154211/original=true/141210347.jpeg",
+              "nsfwLevel": 1,
+              "width": 1184,
+              "height": 896,
+              "hash": "UUL.F^E4$$xZ~BNJjtR+IvtPNINHIctPxEjZ",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3278049"
+        },
+        {
+          "id": 3204958,
+          "index": 1,
+          "name": "City Worlds Part 1",
+          "baseModel": "Krea 2",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-06T23:56:03.899Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 3,
+          "description": "<p>Made by Z1os on civitai. <a target=\"_blank\" rel=\"ugc\" href=\"https://civitai.com/user/Z1os\">https://civitai.com/user/Z1os</a></p><p><strong>Finding all my models or profile elsewhere than Civitai is without my consent !</strong></p><p><strong>If you see this model or my profile elsewhere, then this site is a stealer.</strong></p><p><em>--</em></p><p>Please don't repost my files. Send people to my Civitai profile, thanks :)</p><p>--</p><p>Like my other loras, you are not allowed to use this lora for any commercial project without my consent and you are not allowed to use it to make another lora or for merging. You are not allowed to distribute it or sell it on other platforms or to anyone.</p><p>For pictures generated with this lora, you can show them on social media and keep them for yourself, etc.. , however you are not allowed to sell them or any design made with this lora or my other loras and models.</p><p>For commercial use, contact me.</p>",
+          "trainedWords": [
+            "z1os, ultra detailed."
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 164,
+            "thumbsUpCount": 14,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3086403,
+              "sizeKB": 223231.390625,
+              "name": "Country_Roads_CWp1_krea2.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-06T23:50:51.639Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "77BAFF12",
+                "AutoV2": "AA2AF9BDFF",
+                "SHA256": "AA2AF9BDFF4506496C5865D37BE7CBC29522143BEBA6A57146C31D2231BF63F6",
+                "CRC32": "B9780788",
+                "BLAKE3": "C210FC0B83F9F0BB8272960BF764FA7D2FD772D4D6D81F9976BAE7853C3F82D2",
+                "AutoV3": "40225D39EA56",
+                "SHA256_12": "AA2AF9BDFF45"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3204958",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 138965197,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/94b4902b-dca4-4ba1-92c0-67d4fdbd4124/original=true/138965197.jpeg",
+              "nsfwLevel": 1,
+              "width": 928,
+              "height": 1152,
+              "hash": "UUFXu7D%9uo#~CR5I:kWoPs8oeR+Ia-TbbNH",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 138965267,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/71879bcf-c4e1-4e72-8244-833f30260b9b/original=true/138965267.jpeg",
+              "nsfwLevel": 1,
+              "width": 928,
+              "height": 1152,
+              "hash": "UGByNpM{9uo}%Mr=IptR%3RjRjxu~BM|NGoz",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 138965302,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b1e94ba9-672b-453f-be0e-3e29e9840c08/original=true/138965302.jpeg",
+              "nsfwLevel": 1,
+              "width": 928,
+              "height": 1152,
+              "hash": "UWI3zf9GJ*sn}]RjSzn%D*xus;jF$zs:sVf6",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": true,
+              "remixOfId": null
+            },
+            {
+              "id": 138965384,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d2abd308-da62-4861-9673-5c6279a44388/original=true/138965384.jpeg",
+              "nsfwLevel": 1,
+              "width": 896,
+              "height": 1200,
+              "hash": "UFE-jp}r57Nb=K}?xYEMNHV[NGNGJA9uIo-n",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3204958"
+        }
+      ]
+    },
+    {
+      "id": 2899227,
+      "name": "KreaSammelin",
+      "description": "<p><span style=\"background-color:rgb(26, 27, 30);color:rgb(141, 141, 143);font-family:-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;;font-size:16px\"><strong>Images were created with ComfyUI</strong></span><a target=\"_blank\" rel=\"ugc\" href=\"https://civitai.red/models/618692?modelVersionId=691639\"><strong> </strong></a><span style=\"background-color:rgb(26, 27, 30);color:rgb(141, 141, 143);font-family:-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;;font-size:16px\"><strong>and include workflow.</strong></span></p><p><strong>If you notice that your images are not appearing on my model pages, or that they are disappearing, this is not due to my moderation but rather a recent site malfunction.</strong></p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 7,
+      "availability": "Public",
+      "userId": 1247607,
+      "baseModels": [
+        "Krea 2"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 6,
+        "thumbsUpCount": 5,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "Adel_AI",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7c1e2bac-1f02-4978-9eb8-d5456fb12a2b/width=96/Adel_AI.jpeg"
+      },
+      "tags": [
+        "style"
+      ],
+      "modelVersions": [
+        {
+          "id": 3278046,
+          "index": 0,
+          "name": "V1",
+          "baseModel": "Krea 2",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T16:40:37.546Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 2,
+          "description": "<ul><li><p>Steps : 8 - 10</p></li><li><p>Sampler : heunpp2 / sgm_uniform</p></li><li><p>Weighting : around 1.0</p></li><li><p>Krea2T Enhancer Advanced preferably disabled</p></li><li><p>Recommended model: <a target=\"_blank\" rel=\"ugc\" href=\"https://civitai.red/models/2838525/kreation\">Kreation V2</a> or <a target=\"_blank\" rel=\"ugc\" href=\"https://civitai.red/models/2729631/kreamania\">Kreamania V3 | V6 | V7d</a></p></li></ul><p>Dataset inspired by <strong>Robert Sammelin</strong>, without being directly trained on the artist's works.</p>",
+          "trainedWords": [
+            "Bradhamel art style"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 7,
+            "thumbsUpCount": 5,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3162103,
+              "sizeKB": 223231.3515625,
+              "name": "KreaSammelin.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T16:24:19.900Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "419A554A",
+                "AutoV2": "49A5617F85",
+                "SHA256": "49A5617F85AD0882381EAAF92CA87298457FCDCE66CFB3A42943394B8FACD9F1",
+                "CRC32": "0980114B",
+                "BLAKE3": "8718B03C84B4410B7B89274F52CE9CBE40349E8A38147531421E884198BC3604",
+                "AutoV3": "499D38641671",
+                "SHA256_12": "49A5617F85AD"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3278046",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 141208257,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/06c474d1-99b8-4d68-995e-e0fb212234d0/original=true/141208257.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1024,
+              "hash": "UDFrqz4o.S%L-pRjoz%M_Ns:smbItQoLxGR%",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3278046"
+        }
+      ]
+    },
+    {
+      "id": 1064747,
+      "name": "Amigasa Zamurai / 編笠侍 (Kr2/Fl)",
+      "description": "<p>日本語解説は最後の方に</p><p>Amigasa Zamurai = Samurai wearing a Amigasa（straw head-gear)</p><p>Trigger word: amigasa</p><p>Banned words: Samurai, Ronin, Japanese</p><p>Headwear has been commonly used since ancient times in the Far East and Southeast Asia, including Japan. The hat in this video is a type of hat called \"amigasa,\" which is often seen in Japanese period dramas.</p><p>The title is \"amigasa zamurai,\" but a ronin also appears in the image.</p><p>I intended to be able to control the number of clothes and swords by switching between the two words \"Samurai\" and \"Ronin,\" but when Lora was completed...</p><p>As soon as I entered \"Japanese,\" \"Samurai,\" and \"Ronin,\" a samurai with a Chinese-style topknot and a strange samurai dressed in a mix of Chinese and Korean styles appeared, and the image was distorted by the AI ​​in an instant. As a Japanese person, I cannot accept these appearances.</p><p>It is also strange that images of Japanese samurai and ronin cannot be generated with \"Samurai,\" \"Ronin,\" and \"Japanese.\"</p><p>By the way, the katana may become shorter, and sandals may change to leather shoes.</p><p>I don't feel good about the Laura I created being distorted by AI.</p><p></p><p>Differences between Samurai and Ronin (only after 1600)</p><p>Samurai: A warrior who has a lord-vassal relationship with a person of some authority, such as a shogun or a feudal lord. In modern terms, this would be a professional soldier, an office worker, or a bureaucrat. They carry two swords, one long and one short, on their left hip.</p><p>Ronin: A warrior who has no lord-vassal relationship with anyone. Since they don't receive a salary, they tend to dress poorly compared to samurai. In dramas, they often carry two swords, but in reality, most people probably only carried one. Unlike samurai, they are free to wear whatever hairstyle and clothing they like.</p><p>-------------------------------------------------------------------------------</p><p>トリガーワード : amigasa</p><p>使用禁止ワード：samurai,ronin,japanese←重要！</p><p>「編笠侍」とタイトルをつけてますが、実際には浪人も出てきます。</p><p>予定では「samurai」「ronin」の2つのワードの切り替えで服装、刀の本数をコントロール出来る筈だったんですがいざLoraが出来上がってみると・・。</p><p>「japanese」「samurai」「ronin」と入れた途端に中国風の髷を結った武人が出てくるわ、中国・韓国が混ざった様な服装の異形の武者が出てくるわ、編笠に兜の角が生えるわ、即座にAIによって歪められてしまいます。</p><p>日本の侍や浪人の画像を生成するのに「samurai」も「ronin」も「japanese」も使えない、というのもふざけた話です。</p><p>ついでに言えば、刀は短く変形させるわ、草鞋は革靴に変えてくるわ、という具合です。</p><p>Fluxで生成した多くのサムライ画像が日本人である私の目には奇異なものばかりなのも、今回自分でLoraを作っていろいろいじってみて納得できました。Fluxが歪めてるんですね。</p><p></p><p>時代劇ではおなじみのこの編笠、鬼平や柳生十兵衛が愛用している笠ですね。</p><p>浪人が多く愛用していたことから「浪人笠」と呼ばれることもありますが、顔がすっぽり隠れる事から身分の高い侍や、隠密の用途にも使用された様です。鬼平はよくこれを被って市中を見廻ってましたね。</p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit",
+        "Rent",
+        "Sell"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 3,
+      "availability": "Public",
+      "userId": 1327957,
+      "baseModels": [
+        "Krea 2",
+        "Flux.1 D"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 85,
+        "thumbsUpCount": 15,
+        "thumbsDownCount": 0,
+        "commentCount": 2,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "Takec5031",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/60053b1d-007a-4409-afc6-5caf850cd6c2/width=96/Takec5031.jpeg"
+      },
+      "tags": [
+        "character",
+        "realistic"
+      ],
+      "modelVersions": [
+        {
+          "id": 3278012,
+          "index": 0,
+          "name": "Krea 2",
+          "baseModel": "Krea 2",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T16:33:35.698Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 3,
+          "description": null,
+          "trainedWords": [
+            "amigasa hat"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 1,
+            "thumbsUpCount": 0,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3162102,
+              "sizeKB": 223231.359375,
+              "name": "amigasazamuraikr2_epoch_10.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T16:24:09.955Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "A847870B",
+                "AutoV2": "455993DA77",
+                "SHA256": "455993DA77DAB8F8845109EDBDF2100918A618FCA30BE978D17E880743C0F8E2",
+                "CRC32": "5209EE29",
+                "BLAKE3": "5E72A3AB388C89C2F9F34A68D93DDF730F1D314A12D726C1F69EE275CE38C2C7",
+                "AutoV3": "E16430347A78",
+                "SHA256_12": "455993DA77DA"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3278012",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 141207894,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0e0087a6-55db-4834-8a49-a084070541ba/original=true/141207894.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "U9DSXO01~qM_~9024;IU$~_3M|^*01xZD*t7",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208014,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f1d64757-0ade-48a0-a924-ce0c59b82191/original=true/141208014.jpeg",
+              "nsfwLevel": 1,
+              "width": 1152,
+              "height": 864,
+              "hash": "U$Nc~IE1_N-o-;ofR+oztSoJV@W=%Lt7WBRj",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208016,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/722a923a-e6e9-460e-937f-e75dcca782a4/original=true/141208016.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UTD]F.t6-;xt~UkCt7kBk9bHRkofoyt6t7xZ",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208022,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/78404bb9-6ee7-42b2-9429-d9d91da91cb9/original=true/141208022.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UTEe[HIU?HWB~UNGt8WBbFR*NHWBxuRjt7ae",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208027,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f1146d8c-4fe9-4cc1-b0b0-90199d652979/original=true/141208027.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UMDc2FjE-:%L~TNdX8t6R+NHM|t69uoKWCxZ",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208038,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/94c7e3be-8db6-47e1-a6ba-31920a11cf7e/original=true/141208038.jpeg",
+              "nsfwLevel": 1,
+              "width": 1208,
+              "height": 864,
+              "hash": "UKIr4[og~qRj?b-;M{D%4nMyM{D%?bIUj[M{",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": false,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208042,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/83b7655d-1dee-47f8-aad8-7e7a4ea7dd9d/original=true/141208042.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UeL4$#_3?bt7~q%Mt7of9Ft7D%ay%M%MM{Rj",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208047,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/46d9a7a6-c656-4e44-b39c-29f1fc7c022f/original=true/141208047.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UwLqe7%M-;tR~qWBt7xuj[ofIUfQ%M%MRjRj",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208054,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0219ac54-9f17-43c8-9c8c-66bff3d6f5fd/original=true/141208054.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UtL4saWC~qs:~qt7tRt6%MWBIUj[%MayV@WB",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208070,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/11381901-61ae-4dcc-9bc0-31dbab0d466e/original=true/141208070.jpeg",
+              "nsfwLevel": 1,
+              "width": 1568,
+              "height": 672,
+              "hash": "UGAmbfRlI:s:~VR,E2of?aWCIVoL-:t7NHj[",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208073,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/097ec413-a74d-4464-8195-17c5ae1fb90f/original=true/141208073.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UzM@inog~qoe%MWBWCfk-;ofMxaet7t7f6ay",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208081,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a294ebb3-752a-4fa3-80ca-059a707ebd9f/original=true/141208081.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "USD+;zNGRjt7~pRjNGxt?HWVRQt7tRayWBof",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208088,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bb49d4a0-41af-4565-b626-cf90d840fa1c/original=true/141208088.jpeg",
+              "nsfwLevel": 1,
+              "width": 1216,
+              "height": 832,
+              "hash": "UgI;*69a_2fi~VRkxu%1M|azNHbHNHWCt6fk",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208087,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fc5d214b-184b-4631-93b5-cf4bf3ffdb5f/original=true/141208087.jpeg",
+              "nsfwLevel": 1,
+              "width": 1216,
+              "height": 832,
+              "hash": "UFC?ZF00~q01t7V@IqIp.7D*?GNGE2NG%Le.",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208097,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/aeef2e1d-99bd-479d-9adb-532f7beb236d/original=true/141208097.jpeg",
+              "nsfwLevel": 1,
+              "width": 1216,
+              "height": 832,
+              "hash": "UiF~s=xt%$aJ_NxtkYoeS$j[M|a{%hoJayM{",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208095,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5ed4fd20-5895-470f-9233-e28446a4e2d5/original=true/141208095.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "UKCY{yM|0fxa~VR*WBoKyDs:xGRk?aofIVof",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 141208102,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f26d986c-ef0d-4685-85f0-1c6993fa847a/original=true/141208102.jpeg",
+              "nsfwLevel": 1,
+              "width": 864,
+              "height": 1152,
+              "hash": "U6A,n5~815020301x]?GMIsmwu%1ws?uMxE2",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3278012"
+        }
+      ]
+    },
+    {
+      "id": 1989095,
+      "name": "Retro 80s Vaporwave",
+      "description": "<p>This LoRA reminds me of the worn, nostalgic feel of old VHS covers and magazine prints, but in a Vaporwave interpretation.<br />Bold colors softened by heavy grain, scratches, and print textures.<br />The aesthetic balances surreal calm with urban vibrance. It is both dreamlike and gritty.<br />Best for evocative portraits, cityscapes, and nostalgic retro-futurist edits. I also included 20 Animal Images in the Dataset :) <br /></p>",
+      "allowNoCredit": false,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit"
+      ],
+      "allowDerivatives": false,
+      "allowDifferentLicense": false,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 15,
+      "availability": "Public",
+      "userId": 107364,
+      "baseModels": [
+        "Krea 2",
+        "Anima",
+        "ZImageBase",
+        "Flux.2 Klein 9B",
+        "Flux.2 Klein 4B",
+        "ZImageTurbo",
+        "Flux.1 D",
+        "Chroma",
+        "Illustrious",
+        "SDXL 1.0",
+        "SD 1.5"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 6170,
+        "thumbsUpCount": 614,
+        "thumbsDownCount": 0,
+        "commentCount": 15,
+        "tippedAmountCount": 34210
+      },
+      "creator": {
+        "username": "ArsMachina",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6a606239-6951-422b-8dd8-0aa66ecc91e0/width=96/ArsMachina.jpeg"
+      },
+      "tags": [
+        "synthwave",
+        "retro",
+        "80s",
+        "style",
+        "vaporwave"
+      ],
+      "modelVersions": [
+        {
+          "id": 3215746,
+          "index": 0,
+          "name": "Krea2",
+          "baseModel": "Krea 2",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T15:56:10.615Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 3,
+          "description": null,
+          "trainedWords": [
+            "Retro 80s Vaporwave,"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 64,
+            "thumbsUpCount": 30,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3097549,
+              "sizeKB": 223230.21875,
+              "name": "80sVaporwaveRetorKrea2Raw.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-10T11:36:16.551Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "4C6C5F6D",
+                "AutoV2": "148F66920C",
+                "SHA256": "148F66920C13253D994B7ED000A7129F9AB88D8BA082F489CDB1401B7097D2C9",
+                "CRC32": "05DA9D22",
+                "BLAKE3": "754896F311AC80109BF2C9DD95B96A2CA05CE1E0D2C62C280CA88189AED036E6",
+                "AutoV3": "C40912620C4D",
+                "SHA256_12": "148F66920C13"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3215746",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 139304545,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1110af00-cf75-4219-9ce4-131cf8f802ec/original=true/139304545.jpeg",
+              "nsfwLevel": 1,
+              "width": 1024,
+              "height": 1024,
+              "hash": "U7BW3,MJ0=^*]fx^4.R+0JngtJE20hXm~Wi^",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": false,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 139304546,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c0e6a73d-2592-4824-80ff-b572c0d19967/original=true/139304546.jpeg",
+              "nsfwLevel": 1,
+              "width": 1024,
+              "height": 1024,
+              "hash": "UIC6DW~BE35X=_xVWrS60z9uj=-A5BE7ayxB",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": false,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 139304549,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bc5d3a09-e8b5-4278-9fef-190c564989ac/original=true/139304549.jpeg",
+              "nsfwLevel": 1,
+              "width": 1024,
+              "height": 1024,
+              "hash": "U7BW3=|?]U734,pHW9rr0257AD={[xoixuJP",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": false,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/3215746"
+        }
+      ]
+    },
+    {
+      "id": 2896741,
+      "name": "Gareth - CCC",
+      "description": "<p><img src=\"https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c495153c-fb5b-4637-b4a8-3bb7354ef06f/original=true/c495153c-fb5b-4637-b4a8-3bb7354ef06f.jpeg\" /></p><p><strong>Age:</strong> 32<br /><strong>Height:</strong> 6'2\" | 188 cm<br /><strong>Hair:</strong> Dark Brown<br /><strong>Waist:</strong> 32\" | 81 cm<br /><strong>From:</strong> Banff, Alberta, Canada</p><p><span>Hailing from the picturesque alpine town of Banff, Alberta, Canada, 32-year-old Gareth possesses a backstory as dramatic as his striking features. Born into a life of undisputed luxury and generational wealth, his early years were defined by private ski chalets, exclusive boarding schools, and international travel. However, a catastrophic and highly publicized venture capital investment effectively wiped out his family trust, forcing a sudden and humbling pivot in his life's trajectory. Trading luxury boardrooms for casting calls, Gareth turned to the fashion industry. He brings an unexpected depth to the camera—the quiet resilience of a man who has had it all, lost it, and is fiercely determined to rebuild his empire from the ground up through the lens of the modeling world.</span></p><p><span>In front of the camera, Gareth offers a commanding, hyper-masculine presence that seamlessly bridges the gap between rugged outdoor lifestyle and high-end editorial elegance. His piercing blue eyes, meticulously groomed facial hair, and chiseled jawline make him a natural focal point. Furthermore, his imposing, highly developed athletic physique makes him incredibly versatile for the modern market. Gareth is a powerhouse booking for luxury fragrance campaigns, premium athletic wear, and sophisticated tailoring. He doesn’t just showcase garments; he projects an aura of hard-earned confidence, bringing a mature, narrative-driven edge to every shoot he leads.</span></p><p><span>Off-camera, Gareth remains deeply connected to his Rocky Mountain roots, though his lifestyle has shifted significantly. He channels his relentless drive into intense physical conditioning, alpine mountaineering, and the meticulous restoration of vintage motorcycles—a far cry from his former days of collecting luxury sports cars. While he may no longer charter private jets, he retains his refined tastes, harboring a deep appreciation for bespoke architecture and a perfect shot of espresso. Humbler but hungrier than ever, Gareth views his unexpected modeling career not just as a survival tactic, but as the thrilling first chapter of his great comeback story, proving that true grit is the ultimate luxury.</span></p><hr /><p>Gareth is a character I created in MidJourney. The images from that platform have been used as training material and are available for everyone to download and use as they wish—even to train better Gareths!</p><p>Gareth is also one of the AI models of my fictional company, the <a target=\"_blank\" rel=\"ugc\" href=\"https://consolidatedconsortiumofconnoisseurs.wordpress.com/\"><strong>Consolidated Consortium of Connoisseurs</strong></a>, where I happily play the role of a tyrant managing models and weirdos of all kinds.</p><p></p><hr /><h1 id=\"disclaimer\"><strong>Disclaimer</strong></h1><p>This man has no passport, no driver's license, no childhood home to miss, no old friends he's drifted away from, and no box of photographs quietly fading in a closet somewhere. He won't wonder where the years went, reread messages he should have deleted, or lie awake replaying conversations from a decade ago, because he was never given a past to regret.</p><p>And if he happens to resemble you... perhaps the algorithm recognized something familiar in the melancholy.</p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit",
+        "Rent"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 31,
+      "availability": "Public",
+      "userId": 5137080,
+      "baseModels": [
+        "Krea 2"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 41,
+        "thumbsUpCount": 8,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 1000
+      },
+      "creator": {
+        "username": "MalkhaiC",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9e57cb69-3e70-4ddc-8ac1-73e569fa842c/width=96/MalkhaiC.jpeg"
+      },
+      "tags": [
+        "character",
+        "gay",
+        "muscles",
+        "bara",
+        "muscular",
+        "handsome",
+        "oc",
+        "male",
+        "man",
+        "male model"
+      ],
+      "modelVersions": [
+        {
+          "id": 3274942,
+          "index": 0,
+          "name": "Krea 2 - V1",
+          "baseModel": "Krea 2",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T06:58:54.432Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 31,
+          "description": null,
+          "trainedWords": [
+            "Photography of a handsome muscular guy with styled brown hair, volume on top, and a short full beard."
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 39,
+            "thumbsUpCount": 8,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3160783,
+              "sizeKB": 223231.3515625,
+              "name": "Gareth_CCC_Krea2.safetensors",
+              "overrideName": "Gareth_CCC_Krea2.safetensors",
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T06:52:08.035Z",
+              "metadata": {
+                "format": "SafeTensor"
+              },
+              "hashes": {
+                "AutoV1": "54EAAB90",
+                "AutoV2": "4EE9CEC27D",
+                "SHA256": "4EE9CEC27D0EB9D8C69608DEEAE796B04546A77CED7B89B628BA2C0DDF06A356",
+                "CRC32": "59648A4E",
+                "BLAKE3": "6E281DDDE5A2CC716E8BC3546C2588AE6972D236F8883F4B08CF6630356E2327",
+                "AutoV3": "17CCD06F2893",
+                "SHA256_12": "4EE9CEC27D0E"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3274942",
+              "primary": true
+            },
+            {
+              "id": 3159080,
+              "sizeKB": 1133049.671875,
+              "name": "3274942_training_data.zip",
+              "overrideName": null,
+              "type": "Training Data",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": "No Pickle imports",
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-28T16:01:59.578Z",
+              "metadata": {
+                "format": "Other"
+              },
+              "hashes": {
+                "AutoV1": "C15763EC",
+                "AutoV2": "40076DEC9D",
+                "SHA256": "40076DEC9D6CCBAE1CAA822DEBBA5841B7BF8EF3B28A36D44378BA59717E961C",
+                "CRC32": "6F91683B",
+                "BLAKE3": "DA06AB35FC7312979D4405CB45A556610032B2A69D57390110982D07EA441184",
+                "AutoV3": "1D6CAF6551CD",
+                "SHA256_12": "40076DEC9D6C"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3274942?type=Training%20Data"
+            }
+          ],
+          "images": [],
+          "downloadUrl": "https://civitai.com/api/download/models/3274942"
+        },
+        {
+          "id": 3277961,
+          "index": 1,
+          "name": "Midjourney - v1.0",
+          "baseModel": "Krea 2",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T15:54:47.516Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 0,
+          "description": "<p>This is the reference picture I use to create Gareth in Midjourney.</p>",
+          "trainedWords": [],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 2,
+            "thumbsUpCount": 1,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": false,
+          "files": [
+            {
+              "id": 3162021,
+              "sizeKB": 1925.408203125,
+              "name": "Gareth_Midjourney.zip",
+              "overrideName": null,
+              "type": "Training Data",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": "No Pickle imports",
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-29T15:52:04.080Z",
+              "metadata": {
+                "format": "Other",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV2": "966E98BC35",
+                "SHA256": "966E98BC352A25E5ACD4923D8CE5C40994E4C7D96E3D9ABAACA4575F645C0FEA",
+                "CRC32": "BBFF737F",
+                "BLAKE3": "D031CAC04ABECEB10B07DDB07316A2D8107F2E8D08838071FF6F421B777E6716",
+                "AutoV3": "CCF59AAF874D",
+                "SHA256_12": "966E98BC352A"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3277961",
+              "primary": true
+            }
+          ],
+          "images": [],
+          "downloadUrl": "https://civitai.com/api/download/models/3277961"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "nextCursor": "2026-08-29 15:54:09.541|881194",
+    "nextPage": "https://civitai.com/api/v1/models?types=LORA&baseModels=Krea%202&sort=Newest&period=AllTime&nsfw=false&limit=5&cursor=2026-08-29%2015%3A54%3A09.541%7C881194"
+  }
+}

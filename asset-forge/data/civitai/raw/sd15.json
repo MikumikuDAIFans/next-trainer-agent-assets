@@ -1,0 +1,1322 @@
+{
+  "items": [
+    {
+      "id": 1989095,
+      "name": "Retro 80s Vaporwave",
+      "description": "<p>This LoRA reminds me of the worn, nostalgic feel of old VHS covers and magazine prints, but in a Vaporwave interpretation.<br />Bold colors softened by heavy grain, scratches, and print textures.<br />The aesthetic balances surreal calm with urban vibrance. It is both dreamlike and gritty.<br />Best for evocative portraits, cityscapes, and nostalgic retro-futurist edits. I also included 20 Animal Images in the Dataset :) <br /></p>",
+      "allowNoCredit": false,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit"
+      ],
+      "allowDerivatives": false,
+      "allowDifferentLicense": false,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 15,
+      "availability": "Public",
+      "userId": 107364,
+      "baseModels": [
+        "Krea 2",
+        "Anima",
+        "ZImageBase",
+        "Flux.2 Klein 9B",
+        "Flux.2 Klein 4B",
+        "ZImageTurbo",
+        "Flux.1 D",
+        "Chroma",
+        "Illustrious",
+        "SDXL 1.0",
+        "SD 1.5"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 6170,
+        "thumbsUpCount": 614,
+        "thumbsDownCount": 0,
+        "commentCount": 15,
+        "tippedAmountCount": 34210
+      },
+      "creator": {
+        "username": "ArsMachina",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6a606239-6951-422b-8dd8-0aa66ecc91e0/width=96/ArsMachina.jpeg"
+      },
+      "tags": [
+        "synthwave",
+        "retro",
+        "80s",
+        "style",
+        "vaporwave"
+      ],
+      "modelVersions": [
+        {
+          "id": 2251616,
+          "index": 10,
+          "name": "SD1",
+          "baseModel": "SD 1.5",
+          "baseModelType": "Standard",
+          "publishedAt": "2025-10-11T10:55:07.128Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 1,
+          "description": null,
+          "trainedWords": [
+            "Retro 80s Vaporwave"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 367,
+            "thumbsUpCount": 32,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 2146411,
+              "sizeKB": 37018.3046875,
+              "name": "Retro_80s_VaporwaveSD1.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": "No Pickle imports",
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2025-09-26T10:55:57.611Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "size": null,
+                "fp": null
+              },
+              "hashes": {
+                "AutoV1": "14CB02D4",
+                "AutoV2": "478710FBB9",
+                "SHA256": "478710FBB9F575B7695CA511A8CFF4DB08B78E04D033856C88AA208C7B52853B",
+                "CRC32": "1BE90863",
+                "BLAKE3": "49E0BCE9908BC10BED42D74E054DF6AAB03FCD523DC40F520DBFBAE7CB053827",
+                "AutoV3": "FE00AE22E195",
+                "SHA256_12": "478710FBB9F5"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/2251616",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 102520905,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/55fc9735-4536-4a1f-93ae-497c3c24c88f/original=true/102520905.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UDE_~-=tEPr=}pb;XSbcVrE1M_afE1rXX9V[",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520899,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/18b6a92d-e7c4-4459-b555-9b268f34a60d/original=true/102520899.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UDDl[~tS5aoz}8i^5BRkO7bFt7ae9boz-3s,",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520903,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f0bb58a0-69ea-47dc-a2e4-b3c475adba30/original=true/102520903.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UMC%N]yZpJcER4RPRPV@tSjbivV?donP%2jE",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520906,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f03913fb-d67d-47f3-8c75-e999c1cea34f/original=true/102520906.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UFDS][yEIU%M0Ps;-Pf,qZWDb_WX~pbcNMjE",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520898,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ced63bd9-5d02-4e2e-88b1-3f9a3c87083d/original=true/102520898.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UG9H;RbcZ~RkpyWXxGWCH=RjxtoJqsa}k9oJ",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520902,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/546988ca-2fc0-4593-88d5-c6db36597ccf/original=true/102520902.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UFCsU20f4;~9afIVxGx[D*%h%KIU^PRRElxs",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520897,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ab8d5d17-0f94-4776-9c96-a16df69c3dce/original=true/102520897.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UKD9M2~VxwIV#kaIIUNI5RNeSgo#9}NIxujX",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520900,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c5e5640e-499f-4582-956a-d73b0c169cbf/original=true/102520900.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "U9AT+r4mDl?wbwNf$*xBEx-WDgE1E4$~adIr",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520904,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b5373411-6144-4a23-a0f5-b578554871d8/original=true/102520904.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "UCDJ6V0Nq@%L-jXBadV?03}:JDV[4;-+bdRl",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 102520911,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1c34e6fe-2dfd-4462-bc4c-3cdafc67d8df/original=true/102520911.jpeg",
+              "nsfwLevel": 1,
+              "width": 768,
+              "height": 1128,
+              "hash": "U9CG3}?covtm:$rq~V$fIUr;v}E1AJ%M9aAH",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/2251616"
+        }
+      ]
+    },
+    {
+      "id": 881194,
+      "name": "90s Indie Movie",
+      "description": "<p>This LoRA tried to represent properly the diverse  <strong>90s indie movies</strong> </p><p></p><p>The trigger words are <strong>ArsMovieStill,  movie still from a 1990s indie movie</strong></p>",
+      "allowNoCredit": false,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit"
+      ],
+      "allowDerivatives": false,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 3,
+      "availability": "Public",
+      "userId": 107364,
+      "baseModels": [
+        "Krea 2",
+        "SD 1.5",
+        "ZImageBase",
+        "Flux.2 Klein 9B",
+        "Flux.2 Klein 4B",
+        "ZImageTurbo",
+        "Flux.1 D",
+        "SDXL 1.0",
+        "Pony"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 6744,
+        "thumbsUpCount": 562,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 3020
+      },
+      "creator": {
+        "username": "ArsMachina",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6a606239-6951-422b-8dd8-0aa66ecc91e0/width=96/ArsMachina.jpeg"
+      },
+      "tags": [
+        "movie",
+        "midjourney",
+        "style",
+        "still",
+        "movie still",
+        "midjourney v6"
+      ],
+      "modelVersions": [
+        {
+          "id": 3191415,
+          "index": 1,
+          "name": "Anima",
+          "baseModel": "SD 1.5",
+          "baseModelType": "Standard",
+          "publishedAt": "2026-08-29T15:53:08.224Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 2,
+          "description": null,
+          "trainedWords": [
+            "ArsMovieStill, movie still from a 1990s indie movie,"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 10,
+            "thumbsUpCount": 5,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 3072530,
+              "sizeKB": 89784.9609375,
+              "name": "90sIndieMovieAnima-step00005000.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": null,
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2026-08-02T15:52:45.405Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "fp": "bf16",
+                "isRequired": false
+              },
+              "hashes": {
+                "AutoV1": "E97E8AA1",
+                "AutoV2": "BD143AE09A",
+                "SHA256": "BD143AE09A7750C6EC9698C50452C09082DFD7B660C864AE5A479E8B5FD382AE",
+                "CRC32": "A065BFF1",
+                "BLAKE3": "EB15352B325140BF1815FB55EEF83207F4D065F4DA6A48683CCC4F56EA1279E3",
+                "AutoV3": "200C2FBE97BD",
+                "SHA256_12": "BD143AE09A77"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/3191415",
+              "primary": true
+            }
+          ],
+          "images": [],
+          "downloadUrl": "https://civitai.com/api/download/models/3191415"
+        },
+        {
+          "id": 986403,
+          "index": 9,
+          "name": "SD 1.5",
+          "baseModel": "SD 1.5",
+          "baseModelType": "Standard",
+          "publishedAt": "2024-10-24T15:52:30.902Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 1,
+          "description": null,
+          "trainedWords": [
+            "ArsMovieStill, movie still from a 1990s indie movie"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 626,
+            "thumbsUpCount": 48,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 896122,
+              "sizeKB": 37060.2734375,
+              "name": "90s_Indie_Movie.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": "No Pickle imports",
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2024-10-24T15:30:41.671Z",
+              "metadata": {
+                "format": "SafeTensor"
+              },
+              "hashes": {
+                "AutoV1": "C1093EC8",
+                "AutoV2": "E4EE9AC37B",
+                "SHA256": "E4EE9AC37B728407365862253CDDC8DE8B3F61591ED5CF404675F9F4DF1F9FF3",
+                "CRC32": "FCC53BEC",
+                "BLAKE3": "03A029E5E6324A16A6D577BF231D0E3852CB827FC66C0FE501EEC0475A2A3015",
+                "AutoV3": "CA0108C4301A",
+                "SHA256_12": "E4EE9AC37B72"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/986403",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 36329812,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d6478560-e7b8-4766-916b-6894fe2f199d/original=true/36329812.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "U37mW#I=S4JAF2EME%}r0#WCw^RkM|=w,;5m",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329814,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/dfd2b0a1-67cf-4124-ab53-d2c6059609f9/original=true/36329814.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "U$HCDvRjxuV@_NWBkCV[%NazRjfkR+j]Rjt7",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329813,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6a4f686a-2886-4e50-957d-c44c61c65dab/original=true/36329813.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "UAEME~^+E*tR_0M_Ndt700Ri=|t5~Xxu-V%2",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329811,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a05163e1-d234-4a82-b9e2-6d4b4739a40c/original=true/36329811.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "U47^uaY*?]t+yW?tx]kC0MVFD*Mx8|H[R6n$",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329821,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1632ceaf-fef6-47d3-8b09-6dff72a3bb18/original=true/36329821.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "U57d{~_MTJD?x]R;%fXT024Wxu.QbcM|kCt7",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329819,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c3dc04b5-9053-4d04-84ef-f2268f4c8107/original=true/36329819.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "U*Mk65Rjt7Rj~qj[ofayofofRQt7oft7ofjt",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329823,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/74e15e64-6a7d-40bb-8b14-c53dba74922c/original=true/36329823.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "UGE-~~-p0JNHaut7%NbF00NF~C%2%3ofE0xa",
+              "type": "image",
+              "minor": false,
+              "poi": true,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329820,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bb194fa3-a217-432e-83cd-bf8b5b580cd0/original=true/36329820.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "U87ntS_N%$tPa*M{NJV@E1V@RjjukQ-:%1oz",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329822,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c442e5c4-f4df-4ee3-8010-05d1eb0133b1/original=true/36329822.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "U8AT4,$]gh$w%7abM{xa5^%L-S%10-a0=wNG",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329840,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9dab278f-5267-4d68-b054-4d5bb42e4cae/original=true/36329840.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "UvIYIlofD%jr~qoJM}t7%LWBWDoeRiWBt7ax",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329843,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a032b7a4-84ce-43d2-9c37-9e8769ce0f82/original=true/36329843.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "UADlf;nME1%h~U-;-;WBITxa-=IUI;WAogWB",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 36329837,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d644c591-8f80-4e49-96c1-6dd83a112e77/original=true/36329837.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 512,
+              "hash": "UvGl3eo#xvWX~XWVofWB-pRjWAj]oya#R%of",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/986403"
+        }
+      ]
+    },
+    {
+      "id": 808340,
+      "name": "Clara Contard, Ladybug, Miraculous. Different models and attires.",
+      "description": "<p>Character from \"Miraculous: Tales of Ladybug and Cat Noir\" </p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "RentCivit",
+        "Rent"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 3,
+      "availability": "Public",
+      "userId": 4203498,
+      "baseModels": [
+        "Illustrious",
+        "Pony",
+        "Flux.1 D",
+        "SD 1.5"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 245,
+        "thumbsUpCount": 25,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "Tetete80099",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/460eb21f-2e2a-47a2-8922-af87cf12f9ba/width=96/Tetete80099.jpeg"
+      },
+      "tags": [
+        "character",
+        "clara",
+        "miraculous",
+        "ladybug",
+        "clara contard",
+        "contard"
+      ],
+      "modelVersions": [
+        {
+          "id": 903899,
+          "index": 3,
+          "name": "🟤 Civilian (SD1.5)",
+          "baseModel": "SD 1.5",
+          "baseModelType": "Standard",
+          "publishedAt": "2024-09-29T13:00:28.952Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 3,
+          "description": "<p>SD1.5 model for the Clara Contard civilian attire from season 1-5.</p><p>PixAi trained model.</p><p>For the closest image of the character to the original, use a strength of 0.9-1.0.</p><p>For looser work, use a strength of 0.6–0.7.</p><p>I advise you to use built-in triwords for better performance of the model. If consistency with the original is not important to you, delete them.</p>",
+          "trainedWords": [
+            "Clara Contard ",
+            "dark green eyes",
+            "golden blonde hair is cut into a short bob that ends in the center of her neck"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 120,
+            "thumbsUpCount": 17,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 812177,
+              "sizeKB": 38163.0625,
+              "name": "Clara Contard .safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": "No Pickle imports",
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2024-09-29T13:00:57.987Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "size": null,
+                "fp": null
+              },
+              "hashes": {
+                "AutoV1": "C3D52F46",
+                "AutoV2": "23FD255B3B",
+                "SHA256": "23FD255B3B36CDF56736F2B74270807D35E66AC728A665014B9F79466D5E047E",
+                "CRC32": "12AC4604",
+                "BLAKE3": "1B53FC279A24E8F1BEA22ED94E34DFADD3E1BC5E2B535FAF09F7ECEF8B738D50",
+                "AutoV3": "4D8679E320EF",
+                "SHA256_12": "23FD255B3B36"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/903899",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 31917542,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/288fe55c-1a6e-4dc9-af95-b4a7e5a1134e/original=true/31917542.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 1024,
+              "hash": "UMGt{GD*58-9aIW=E3xFS~xtnjj?~pM{IqM{",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 31917543,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5d402830-1d6f-474b-9924-ae9df19c3adf/original=true/31917543.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 1024,
+              "hash": "UJEoDAxZx]i_~AfhS%xGM_-o-V-pxt?HRPxu",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 31917544,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/68081ba0-557b-40c6-b44d-fc5a64c5fce1/original=true/31917544.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 1024,
+              "hash": "UKGH#b02%goz=?9aR*WDouRjs:M|~pIVSi%2",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 31917547,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/238a5a12-c5fe-4816-a61a-3aa455169b36/original=true/31917547.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 1024,
+              "hash": "U8F}[,000m~Aot9FBss+0K^%-WIV~q?Z00%L",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 31917550,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6d25c984-ad71-4b9d-9664-2349457e0ea1/original=true/31917550.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 1024,
+              "hash": "UIF=EiNFO?~VnNIp4:s:EL%3j0bc?bM{M}of",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 31917549,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/dc91fbb4-bc22-4755-9d35-503b1933a889/original=true/31917549.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 1024,
+              "hash": "ULH1#s?Itl~V$w-:o$_1$~M|jFV@x]M|IVf5",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/903899"
+        }
+      ]
+    },
+    {
+      "id": 338438,
+      "name": "Red (Dragon Quest VIII)",
+      "description": "<p>Red from Dragon Quest VIII (PS2 &amp; Nintendo 3DS), is a supporting character originally, made playable in the 3DS port. I was surprised there was no Lora of her yet, despite Dragon Quest being such a big name and other supporting characters had a Lora made out of them already.</p><p>Red is and Yangus have history together, and she makes Yangus fetch a rare treasure for her, which he had apparently promised for her in the past.</p><p>Usage notes for different versions:</p><pre><code>Anima: Works on strength 1. Updated dataset and improved tagging. The only iffy part is the sheathed knife on her belt, as with plain \"sheath\" prompt it can generate as a full-sized sword sheath, and \"knife sheath\" can instead generate the sheath somewhere else on her body.</code></pre><pre><code>Illustrious: Works on strength 1. The single strap is not 100% accurate and may thus require multiple generations attempts or inpainting.</code></pre><pre><code>SD 1.5: Works well with 0.5 - 0.6 strength. Tested on anime-like models.</code></pre><p>Hope you like the lora! :)</p>",
+      "allowNoCredit": false,
+      "allowCommercialUse": [
+        "RentCivit"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": false,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 7,
+      "availability": "Public",
+      "userId": 796990,
+      "baseModels": [
+        "Anima",
+        "Illustrious",
+        "SD 1.5"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 718,
+        "thumbsUpCount": 97,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "mesnon",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/34f77261-5f14-46a4-986f-bf6212278222/width=96/mesnon.jpeg"
+      },
+      "tags": [
+        "character",
+        "female",
+        "dragon quest",
+        "game character"
+      ],
+      "modelVersions": [
+        {
+          "id": 378942,
+          "index": 2,
+          "name": "SD 1.5",
+          "baseModel": "SD 1.5",
+          "baseModelType": "Standard",
+          "publishedAt": "2024-03-07T08:18:11.843Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 6,
+          "description": "<p>Str 0.5 - 0.6</p><p>Clip skip: 2</p><p>CFG: 5 - 7</p>",
+          "trainedWords": [
+            "red_dq8, black hair, blue eyes, thighhighs, detached sleeves, jewelry, midriff, choker, breasts, fur wrap"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 195,
+            "thumbsUpCount": 24,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 303782,
+              "sizeKB": 36980.453125,
+              "name": "Red_DQ8.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": "No Pickle imports",
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2024-03-07T08:15:45.474Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "size": null,
+                "fp": null
+              },
+              "hashes": {
+                "AutoV1": "6A47D6A7",
+                "AutoV2": "6A7C7AFE1F",
+                "SHA256": "6A7C7AFE1F4A3CCDD0BD6B46796FB0A39BED155D3DEBF33351865BF25266DF63",
+                "CRC32": "877DB4F1",
+                "BLAKE3": "9D0C635B5ED3A965B54204A66EAD6416580E88BF22139959CDECF1FE7CD7A467",
+                "AutoV3": "F614BB9AEBEF",
+                "SHA256_12": "6A7C7AFE1F4A"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/378942",
+              "primary": true
+            }
+          ],
+          "images": [],
+          "downloadUrl": "https://civitai.com/api/download/models/378942"
+        }
+      ]
+    },
+    {
+      "id": 630033,
+      "name": "magpie bridge",
+      "description": "<p><span style=\"color:rgb(193, 194, 197)\">Try size: 768 x 1024 or 1024 x 1024</span></p><p>Weights: 1.0</p><p>Clip skip: 2</p><p></p><p>Note: The complete prompt is in the Training Data. / 完整提詞在訓練集裏。(Anima10)</p><p></p><p>Reference Music: </p><div data-youtube-video><iframe width=\"640\" height=\"480\" allowfullscreen=\"true\" autoplay=\"false\" disablekbcontrols=\"false\" enableiframeapi=\"false\" endtime=\"0\" ivloadpolicy=\"0\" loop=\"false\" modestbranding=\"false\" origin playlist src=\"https://www.youtube.com/embed/UQIpD33-Muk?rel=1\" start=\"0\"></iframe></div><p></p>",
+      "allowNoCredit": true,
+      "allowCommercialUse": [
+        "Image",
+        "RentCivit",
+        "Rent",
+        "Sell"
+      ],
+      "allowDerivatives": true,
+      "allowDifferentLicense": true,
+      "type": "LORA",
+      "minor": false,
+      "sfwOnly": false,
+      "poi": false,
+      "nsfw": false,
+      "nsfwLevel": 15,
+      "availability": "Public",
+      "userId": 1185760,
+      "baseModels": [
+        "Krea 2",
+        "Anima",
+        "Illustrious",
+        "Pony",
+        "SD 1.5"
+      ],
+      "cosmetic": null,
+      "supportsGeneration": true,
+      "stats": {
+        "downloadCount": 656,
+        "thumbsUpCount": 38,
+        "thumbsDownCount": 0,
+        "commentCount": 0,
+        "tippedAmountCount": 0
+      },
+      "creator": {
+        "username": "ghostpaint",
+        "image": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6ad2a274-8c9b-4466-8a8e-541ba478151f/width=96/ghostpaint.jpeg"
+      },
+      "tags": [
+        "character",
+        "festival",
+        "orihime",
+        "bird",
+        "bridge",
+        "magpie",
+        "tanabata",
+        "qixi",
+        "weaver girl",
+        "vega star",
+        "chinese legends"
+      ],
+      "modelVersions": [
+        {
+          "id": 704395,
+          "index": 4,
+          "name": "SD 1.5",
+          "baseModel": "SD 1.5",
+          "baseModelType": "Standard",
+          "publishedAt": "2024-08-07T19:04:52.505Z",
+          "flags": 0,
+          "availability": "Public",
+          "nsfwLevel": 1,
+          "description": "",
+          "trainedWords": [
+            "((magpie bridge)), ((birds flock)), tanabata, hanfu, weaver girl, big tits, long hair, braids, hair flower, hair ornament, necklace, earrings, floating hair, fog, wind, cloud, high sky, starry sky, colorful sky, upper body, close-up, looking at viewer,"
+          ],
+          "vaeId": null,
+          "paidAccess": null,
+          "stats": {
+            "downloadCount": 246,
+            "thumbsUpCount": 21,
+            "thumbsDownCount": 0
+          },
+          "supportsGeneration": true,
+          "files": [
+            {
+              "id": 619033,
+              "sizeKB": 18545.125,
+              "name": "girllikemagpiebridge.safetensors",
+              "overrideName": null,
+              "type": "Model",
+              "pickleScanResult": "Success",
+              "pickleScanMessage": "No Pickle imports",
+              "virusScanResult": "Success",
+              "virusScanMessage": null,
+              "scannedAt": "2024-08-07T19:01:29.616Z",
+              "metadata": {
+                "format": "SafeTensor",
+                "size": null,
+                "fp": null
+              },
+              "hashes": {
+                "AutoV1": "DE2F2560",
+                "AutoV2": "AEAADC3876",
+                "SHA256": "AEAADC3876EADA2D6BCE2BAC77A905AAA7A2F4296D2908D126D88C91C705C7A7",
+                "CRC32": "33F1993D",
+                "BLAKE3": "D214F2DB14F03F99EB5498334A81AA258D47B2E9E8059AFAC6D72F2D3FB630A6",
+                "AutoV3": "E1144ADC1549",
+                "SHA256_12": "AEAADC3876EA"
+              },
+              "downloadUrl": "https://civitai.com/api/download/models/704395",
+              "primary": true
+            }
+          ],
+          "images": [
+            {
+              "id": 23222511,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/89e19479-5c25-4b3b-9ee2-db855d8cafba/original=true/23222511.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UFG8+sIqwa~W00^+9vIpZ}Iq-oM{?b-oxZNa",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222536,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c95faef1-a561-4bc0-84e8-13ffe911afb8/original=true/23222536.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UAFYcY^,9YNH00E0ElIn$yV?}@^+-=kW9ZD%",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222508,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/291b5a81-2776-4c17-93a8-b43c6c9c5274/original=true/23222508.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UDGITQ%2jD$M00NGEO%M$~NI={4.~qMwMx-p",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223391,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2da93886-80a9-49c3-83d5-24a695d3fc54/original=true/23223391.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UAFrk+~WVq9Z009Z0f%3R3-o?aE1^kbcVYR.",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222510,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5e199c7c-92d1-425b-8ca8-d3db3d9f6284/original=true/23222510.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "ULF=%X~VW-af4TofNHxujr%2^*NG-=xaIUR%",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223123,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d9ac8a4-0c24-4f56-8929-a49c506a5b99/original=true/23223123.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "U6FO$V?b-f4.00IV01xbVV~U~Ckp~Eo#4oD%",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222515,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2572b375-683a-4402-aa86-d721106434a6/original=true/23222515.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UGHLA2%LxBE200M{9]%LInbd-UIT~Wt5ITkW",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223418,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c3a8f43a-9afd-4904-a917-6833b454c4ec/original=true/23223418.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "U9E.;U~D;^9F000J0L%MR3xD~V-;-po#v}M{",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222516,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/79f2acaa-b0b5-4d36-86b7-32d8982e5171/original=true/23222516.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UAFi180KVq?I00?GKRxuV;Ip~A0K.9r;Vrx]",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222509,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f4665362-b30a-40d9-b12b-97ceb0bd5177/original=true/23222509.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UBF5~;%MwF~W00NGIos:NG^+={56.TrqIA%L",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223388,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/904f3b5d-d763-4ed9-a606-ee68d7d19df6/original=true/23223388.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UAFO=w~Xt09Z00In0g?H=q-o~BR*JCNLIAR-",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222527,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fc4f12f9-d358-4ff7-9af1-37b2c6ecbed3/original=true/23222527.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UIF$YB~V-VM{Dhxu57xu9FEMxuM{tkniV@ax",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223397,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8a81927f-e4f0-48c1-b2f9-95ab26da78c9/original=true/23223397.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UCF=%d~Xw?o#00IUEMNHI.ni?G%3~W%M-Axb",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222514,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fd7066e0-88f2-4de2-8ecb-b3a6b4ae5a77/original=true/23222514.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UEG8vTEMn2=y00-o9}%ND$W=%1D%~VM{R4xu",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223790,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b876f277-2fce-4d39-a53f-06e351b66d4f/original=true/23223790.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UBFrx6-p^PtS00X80f9F9EIA^*%N~Wt8Q,Rk",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223863,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e3f8c06c-2054-4c89-a466-dcdb12bf0d07/original=true/23223863.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UJIhHo0fxV~B4mIUE3tR01%2s:Rj%L%1IAjE",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223392,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e4a72836-58de-4ccc-ab24-919210f451d1/original=true/23223392.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UCG8i}%M?bXU00%356ITMbIT~B^+?v%NITen",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23222517,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4dcb80ed-c9ad-4a0d-867c-657d0347d2bb/original=true/23222517.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UGIX%M0LwG~V0fs:EMt80KozeS9FkD-V9ERP",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223124,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/065d4beb-72e9-4d11-8f22-57062fb41248/original=true/23223124.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "U9F$3O%0=?%N00I;02s94m4:~W%M?Ingw]9s",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            },
+            {
+              "id": 23223126,
+              "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4a74e9ef-819b-474d-aab0-3dc870c5c839/original=true/23223126.jpeg",
+              "nsfwLevel": 1,
+              "width": 512,
+              "height": 768,
+              "hash": "UMH27@9aRO~VM^M{56ozRNR+xaoLxvxaRPxa",
+              "type": "image",
+              "minor": false,
+              "poi": false,
+              "hasMeta": true,
+              "hasPositivePrompt": true,
+              "onSite": false,
+              "remixOfId": null
+            }
+          ],
+          "downloadUrl": "https://civitai.com/api/download/models/704395"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "nextCursor": "2026-08-29 07:34:08.074|235284",
+    "nextPage": "https://civitai.com/api/v1/models?types=LORA&baseModels=SD%201.5&sort=Newest&period=AllTime&nsfw=false&limit=5&cursor=2026-08-29%2007%3A34%3A08.074%7C235284"
+  }
+}

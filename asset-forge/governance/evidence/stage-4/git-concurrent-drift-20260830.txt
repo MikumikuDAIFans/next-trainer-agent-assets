@@ -1,0 +1,7 @@
+== observed after prior revalidation ==
+project status:
+ M build-scripts/build_portable_2026_full.ps1
+ M build-scripts/resume_portable_2026_full.ps1
+agent-assets status: clean
+scope: build orchestration scripts only; no training schema/preset/validator files
+ownership: preserved as concurrent user/other-task changes; not modified by this task
