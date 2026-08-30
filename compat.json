@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "assetsVersion": "2026.08.29-4",
+  "assetsVersion": "2026.08.30-1",
   "plugin": {
     "id": "next-trainer-pi-agent",
     "version": "0.3.8"
@@ -15,11 +15,11 @@
     "next-trainer-knowledge",
     "next-trainer-civitai-evidence"
   ],
-  "knowledgeDocs": 14,
-  "templates": 4,
+  "knowledgeDocs": 78,
+  "templates": 17,
   "evalSeeds": {
     "behavior": 18,
-    "knowledgeCitation": 15
+    "knowledgeCitation": 79
   },
   "notes": "assetsVersion is the managed business-data CHANNEL version (F3-3): content-only releases bump it and publish an assets-<assetsVersion> tag; installed clients update knowledge/templates/skills without a plugin upgrade. Baseline extracted from lora-scripts-next @ d19370f."
 }
