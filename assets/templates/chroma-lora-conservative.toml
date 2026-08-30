@@ -1,0 +1,28 @@
+# Next Trainer candidate template (staging; not migrated). Chroma variant on the Flux LoRA page.
+# The five variant fields are a unit from the shipped preset — keep or change them together.
+template_version = "2026-08-30"
+scope = "chroma-lora-conservative"
+base_model = "chroma"
+model_train_type = "flux-lora"        # Chroma trains on the Flux page; there is no separate Chroma page
+
+# --- Chroma variant contract unit (config/presets/chroma.toml, verbatim) ---
+model_type = "chroma"
+apply_t5_attn_mask = true
+timestep_sampling = "sigmoid"
+model_prediction_type = "raw"
+guidance_scale = 0.0
+
+# --- shared Flux scaffold ---
+fp8_base = true
+resolution = "768,768"
+enable_bucket = true
+bucket_no_upscale = true
+
+# --- in-training evaluation ---
+enable_preview = true
+sample_width = 768
+sample_height = 768
+sample_every_n_epochs = 2
+
+# --- intentionally NOT set (unknown-here; see evidence card) ---
+# learning_rate / network_dim / network_alpha / training horizon: no shipped Chroma values beyond the variant unit

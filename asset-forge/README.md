@@ -4,12 +4,14 @@
 
 ## 最高优先级边界
 
-1. 本目录是暂存区，不是正式知识库或模板库。
-2. 未经用户再次明确批准，不得把任何候选文件迁移到：
-   - `E:\OpenSourceTeamWork\Kimi_Agent_lora-scripts-next-agent-dev\agent-assets\assets\knowledge`
-   - `E:\OpenSourceTeamWork\Kimi_Agent_lora-scripts-next-agent-dev\agent-assets\assets\templates`
-   - `E:\OpenSourceTeamWork\Kimi_Agent_lora-scripts-next-agent-dev\project\plugin-packages\next-trainer-pi-agent`
-3. 训练器源码和现有资产仓库在本任务中只读。
+1. 本目录是候选暂存区（forge），正式知识库/模板库位于仓库根 `assets/`。
+2. 候选进入正式资产只允许经**单向同步** `tools/sync_from_forge.py`：
+   数据源只取 `assets/{knowledge,templates,eval}` + `sync/sync-manifest.json`；
+   每一次同步必须先经人工审查，并携带 `--confirmed-by-user "<确认说明>"` 才能
+   执行（无确认参数时工具只输出计划、零写入）。同步运行记录落在
+   `sync/sync-runs/`。禁止任何绕过该工具的手工迁移。
+   2026-08-30 用户批准并完成首次同步（见 `sync/sync-runs/run-20260830T162032Z.json`）。
+3. 训练器源码与本目录外的仓库路径对本目录的采集/校验脚本只读。
 4. Civitai 只采集公开、可追溯的结构化元数据和必要的文本说明；默认不下载模型权重或图片。
 5. Civitai 的热度、下载量和单个作者配置只能作为发现性/观察性证据，不能直接升级为通用参数结论。
 
@@ -32,4 +34,4 @@
 
 候选镜像位于 `assets/knowledge`、`assets/templates`、`assets/eval`；采集与索引数据位于 `data/`，评测和迁移证据位于 `governance/`，只描述不执行的同步预览位于 `sync/`。`research-rejected/` 保存拒绝样本，`tools/` 保存可复用校验与审计脚本。
 
-模板事故 F-S4-002 已按方案 B 处置：26 份模板制品中 10 份字节级恢复、16 份语义重建、0 份缺失。16 份重建制品带有 `reconstructed-2026-08-30` 标记，不能视为原件；详情见 `governance/evidence/stage-4/recovery-decision-F-S4-002.md`。正式仓库仍保持只读，当前状态为 `awaiting-user-approval`。
+模板事故 F-S4-002 已按方案 B 处置：26 份模板制品中 10 份字节级恢复、16 份语义重建、0 份缺失。16 份重建制品带有 `reconstructed-2026-08-30` 标记，不能视为原件；详情见 `governance/evidence/stage-4/recovery-decision-F-S4-002.md`。当前状态：`synced-2026-08-30`（首次同步已经人工审查批准执行，正式 `assets/` 已接收 91 项操作，事后逐字节验证 90/90 一致、eval 追加 64 行后 79 行零重复）。

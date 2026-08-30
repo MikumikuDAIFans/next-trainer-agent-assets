@@ -1,0 +1,16 @@
+# reconstructed-2026-08-30; original bytes unavailable
+template_version = "2026-08-30-reconstructed"
+scope = "flux-lora-oft-conservative"
+base_model = "flux"
+model_train_type = "flux-lora"
+lora_type = "oft"
+network_module = "networks.oft_flux"
+timestep_sampling = "sigmoid"
+fp8_base = true
+resolution = "768,768"
+enable_bucket = true
+bucket_no_upscale = true
+enable_preview = true
+sample_width = 768
+sample_height = 768
+sample_every_n_epochs = 2

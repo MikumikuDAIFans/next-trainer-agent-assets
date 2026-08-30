@@ -1,0 +1,24 @@
+# Next Trainer candidate template (staging; not migrated). Contract scaffold for the Flux LoRA page.
+# Validate in-host before import. No machine paths on purpose — fill asset/dataset paths at import time.
+template_version = "2026-08-30"
+scope = "flux-lora-conservative"
+base_model = "flux"
+model_train_type = "flux-lora"
+
+# --- page-contract essentials (schema defaults stated explicitly) ---
+timestep_sampling = "sigmoid"          # flux-lora.ts default
+fp8_base = true                        # flux-lora.ts default memory path; do not disable blindly
+resolution = "768,768"                 # flux-lora.ts default area class
+enable_bucket = true
+bucket_no_upscale = true
+
+# --- in-training evaluation (deliberate deviation from shared preview default 512) ---
+enable_preview = true
+sample_width = 768
+sample_height = 768
+sample_every_n_epochs = 2
+
+# --- intentionally NOT set (unknown-here; see evidence card) ---
+# learning_rate / unet_lr / text_encoder_lr : no shipped Flux preset, no measured table (conflict C-014 discipline)
+# network_dim / network_alpha               : schema ships 2/16; C-014 forbids blind-copying as "empirical" — sweep and record
+# max_train_epochs / max_train_steps        : exposure depends on dataset; see parameters/exposure-budget (Flux row: unknown)
