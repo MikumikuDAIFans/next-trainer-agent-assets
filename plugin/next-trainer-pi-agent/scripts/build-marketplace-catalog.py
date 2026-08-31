@@ -35,7 +35,7 @@ PKG_ROOT = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = PKG_ROOT.parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
-VERSION = "0.3.8"
+VERSION = "0.3.9"
 PLUGIN_ID = "next-trainer-pi-agent"
 PUBLISHER = "next-trainer-project"
 HOST_COMPAT = ">=2.9.2 <4.0.0"
