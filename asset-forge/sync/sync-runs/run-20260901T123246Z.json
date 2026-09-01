@@ -1,0 +1,668 @@
+{
+  "run": "20260901T123246Z",
+  "mode": "applied",
+  "confirmedByUser": "2026-09-01 user instructed importing forge prep knowledge/templates into the official library; dry-run verified 91/91 skip-identical (idempotent re-confirmation, no new items)",
+  "manifest": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-08-30T13:41:18Z"
+  },
+  "counts": {
+    "skip": 91
+  },
+  "actions": [
+    {
+      "op": "create",
+      "source": "assets/knowledge/datasets/caption-tag-trigger-strategy.md",
+      "target": "assets/knowledge/datasets/caption-tag-trigger-strategy.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/datasets/preparation-checklist.md",
+      "target": "assets/knowledge/datasets/preparation-checklist.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/datasets/regularization-images.md",
+      "target": "assets/knowledge/datasets/regularization-images.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/character-identity.md",
+      "target": "assets/knowledge/directions/character-identity.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/clothing-accessory.md",
+      "target": "assets/knowledge/directions/clothing-accessory.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/multi-concept-training.md",
+      "target": "assets/knowledge/directions/multi-concept-training.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/object-product-concept.md",
+      "target": "assets/knowledge/directions/object-product-concept.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/pose-expression-features.md",
+      "target": "assets/knowledge/directions/pose-expression-features.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/scene-domain-migration.md",
+      "target": "assets/knowledge/directions/scene-domain-migration.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/slider-erasure-boundaries.md",
+      "target": "assets/knowledge/directions/slider-erasure-boundaries.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/style-training.md",
+      "target": "assets/knowledge/directions/style-training.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/directions/utility-correction-lora.md",
+      "target": "assets/knowledge/directions/utility-correction-lora.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/engines/anima-fast-workflow-guide.md",
+      "target": "assets/knowledge/engines/anima-fast-workflow-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/errors/oom-performance-playbook.md",
+      "target": "assets/knowledge/errors/oom-performance-playbook.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/alternative-tooling-evidence.md",
+      "target": "assets/knowledge/external-channels/alternative-tooling-evidence.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/attention-memory-runtime.md",
+      "target": "assets/knowledge/external-channels/attention-memory-runtime.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/bitsandbytes-optimizer-context.md",
+      "target": "assets/knowledge/external-channels/bitsandbytes-optimizer-context.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/captioning-blip-lavis-review.md",
+      "target": "assets/knowledge/external-channels/captioning-blip-lavis-review.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/clip-evaluation-boundaries.md",
+      "target": "assets/knowledge/external-channels/clip-evaluation-boundaries.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/concept-sliders-research-channel.md",
+      "target": "assets/knowledge/external-channels/concept-sliders-research-channel.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/dataset-curation-datacomp.md",
+      "target": "assets/knowledge/external-channels/dataset-curation-datacomp.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/dataset-ingestion-provenance.md",
+      "target": "assets/knowledge/external-channels/dataset-ingestion-provenance.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/dataset-visual-qa-fiftyone.md",
+      "target": "assets/knowledge/external-channels/dataset-visual-qa-fiftyone.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/diffusers-dreambooth-prior-preservation.md",
+      "target": "assets/knowledge/external-channels/diffusers-dreambooth-prior-preservation.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/diffusers-lora-translation.md",
+      "target": "assets/knowledge/external-channels/diffusers-lora-translation.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/examples-config-translation.md",
+      "target": "assets/knowledge/external-channels/examples-config-translation.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/hf-metadata-missingness.md",
+      "target": "assets/knowledge/external-channels/hf-metadata-missingness.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/hf-model-card-provenance.md",
+      "target": "assets/knowledge/external-channels/hf-model-card-provenance.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/instruction-editing-objective-boundary.md",
+      "target": "assets/knowledge/external-channels/instruction-editing-objective-boundary.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/joycaption-caption-review.md",
+      "target": "assets/knowledge/external-channels/joycaption-caption-review.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/kohya-gui-comparison.md",
+      "target": "assets/knowledge/external-channels/kohya-gui-comparison.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/lycoris-upstream-boundaries.md",
+      "target": "assets/knowledge/external-channels/lycoris-upstream-boundaries.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/musubi-tuner-krea2-contract.md",
+      "target": "assets/knowledge/external-channels/musubi-tuner-krea2-contract.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/onetrainer-comparison.md",
+      "target": "assets/knowledge/external-channels/onetrainer-comparison.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/peft-adapter-taxonomy.md",
+      "target": "assets/knowledge/external-channels/peft-adapter-taxonomy.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/pytorch-runtime-reproducibility.md",
+      "target": "assets/knowledge/external-channels/pytorch-runtime-reproducibility.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/safetensors-checkpoint-metadata.md",
+      "target": "assets/knowledge/external-channels/safetensors-checkpoint-metadata.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/external-channels/sd-scripts-config-reading.md",
+      "target": "assets/knowledge/external-channels/sd-scripts-config-reading.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/anima-full-finetune-guide.md",
+      "target": "assets/knowledge/model-families/anima-full-finetune-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/anima-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/anima-lora-workflow-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/chroma-flux-page-variant.md",
+      "target": "assets/knowledge/model-families/chroma-flux-page-variant.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/flux-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/flux-lora-workflow-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/hidden-and-unsupported-boundaries.md",
+      "target": "assets/knowledge/model-families/hidden-and-unsupported-boundaries.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/krea2-lora-musubi-guide.md",
+      "target": "assets/knowledge/model-families/krea2-lora-musubi-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/lumina2-known-breakage.md",
+      "target": "assets/knowledge/model-families/lumina2-known-breakage.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/sd-dreambooth-finetune-guide.md",
+      "target": "assets/knowledge/model-families/sd-dreambooth-finetune-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/sd15-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/sd15-lora-workflow-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/sd2-lora-conditions.md",
+      "target": "assets/knowledge/model-families/sd2-lora-conditions.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/sdxl-derived-cohorts.md",
+      "target": "assets/knowledge/model-families/sdxl-derived-cohorts.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/sdxl-full-finetune-guide.md",
+      "target": "assets/knowledge/model-families/sdxl-full-finetune-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/model-families/sdxl-lora-workflow-guide.md",
+      "target": "assets/knowledge/model-families/sdxl-lora-workflow-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/network-algos/anima-schema-only-adapters.md",
+      "target": "assets/knowledge/network-algos/anima-schema-only-adapters.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/network-algos/dylora-guide.md",
+      "target": "assets/knowledge/network-algos/dylora-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/network-algos/lokr-guide.md",
+      "target": "assets/knowledge/network-algos/lokr-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/network-algos/lycoris-family-guide.md",
+      "target": "assets/knowledge/network-algos/lycoris-family-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/network-algos/oft-guide.md",
+      "target": "assets/knowledge/network-algos/oft-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/network-algos/tlora-anima-guide.md",
+      "target": "assets/knowledge/network-algos/tlora-anima-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/parameters/cache-precision-guide.md",
+      "target": "assets/knowledge/parameters/cache-precision-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/parameters/exposure-budget-steps.md",
+      "target": "assets/knowledge/parameters/exposure-budget-steps.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/parameters/optimizer-scheduler-guide.md",
+      "target": "assets/knowledge/parameters/optimizer-scheduler-guide.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/parameters/resolution-bucket.md",
+      "target": "assets/knowledge/parameters/resolution-bucket.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/training/checkpoint-selection.md",
+      "target": "assets/knowledge/training/checkpoint-selection.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/training/preview-sampling-evaluation.md",
+      "target": "assets/knowledge/training/preview-sampling-evaluation.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/knowledge/training/repro-publishing-workflow.md",
+      "target": "assets/knowledge/training/repro-publishing-workflow.md",
+      "kind": "knowledge",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-fast-lora-character.evidence.md",
+      "target": "assets/templates/anima-fast-lora-character.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-fast-lora-character.toml",
+      "target": "assets/templates/anima-fast-lora-character.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-fast-lora-style.evidence.md",
+      "target": "assets/templates/anima-fast-lora-style.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-fast-lora-style.toml",
+      "target": "assets/templates/anima-fast-lora-style.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-character-automagic.evidence.md",
+      "target": "assets/templates/anima-lora-character-automagic.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-character-automagic.toml",
+      "target": "assets/templates/anima-lora-character-automagic.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-lokr-conservative.evidence.md",
+      "target": "assets/templates/anima-lora-lokr-conservative.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-lokr-conservative.toml",
+      "target": "assets/templates/anima-lora-lokr-conservative.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-style-automagic.evidence.md",
+      "target": "assets/templates/anima-lora-style-automagic.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-style-automagic.toml",
+      "target": "assets/templates/anima-lora-style-automagic.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-tlora-conservative.evidence.md",
+      "target": "assets/templates/anima-lora-tlora-conservative.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/anima-lora-tlora-conservative.toml",
+      "target": "assets/templates/anima-lora-tlora-conservative.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/chroma-lora-conservative.evidence.md",
+      "target": "assets/templates/chroma-lora-conservative.evidence.md",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/chroma-lora-conservative.toml",
+      "target": "assets/templates/chroma-lora-conservative.toml",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/flux-lora-conservative.evidence.md",
+      "target": "assets/templates/flux-lora-conservative.evidence.md",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/flux-lora-conservative.toml",
+      "target": "assets/templates/flux-lora-conservative.toml",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/flux-lora-oft-conservative.evidence.md",
+      "target": "assets/templates/flux-lora-oft-conservative.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/flux-lora-oft-conservative.toml",
+      "target": "assets/templates/flux-lora-oft-conservative.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/krea2-lora-conservative.evidence.md",
+      "target": "assets/templates/krea2-lora-conservative.evidence.md",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/krea2-lora-conservative.toml",
+      "target": "assets/templates/krea2-lora-conservative.toml",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/sd-dreambooth-conservative.evidence.md",
+      "target": "assets/templates/sd-dreambooth-conservative.evidence.md",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/sd-dreambooth-conservative.toml",
+      "target": "assets/templates/sd-dreambooth-conservative.toml",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/sd-dylora-conservative.evidence.md",
+      "target": "assets/templates/sd-dylora-conservative.evidence.md",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/sd-dylora-conservative.toml",
+      "target": "assets/templates/sd-dylora-conservative.toml",
+      "kind": "template",
+      "reconstruction": "reconstructed-2026-08-30",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/sd2-lora-conservative.evidence.md",
+      "target": "assets/templates/sd2-lora-conservative.evidence.md",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "create",
+      "source": "assets/templates/sd2-lora-conservative.toml",
+      "target": "assets/templates/sd2-lora-conservative.toml",
+      "kind": "template",
+      "action": "skip-identical"
+    },
+    {
+      "op": "append",
+      "source": "assets/eval/knowledge-citation-seeds.jsonl",
+      "target": "assets/eval/knowledge-citation-seeds.jsonl",
+      "kind": "eval",
+      "action": "skip-all-ids-present"
+    }
+  ],
+  "errors": []
+}
