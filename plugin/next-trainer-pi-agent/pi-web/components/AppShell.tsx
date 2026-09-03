@@ -64,6 +64,13 @@ export function AppShell() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [initialNavigation] = useState(() => getInitialNavigation(searchParams));
+  // P1-6②: hand off from the SSR first-paint skeleton (app/page.tsx). The
+  // skeleton is server-rendered HTML that React does not own; removing it on
+  // mount is what lets the client's own validating/ready/error UI (same text,
+  // same layout, same CSS variables) take over with zero flash.
+  useEffect(() => {
+    document.getElementById("initial-workspace-skeleton")?.remove();
+  }, []);
   const { preference, toggleTheme } = useTheme();
   const themeLabelKey =
     preference === "light" ? "theme.light" : preference === "dark" ? "theme.dark" : "theme.auto";
